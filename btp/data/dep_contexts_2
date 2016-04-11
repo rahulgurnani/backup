@@ -1,0 +1,100 @@
+In our work , we adopt the method proposed in CITATION and apply it to the problem of transliteration .
+The substitution/insertion/deletion cost for the string alignment algorithm is based on the baseline cost from CITATION .
+The pseudo features in this study are same as in Scientists  CITATION .
+MRRs of the phonetic transliteration The baseline was computed using the phonetic transliteration method proposed in Scientists  CITATION .
+By treating a letter/character as a word and a group of letters/characters as a phrase or token unit in SMT , one can easily apply the traditional SMT models , such as the IBM generative model CITATION or the phrase-based translation model CITATION to transliteration .
+In G2P studies , Font Llitjos and Black CITATION showed how knowledge of language of origin may improve conversion accuracy .
+Phonetic transliteration can be considered as an extension to the traditional grapheme-to-phoneme (G2P) conversion CITATION , which has been a much-researched topic in the field of speech processing .
+Many of the loanwords exist in today's Chinese through semantic transliteration , which has been well received CITATION by the people because of many advantages .
+Unfortunately semantic transliteration , which is considered as a good tradition in translation practice CITATION , has not been adequately addressed computationally in the literature .
+In computational linguistic literature , much effort has been devoted to phonetic transliteration , such as English-Arabic , English-Chinese CITATION , English-Japanese CITATION and English-Korean .
+In the extraction of transliterations , data-driven methods are adopted to extract actual transliteration pairs from a corpus , in an effort to construct a large , up-to-date transliteration lexicon CITATION .
+The Latin-scripted personal names are always assumed to homogeneously follow the English phonic rules in automatic transliteration CITATION .
+This model is conceptually similar to the joint source-channel model CITATION where the target token t i depends on not only its source token s i but also the history t i-1 and s i -1 .
+Some recent work CITATION has attempted to introduce preference into a probabilistic framework for selection of Chinese characters in phonetic transliteration .
+In transliteration modeling , transliteration rules are trained from a large , bilingual transliteration lexicon CITATION , with the objective of translating unknown words on the fly in an open , general domain .
+As discussed elsewhere CITATION , out of several thousand common Chinese characters , a subset of a few hundred characters tends to be used overwhelmingly for transliterating English names to Chinese , e.g.only 731 Chinese characters are adopted in the E-C corpus .
+As a Chinese transliteration can arouse to certain connotations , the choice of Chinese characters becomes a topic of interest CITATION .
+Table 4: Lexicon statistics For Arabic , as a full-size Arabic lexicon was not available to us , we used the Buckwalter morphological analyzer CITATION to derive a lexicon .
+For example , CITATION showed that factored language models , which consider morphological features and use an optimized backoff policy , yield lower perplexity .
+A recent work CITATION experimented with English-to-Turkish translation with limited success , suggesting that inflection generation given morphological features may give positive results .
+More recently , CITATION achieved improvements in Czech-English MT , optimizing a Table 1: Morphological features used for Russian and Arabic set of possible source transformations , incorporating morphology .
+Ideally , the best word analysis should be provided as a result of contextual disambiguation (e.g. , CITATION); we leave this for future work .
+Another work CITATION showed improvements by splitting compounds in German .
+Translating from a morphology-poor to a morphology-rich language is especially challenging since detailed morphological information needs to be decoded from a language that does not encode this information or does so only implicitly CITATION .
+Koehn CITATION includes a survey of statistical MT systems in both directions for the Europarl corpus , and points out the challenges of this task .
+For example , it has been shown CITATION that determiner se.g.entation and deletion in Arabic sentences in an Arabic-to-English translation system improves sentence alignment , thus leading to improved overall translation quality .
+For Arabic , we apply the following heuristic: use the most frequent analysis estimated from the gold standard labels in the Arabic Treebank CITATION; if a word does not appear in the treebank , we choose the first analysis returned by the Buckwalter analyzer .
+Our learning framework uses a Maximum Entropy Markov model CITATION .
+CITATION demonstrated that a similar level of alignment quality can be achieved with smaller corpora applying morpho-syntactic source restructuring , using hierarchical lexicon models , in translating from German into English .
+The sentence pairs were word-aligned using GIZA++ CITATION and submitted to a treelet-based MT system CITATION , which uses the word dependency structure of the source language and projects word dependency structure to the target language , creating the structure shown in Figure 1 above .
+CITATION experimented successfully with translating from inflectional languages into English making use of POS tags , word stems and suffixes in the source language .
+The framework suggested here is most closely related to CITATION , which uses a probabilistic model to generate Japanese case markers for English-to-Japanese MT .
+The algorithm is similar to the one described in CITATION .
+It also differs from now traditional uses of comparable corpora for detecting translation equivalents CITATION or extracting terminology CITATION , which allows a one-to-one correspondence irrespective of the context .
+It has been aligned on the sentence level by JAPA CITATION , and further on the word level by GIZA++ CITATION .
+Thus the present system is unlike SMT CITATION , where lexical selection is effected by a translation model based on aligned , parallel corpora , but the novel techniques it has developed are exploitable in the SMT paradigm .
+Similarity is measured as the cosine between collocation vectors , whose dimensionality is reduced by SVD using the implementation by Rapp CITATION .
+We have generalised the method used in our previous study CITATION for extracting equivalents for continuous multiword expressions (MWEs) .
+Recent efforts in statistical machine translation (MT) have seen promising improvements in output quality , especially the phrase-based models CITATION and syntax-based models CITATION .
+By adapting the k-best parsing Algorithm 2 of Huang and Chiang CITATION , it achieves significant speed-up over full-inte.g.ation on Chiang's Hiero system .
+• We also devise a faster variant of cube pruning , called cube growing , which uses a lazy version of k-best parsing CITATION that tries to reduce k to the minimum needed at each node to obtain the desired number of hypotheses at the root .
+In a nutshell , cube pruning works on the —LM forest , keeping at most k +LM items at each node , and uses the k-best parsing Algorithm 2 of Huang and Chiang CITATION to speed up the computation .
+This situation is very similar to k-best parsing and we can adapt the Algorithm 2 of Huang and Chiang CITATION here to explore this grid in a best-first order .
+This new method , called cube growing , is a lazy version of cube pruning just as Algorithm 3 of Huang and Chiang CITATION , is a lazy version of Algorithm 2 (see Table 1) .
+The different target sides then constitute a third dimension of the grid , forming a cube of possible combinations CITATION .
+The data set is same as in Section 5.1 , except that we also parsed the English-side using a variant of the Collins CITATION parser , and then extracted 24.7M tree-to-string rules using the algorithm of CITATION .
+These forest rescoring algorithms have potential applications to other computationally intensive tasks involving combinations of different models , for example , head-lexicalized parsing CITATION; joint parsing and semantic role labeling CITATION; or tagging and parsing with nonlocal features .
+In tree-to-string (also called syntax-directed) decoding CITATION , the source string is first parsed into a tree , which is then recursively converted into a target string according to transfer rules in a synchronous grammar CITATION .
+We generalize cube pruning and adapt it to two systems very different from Hiero: a phrase-based system similar to Pharaoh CITATION and a tree-to-string system CITATION .
+We test our methods on two large-scale English-to-Chinese translation systems: a phrase-based system and our tree-to-string system CITATION .
+Our data preparation follows Scientists  CITATION: the training data is a parallel corpus of28.3M words on the English side , and a trigram language model is trained on the Chinese side .
+For cube growing , we use a non-duplicate k-best method CITATION to get 100-best unique translations according to — LM to estimate the lower-bound heuristics .
+Since our tree-to-string rules may have many variables , we first binarize each hyperedge in the forest on the target projection CITATION .
+Thus we envision forest rescoring as being of general applicability for reducing complicated search spaces , as an alternative to simulated annealing methods CITATION .
+Part of the complexity arises from the expressive power of the translation model: for example , a phrase- or word-based model with full reordering has exponential complexity CITATION .
+We will use the following example from Chinese to English for both systems described in this section: yU  Shalong juxing le huitan with Sharon hold   [past] meeting 'held a meeting with Sharon' A typical phrase-based decoder generates partial target-language outputs in left-to-right order in the form of hypotheses CITATION .
+We implemented Cubit , a Python clone of the Pharaoh decoder CITATION , 3 and adapted cube pruning to it as follows .
+We set the decoder phrase-table limit to 100 as suggested in CITATION and the distortion limit to 4 .
+An SCFG CITATION is a context-free rewriting system for generating string pairs .
+To inte.g.ate with a bigram language model , we can use the dynamic-programming algorithms of Och and Ney CITATION and Wu CITATION for phrase-based and SCFG-based systems , respectively , which we may think of as doing a iner-grained version of the deductions above .
+The language model also , if fully inte.g.ated into the decoder , introduces an expensive overhead for maintaining target-language boundary words for dynamic programming CITATION .
+Similarly , the decoding problem with SCFGs can also be cast as a deductive (parsing) system CITATION .
+However , the hope is that by choosing the right value ofi , these estimates will be accurate enough to affect the search quality only slightly , which is analogous to "almost admissible" heuristics in A* search CITATION .
+A few exceptions are the hierarchical (possibly syntax-based) trans-duction models CITATION and the string transduction models CITATION .
+The SFST approach described here is similar to the one described in CITATION which has subsequently been adopted by CITATION .
+In preliminary experiments , we have associated the target lexical items with supertag information CITATION .
+We separate the most popular classification techniques into two broad cate.g.ries: also called Maxent as it finds the distribution with maximum entropy that properly estimates the average of each feature over the training data CITATION .
+Most of the previous work on statistical machine translation , as exemplified in CITATION , employs word-alignment algorithm (such as GIZA++ CITATION) that provides local associations between source and target words .
+The BOW approach is different from the parsing based approaches CITATION where the translation model tightly couples the syntactic and lexical items of the two languages .
+The excellent results recently obtained with the SEARN algorithm CITATION also suggest that binary classifiers , when properly trained and combined , seem to be capable ofmatching more complex structured output approaches .
+A new L1-re.g.larized Maxent algorithms was proposed for density estimation CITATION and we adapted it to classification .
+From the bilanguage corpus B , we train an n-gram language model using standard tools CITATION .
+The use of supertags in phrase-based SMT system has been shown to improve results CITATION .
+here: all state hypotheses of a whole sentence are kept in memory) , it is necessary to either use heuristic forward pruning or constrain permutations to be within a local window of adjustable size (also see CITATION) .
+Although Conditional Random Fields (CRF) CITATION train an exponential model at the sequence level , in translation tasks such as ours the computational requirements of training such models are prohibitively expensive .
+We found this algorithm to converge faster than the current state-of-the-art in Maxent training , which is L2-re.g.larized L-BFGS CITATION 1 .
+Discriminative training has been used mainly for translation model combination CITATION and with the exception of CITATION , has not been used to directly train parameters of a translation model .
+For the work reported in this paper , we have used the GIZA++ tool CITATION which implements a string-alignment algorithm .
+Each output label t is projected into a bit string with components b j (t) where probability of each component is estimated independently: In practice , despite the approximation , the 1-vs-other scheme has been shown to perform as well as the multiclass scheme CITATION .
+For the Hansard corpus we used the same training and test split as in CITATION: 1.4 million training sentence pairs and 5432 test sentences .
+In search of a balance between structural flexibility and computational complexity , several authors have proposed constraints to identify classes of non-projec-tive dependency structures that are computationally well-behaved CITATION .
+This result generalizes previous work on the relation between ltag and dependency representations CITATION .
+This enables us to generalize a previous result on the class of dependency structures generated by lexicalized tags CITATION to the class of generated dependency languages , LTAL .
+Lately , they have also been used in many computational tasks , such as relation extraction CITATION , parsing CITATION , and machine translation CITATION .
+Unfortunately , most formal results on non-projectivity are discouraging: While grammar-driven dependency parsers that are restricted to projective structures can be as efficient as parsers for lexicalized context-free grammar CITATION , parsing is prohibitively expensive when unrestricted forms of non-projectivity are permitted CITATION .
+We also show that adding the well-nestedness condition corresponds to the restriction of lcfrs to Coupled Context-Free Grammars CITATION , and that re.g.lar sets of well-nested structures with a gap-de.g.ee of at most 1 are exactly the class of sets of derivations of Lexicalized Tree Adjoining Grammar (ltag) .
+This restriction is central to the formalism of Coupled-Context-Free Grammar (ccfg) CITATION .
+REGD w„(k) = LCCFL(k + 1) As a special case , Coupled-Context-Free Grammars with fan-out 2 are equivalent to Tree Adjoining Grammars (tags) CITATION .
+This gives rise to a notion of re.g.lar dependency languages , and allows us to establish a formal relation between the structural constraints and mildly context-sensitive grammar formalisms CITATION: We show that re.g.lar dependency languages correspond to the sets of derivations of lexicalized Linear Context-Free Rewriting Systems (lcfrs) CITATION , and that the gap-de.g.ee measure is the structural correspondent of the concept of 'fan-out' in this formalism CITATION .
+Such a comparison may be empirically more adequate than one based on traditional notions of generative capacity CITATION .
+Both constraints have been shown to be in very good fit with data from dependency treebanks CITATION .
+A dependency structure is projective , if each of its yields forms an interval with respect to the precedence order CITATION .
+Data-driven dependency parsing with non-projective structures is quadratic when all attachment decisions are assumed to be independent of one another CITATION , but becomes intractable when this assumption is abandoned CITATION .
+The number of components in the order-annotation , and hence , the gap-de.g.ee of the resulting dependency language , corresponds to the fan-out of the function: the highest number of components among the arguments of the function CITATION .
+Linear Context-Free Rewriting Systems Gap-restricted dependency languages are closely related to Linear Context-Free Rewriting Systems (lcfrs) CITATION , a class of formal systems that generalizes several mildly context-sensitive grammar formalisms .
+The Unfold-Fold transformation is a calculus for transforming functional and logic programs into equivalent but (hopefully) faster programs CITATION .
+Standard methods for converting weighted CFGs to equivalent PCFGs can be used if required CITATION .
+Second , Eisner-Satta O(n 3) PBDG parsing algorithms are extremely fast CITATION .
+It is straight-forward to extend the split-head CFG to encode the additional state information required by the head automata of Eisner and Satta CITATION; this corresponds to splitting the non-terminals L u and uR .
+The O(n 3) split-head grammar is closely related to the O(n 3) PBDG parsing algorithm given by Eisner and Satta CITATION .

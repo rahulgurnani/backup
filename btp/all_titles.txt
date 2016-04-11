@@ -1,0 +1,366 @@
+P07-1001 [bib]: Yonggang Deng; Yuqing Gao
+Guiding Statistical Word Alignment Models With Prior Knowledge
+
+P07-1002 [bib]: Pi-Chuan Chang; Kristina Toutanova
+A Discriminative Syntactic Word Order Model for Machine Translation
+
+P07-1003 [bib]: John DeNero; Dan Klein
+Tailoring Word Alignments to Syntactic Machine Translation
+
+P07-1004 [bib]: Nicola Ueffing; Gholamreza Haffari; Anoop Sarkar
+Transductive learning for statistical machine translation
+
+P07-1005 [bib]: Yee Seng Chan; Hwee Tou Ng; David Chiang
+Word Sense Disambiguation Improves Statistical Machine Translation
+
+P07-1006 [bib]: Lucia Specia; Mark Stevenson; Maria das Gra cas Volpe Nunes
+Learning Expressive Models for Word Sense Disambiguation
+
+P07-1007 [bib]: Yee Seng Chan; Hwee Tou Ng
+Domain Adaptation with Active Learning for Word Sense Disambiguation
+
+P07-1008 [bib]: Tony Veale; Yanfen Hao
+Making Lexical Ontologies Functional and Context-Sensitive
+
+P07-1009 [bib]: Hal Daume III; Lyle Campbell
+A Bayesian Model for Discovering Typological Implications
+
+P07-1010 [bib]: Daisuke Okanohara; Jun'ichi Tsujii
+A discriminative language model with pseudo-negative samples
+
+P07-1011 [bib]: Guihua Sun; Xiaohua Liu; Gao Cong; Ming Zhou; Zhongyang Xiong; John Lee; Chin-Yew Lin
+Detecting Erroneous Sentences using Automatically Mined Sequential Patterns
+
+P07-1012 [bib]: Antti Puurula; Mikko Kurimo
+Vocabulary Decomposition for Estonian Open Vocabulary Speech Recognition
+
+P07-1013 [bib]: Vera Demberg; Helmut Schmid; Gregor Möhler
+Phonological Constraints and Morphological Preprocessing for Grapheme-to-Phoneme Conversion
+
+P07-1014 [bib]: Animesh Mukherjee; Monojit Choudhury; Anupam Basu; Niloy Ganguly
+Redundancy Ratio: An Invariant Property of the Consonant Inventories of the World's Languages
+
+P07-1015 [bib]: Su-Youn Yoon; Kyoung-Young Kim; Richard Sproat
+Multilingual Transliteration Using Feature based Phonetic Method
+
+P07-1016 [bib]: Haizhou Li; Khe Chai Sim; Jin-Shea Kuo; Minghui Dong
+Semantic Transliteration of Personal Names
+
+P07-1017 [bib]: Einat Minkov; Kristina Toutanova; Hisami Suzuki
+Generating Complex Morphology for Machine Translation
+
+P07-1018 [bib]: Bogdan Babych; Anthony Hartley; Serge Sharoff; Olga Mudraya
+Assisting Translators in Indirect Lexical Transfer
+
+P07-1019 [bib]: Liang Huang; David Chiang
+Forest Rescoring: Faster Decoding with Integrated Language Models
+
+P07-1020 [bib]: Srinivas Bangalore; Patrick Haffner; Stephan Kanthak
+Statistical Machine Translation through Global Lexical Selection and Sentence Reconstruction
+
+P07-1021 [bib]: Marco Kuhlmann; Mathias Möhl
+Mildly Context-Sensitive Dependency Languages
+
+P07-1022 [bib]: Mark Johnson
+Transforming Projective Bilexical Dependency Grammars into efficiently-parsable CFGs with Unfold-Fold
+
+P07-1023 [bib]: Makoto Kanazawa
+Parsing and Generation as Datalog Queries
+
+P07-1024 [bib]: Daniel Gildea; David Temperley
+Optimizing Grammars for Minimum Dependency Length
+
+P07-1025 [bib]: Andrew Gordon; Reid Swanson
+Generalizing semantic role annotations across syntactically similar verbs
+
+P07-1026 [bib]: Min Zhang; Wanxiang Che; Aiti Aw; Chew Lim Tan; Guodong Zhou; Ting Liu; Sheng Li
+A Grammar-driven Convolution Tree Kernel for Semantic Role Classification
+
+P07-1027 [bib]: Chang Liu; Hwee Tou Ng
+Learning Predictive Structures for Semantic Role Labeling of NomBank
+
+P07-1028 [bib]: Katrin Erk
+A Simple, Similarity-based Model for Selectional Preferences
+
+P07-1029 [bib]: Yoav Goldberg; Michael Elhadad
+SVM Model Tampering and Anchored Learning: A Case Study in Hebrew NP Chunking
+
+P07-1030 [bib]: Dmitry Davidov; Ari Rappoport; Moshe Koppel
+Fully Unsupervised Discovery of Concept-Specific Relationships by Web Mining
+
+P07-1031 [bib]: David Vadas; James Curran
+Adding Noun Phrase Structure to the Penn Treebank
+
+P07-1032 [bib]: Stephen Clark; James Curran
+Formalism-Independent Parser Evaluation with CCG and DepBank
+
+P07-1033 [bib]: Hal Daume III
+Frustratingly Easy Domain Adaptation
+
+P07-1034 [bib]: Jing Jiang; ChengXiang Zhai
+Instance Weighting for Domain Adaptation in NLP
+
+P07-1035 [bib]: Jenny Rose Finkel; Trond Grenager; Christopher D. Manning
+The Infinite Tree
+
+P07-1036 [bib]: Ming-Wei Chang; Lev Ratinov; Dan Roth
+Guiding Semi-Supervision with Constraint-Driven Learning
+
+P07-1037 [bib]: Hany Hassan; Khalil Sima'an; Andy Way
+Supertagged Phrase-Based Statistical Machine Translation
+
+P07-1038 [bib]: Joshua Albrecht; Rebecca Hwa
+Regression for Sentence-Level MT Evaluation with Pseudo References
+
+P07-1039 [bib]: Yanjun Ma; Nicolas Stroppa; Andy Way
+Bootstrapping Word Alignment via Word Packing
+
+P07-1040 [bib]: Antti-Veikko Rosti; Spyros Matsoukas; Richard Schwartz
+Improved Word-Level System Combination for Machine Translation
+
+P07-1041 [bib]: Katja Filippova; Michael Strube
+Generating Constituent Order in German Clauses
+
+P07-1042 [bib]: Claire Gardent; Eric Kow
+A Symbolic Approach to Near-Deterministic Surface Realisation using Tree Adjoining Grammar
+
+P07-1043 [bib]: Alexander Koller; Matthew Stone
+Sentence generation as a planning problem
+
+P07-1044 [bib]: Andrew Mutton; Mark Dras; Stephen Wan; Robert Dale
+GLEU: Automatic Evaluation of Sentence-Level Fluency
+
+P07-1045 [bib]: Jacob Eisenstein; Randall Davis
+Conditional Modality Fusion for Coreference Resolution
+
+P07-1046 [bib]: Mihai Rotaru; Diane Litman
+The Utility of a Graphical Representation of Discourse Structure in Spoken Dialogue Systems
+
+P07-1047 [bib]: Yi Liu; Joyce Chai; Rong Jin
+Automated Vocabulary Acquisition and Interpretation in Multimodal Conversational Systems
+
+P07-1048 [bib]: Michael Johnston; Luis Fernando D'Haro; Michelle Levine; Bernard Renger
+A Multimodal Interface for Access to Content in the Home
+
+P07-1049 [bib]: Yoav Seginer
+Fast Unsupervised Incremental Parsing
+
+P07-1050 [bib]: Keith Hall
+K-best Spanning Tree Parsing
+
+P08-1009 [bib]: Colin Cherry
+Cohesive Phrase-Based Decoding for Statistical Machine Translation
+
+P08-1010 [bib]: Yonggang Deng; Jia Xu; Yuqing Gao
+Phrase Table Training for Precision and Recall: What Makes a Good Phrase and a Good Phrase Pair?
+
+P08-1011 [bib]: Dongdong Zhang; Mu Li; Nan Duan; Chi-Ho Li; Ming Zhou
+Measure Word Generation for English-Chinese SMT Systems
+
+P08-1012 [bib]: Hao Zhang; Chris Quirk; Robert C. Moore; Daniel Gildea
+Bayesian Learning of Non-Compositional Phrases with Synchronous Parsing
+
+P08-1013 [bib]: Tobias Kaufmann; Beat Pfister
+Applying a Grammar-Based Language Model to a Simplified Broadcast-News Transcription Task
+
+P08-1014 [bib]: Maximilian Bisani; Paul Vozila; Olivier Divay; Jeff Adams
+Automatic Editing in a Back-End Speech-to-Text System
+
+P08-1015 [bib]: Michael Fleischman; Deb Roy
+Grounded Language Modeling for Automatic Speech Recognition of Sports Video
+
+P08-1016 [bib]: Margaret M. Fleck
+Lexicalized Phonotactic Word Segmentation
+
+P08-1017 [bib]: Hui Fang
+A Re-examination of Query Expansion Using Lexical Resources
+
+P08-1018 [bib]: Guihong Cao; Stephen Robertson; Jian-Yun Nie
+Selecting Query Term Alternations for Web Search by Exploiting Query Contexts
+
+P08-1019 [bib]: Huizhong Duan; Yunbo Cao; Chin-Yew Lin; Yong Yu
+Searching Questions by Identifying Question Topic and Question Focus
+
+P08-1020 [bib]: François Mairesse; Marilyn Walker
+Trainable Generation of Big-Five Personality Styles through Data-Driven Parameter Estimation
+
+P08-1021 [bib]: John Lee; Stephanie Seneff
+Correcting Misuse of Verb Forms
+
+P08-1022 [bib]: Dominic Espinosa; Michael White; Dennis Mehay
+Hypertagging: Supertagging for Surface Realization with CCG
+
+P08-1023 [bib]: Haitao Mi; Liang Huang; Qun Liu
+Forest-Based Translation
+
+P08-1024 [bib]: Phil Blunsom; Trevor Cohn; Miles Osborne
+A Discriminative Latent Variable Model for Statistical Machine Translation
+
+P08-1025 [bib]: Hao Zhang; Daniel Gildea
+Efficient Multi-Pass Decoding for Synchronous Context Free Grammars
+
+P08-1026 [bib]: Alexander Koller; Michaela Regneri; Stefan Thater
+Regular Tree Grammars as a Formalism for Scope Underspecification
+
+P08-1027 [bib]: Dmitry Davidov; Ari Rappoport
+Classification of Semantic Relationships between Nominals Using Pattern Clusters
+
+P08-1028 [bib]: Jeff Mitchell; Mirella Lapata
+Vector-based Models of Semantic Composition
+
+P08-1029 [bib]: Andrew Arnold; Ramesh Nallapati; William W. Cohen
+Exploiting Feature Hierarchy for Transfer Learning in Named Entity Recognition
+
+P08-1030 [bib]: Heng Ji; Ralph Grishman
+Refining Event Extraction through Cross-Document Inference
+
+P08-1031 [bib]: S.R.K. Branavan; Harr Chen; Jacob Eisenstein; Regina Barzilay
+Learning Document-Level Semantic Properties from Free-Text Annotations
+
+P08-1032 [bib]: Yansong Feng; Mirella Lapata
+Automatic Image Annotation Using Auxiliary Text Information
+
+P08-1033 [bib]: György Szarvas
+Hedge Classification in Biomedical Texts with a Weakly Supervised Selection of Keywords
+
+P08-1034 [bib]: Alina Andreevskaia; Sabine Bergler
+When Specialists and Generalists Work Together: Overcoming Domain Dependence in Sentiment Tagging
+
+P08-1035 [bib]: Tadashi Nomoto
+A Generic Sentence Trimmer with CRFs
+
+P08-1036 [bib]: Ivan Titov; Ryan McDonald
+A Joint Model of Text and Aspect Ratings for Sentiment Summarization
+
+P08-1037 [bib]: Eneko Agirre; Timothy Baldwin; David Martinez
+Improving Parsing and PP Attachment Performance with Sense Information
+
+P08-1038 [bib]: Frederick Hoyt; Jason Baldridge
+A Logical Basis for the D Combinator and Normal Form in CCG
+
+P08-1039 [bib]: David Vadas; James R. Curran
+Parsing Noun Phrase Structure with CCG
+
+P08-1040 [bib]: David Vickrey; Daphne Koller
+Sentence Simplification for Semantic Role Labeling
+
+P08-1041 [bib]: Giuseppe Carenini; Raymond T. Ng; Xiaodong Zhou
+Summarizing Emails with Conversational Cohesion and Subjectivity
+
+P08-1042 [bib]: Markus Dickinson
+Ad Hoc Treebank Structures
+
+P08-1043 [bib]: Yoav Goldberg; Reut Tsarfaty
+A Single Generative Model for Joint Morphological Segmentation and Syntactic Parsing
+
+P08-1044 [bib]: Sharon Goldwater; Dan Jurafsky; Christopher D. Manning
+Which Words Are Hard to Recognize? Prosodic, Lexical, and Disfluency Factors that Increase ASR Error Rates
+
+P08-1045 [bib]: Ulf Hermjakob; Kevin Knight; Hal Daumé III
+Name Translation in Statistical Machine Translation - Learning When to Transliterate
+
+P08-1046 [bib]: Mark Johnson
+Using Adaptor Grammars to Identify Synergies in the Unsupervised Acquisition of Linguistic Structure
+
+P08-1047 [bib]: Jun'ichi Kazama; Kentaro Torisawa
+Inducing Gazetteers for Named Entity Recognition by Large-Scale Clustering of Dependency Relations
+
+P08-1048 [bib]: Alistair Kennedy; Stan Szpakowicz
+Evaluating Roget's Thesauri
+
+P08-1049 [bib]: Zhifei Li; David Yarowsky
+Unsupervised Translation Induction for Chinese Abbreviations using Monolingual Corpora
+
+P08-1050 [bib]: Jianguo Li; Chris Brew
+Which Are the Best Features for Automatic Verb Classification
+
+P08-2001 [bib]: Fernando Batista; Nuno Mamede; Isabel Trancoso
+Language Dynamics and Capitalization using Maximum Entropy
+
+P08-2002 [bib]: Marisa Ferrara Boston; John T. Hale; Reinhold Kliegl; Shravan Vasishth
+Surprising Parser Actions and Reading Difficulty
+
+P08-2003 [bib]: Yllias Chali; Shafiq Joty
+Improving the Performance of the Random Walk Model for Answering Complex Questions
+
+P08-2004 [bib]: Wei Chen
+Dimensions of Subjectivity in Natural Language
+
+P08-2005 [bib]: Sebastian de la Chica; Faisal Ahmad; James H. Martin; Tamara Sumner
+Extractive Summaries for Educational Science Content
+
+P08-2006 [bib]: Rahul Chitturi; John Hansen
+Dialect Classification for Online Podcasts Fusing Acoustic and Language Based Structural and Semantic Information
+
+P08-2007 [bib]: John DeNero; Dan Klein
+The Complexity of Phrase Alignment Problems
+
+P08-2008 [bib]: Dmitriy Dligach; Martha Palmer
+Novel Semantic Features for Verb Sense Disambiguation
+
+P08-2009 [bib]: Mark Dredze; Joel Wallenberg
+Icelandic Data Driven Part of Speech Tagging
+
+P08-2010 [bib]: Kevin Duh; Katrin Kirchhoff
+Beyond Log-Linear Models: Boosted Minimum Error Rate Training for N-best Re-ranking
+
+P08-2011 [bib]: Micha Elsner; Eugene Charniak
+Coreference-inspired Coherence Modeling
+
+P08-2012 [bib]: Jenny Rose Finkel; Christopher D. Manning
+Enforcing Transitivity in Coreference Resolution
+
+P08-2013 [bib]: Kallirroi Georgila; Maria Wolters; Johanna Moore
+Simulating the Behaviour of Older versus Younger Users when Interacting with Spoken Dialogue Systems
+
+P08-2014 [bib]: Dan Goldwasser; Dan Roth
+Active Sample Selection for Named Entity Transliteration
+
+P08-2015 [bib]: Nizar Habash
+Four Techniques for Online Handling of Out-of-Vocabulary Words in Arabic-English Statistical Machine Translation
+
+P08-2016 [bib]: Yaakov HaCohen-Kerner; Ariel Kass; Ariel Peretz
+Combined One Sense Disambiguation of Abbreviations
+
+P08-2017 [bib]: Robbie Haertel; Eric Ringger; Kevin Seppi; James Carroll; McClanahan Peter
+Assessing the Costs of Sampling Methods in Active Learning for Annotation
+
+P08-2018 [bib]: Chikara Hashimoto; Sadao Kurohashi
+Blog Categorization Exploiting Domain Dictionary and Dynamically Estimated Domains of Unknown Words
+
+P08-2019 [bib]: James Henderson; Oliver Lemon
+Mixture Model POMDPs for Efficient Handling of Uncertainty in Dialogue Management
+
+P08-2020 [bib]: Almut Silja Hildebrand; Kay Rottmann; Mohamed Noamany; Quin Gao; Sanjika Hewavitharana; Nguyen Bach; Stephan Vogel
+Recent Improvements in the CMU Large Scale Chinese-English SMT System
+
+P08-2021 [bib]: Damianos Karakos; Jason Eisner; Sanjeev Khudanpur; Markus Dreyer
+Machine Translation System Combination using ITG-based Alignments
+
+P08-2022 [bib]: Anagha Kulkarni; Jamie Callan
+Dictionary Definitions based Homograph Identification using a Generative Hierarchical Model
+
+P08-2023 [bib]: Wenjie Li; Peng Zhang; Furu Wei; Yuexian Hou; Qin Lu
+A Novel Feature-based Approach to Chinese Entity Relation Extraction
+
+P08-2024 [bib]: Chao-Lin Liu; Jen-Hsiang Lin
+Using Structural Information for Identifying Similar Chinese Characters
+
+P08-2025 [bib]: Yandong Liu; Eugene Agichtein
+You've Got Answers: Towards Personalized Models for Predicting Success in Community Question Answering
+
+P08-2026 [bib]: David McClosky; Eugene Charniak
+Self-Training for Biomedical Parsing
+
+P08-2027 [bib]: Tim Miller; William Schuler
+A Unified Syntactic Model for Parsing Fluent and Disfluent Speech
+
+P08-2028 [bib]: Karo Moilanen; Stephen Pulman
+The Good, the Bad, and the Unknown: Morphosyllabic Sentiment Tagging of Unseen Words
+
+P08-2029 [bib]: Alessandro Moschitti; Silvia Quarteroni
+Kernels on Linguistic Structures for Answer Extraction
+
+P08-2030 [bib]: Ryan Roth; Owen Rambow; Nizar Habash; Mona Diab; Cynthia Rudin
+Arabic Morphological Tagging, Diacritization, and Lemmatization Using Lexeme Models and Feature Ranking
+END

@@ -1,0 +1,126 @@
+P08-1009 [bib]: Colin Cherry
+Cohesive Phrase-Based Decoding for Statistical Machine Translation
+
+P08-1010 [bib]: Yonggang Deng; Jia Xu; Yuqing Gao
+Phrase Table Training for Precision and Recall: What Makes a Good Phrase and a Good Phrase Pair?
+
+P08-1011 [bib]: Dongdong Zhang; Mu Li; Nan Duan; Chi-Ho Li; Ming Zhou
+Measure Word Generation for English-Chinese SMT Systems
+
+P08-1012 [bib]: Hao Zhang; Chris Quirk; Robert C. Moore; Daniel Gildea
+Bayesian Learning of Non-Compositional Phrases with Synchronous Parsing
+
+P08-1013 [bib]: Tobias Kaufmann; Beat Pfister
+Applying a Grammar-Based Language Model to a Simplified Broadcast-News Transcription Task
+
+P08-1014 [bib]: Maximilian Bisani; Paul Vozila; Olivier Divay; Jeff Adams
+Automatic Editing in a Back-End Speech-to-Text System
+
+P08-1015 [bib]: Michael Fleischman; Deb Roy
+Grounded Language Modeling for Automatic Speech Recognition of Sports Video
+
+P08-1016 [bib]: Margaret M. Fleck
+Lexicalized Phonotactic Word Segmentation
+
+P08-1017 [bib]: Hui Fang
+A Re-examination of Query Expansion Using Lexical Resources
+
+P08-1018 [bib]: Guihong Cao; Stephen Robertson; Jian-Yun Nie
+Selecting Query Term Alternations for Web Search by Exploiting Query Contexts
+
+P08-1019 [bib]: Huizhong Duan; Yunbo Cao; Chin-Yew Lin; Yong Yu
+Searching Questions by Identifying Question Topic and Question Focus
+
+P08-1020 [bib]: François Mairesse; Marilyn Walker
+Trainable Generation of Big-Five Personality Styles through Data-Driven Parameter Estimation
+
+P08-1021 [bib]: John Lee; Stephanie Seneff
+Correcting Misuse of Verb Forms
+
+P08-1022 [bib]: Dominic Espinosa; Michael White; Dennis Mehay
+Hypertagging: Supertagging for Surface Realization with CCG
+
+P08-1023 [bib]: Haitao Mi; Liang Huang; Qun Liu
+Forest-Based Translation
+
+P08-1024 [bib]: Phil Blunsom; Trevor Cohn; Miles Osborne
+A Discriminative Latent Variable Model for Statistical Machine Translation
+
+P08-1025 [bib]: Hao Zhang; Daniel Gildea
+Efficient Multi-Pass Decoding for Synchronous Context Free Grammars
+
+P08-1026 [bib]: Alexander Koller; Michaela Regneri; Stefan Thater
+Regular Tree Grammars as a Formalism for Scope Underspecification
+
+P08-1027 [bib]: Dmitry Davidov; Ari Rappoport
+Classification of Semantic Relationships between Nominals Using Pattern Clusters
+
+P08-1028 [bib]: Jeff Mitchell; Mirella Lapata
+Vector-based Models of Semantic Composition
+
+P08-1029 [bib]: Andrew Arnold; Ramesh Nallapati; William W. Cohen
+Exploiting Feature Hierarchy for Transfer Learning in Named Entity Recognition
+
+P08-1030 [bib]: Heng Ji; Ralph Grishman
+Refining Event Extraction through Cross-Document Inference
+
+P08-1031 [bib]: S.R.K. Branavan; Harr Chen; Jacob Eisenstein; Regina Barzilay
+Learning Document-Level Semantic Properties from Free-Text Annotations
+
+P08-1032 [bib]: Yansong Feng; Mirella Lapata
+Automatic Image Annotation Using Auxiliary Text Information
+
+P08-1033 [bib]: György Szarvas
+Hedge Classification in Biomedical Texts with a Weakly Supervised Selection of Keywords
+
+P08-1034 [bib]: Alina Andreevskaia; Sabine Bergler
+When Specialists and Generalists Work Together: Overcoming Domain Dependence in Sentiment Tagging
+
+P08-1035 [bib]: Tadashi Nomoto
+A Generic Sentence Trimmer with CRFs
+
+P08-1036 [bib]: Ivan Titov; Ryan McDonald
+A Joint Model of Text and Aspect Ratings for Sentiment Summarization
+
+P08-1037 [bib]: Eneko Agirre; Timothy Baldwin; David Martinez
+Improving Parsing and PP Attachment Performance with Sense Information
+
+P08-1038 [bib]: Frederick Hoyt; Jason Baldridge
+A Logical Basis for the D Combinator and Normal Form in CCG
+
+P08-1039 [bib]: David Vadas; James R. Curran
+Parsing Noun Phrase Structure with CCG
+
+P08-1040 [bib]: David Vickrey; Daphne Koller
+Sentence Simplification for Semantic Role Labeling
+
+P08-1041 [bib]: Giuseppe Carenini; Raymond T. Ng; Xiaodong Zhou
+Summarizing Emails with Conversational Cohesion and Subjectivity
+
+P08-1042 [bib]: Markus Dickinson
+Ad Hoc Treebank Structures
+
+P08-1043 [bib]: Yoav Goldberg; Reut Tsarfaty
+A Single Generative Model for Joint Morphological Segmentation and Syntactic Parsing
+
+P08-1044 [bib]: Sharon Goldwater; Dan Jurafsky; Christopher D. Manning
+Which Words Are Hard to Recognize? Prosodic, Lexical, and Disfluency Factors that Increase ASR Error Rates
+
+P08-1045 [bib]: Ulf Hermjakob; Kevin Knight; Hal Daumé III
+Name Translation in Statistical Machine Translation - Learning When to Transliterate
+
+P08-1046 [bib]: Mark Johnson
+Using Adaptor Grammars to Identify Synergies in the Unsupervised Acquisition of Linguistic Structure
+
+P08-1047 [bib]: Jun'ichi Kazama; Kentaro Torisawa
+Inducing Gazetteers for Named Entity Recognition by Large-Scale Clustering of Dependency Relations
+
+P08-1048 [bib]: Alistair Kennedy; Stan Szpakowicz
+Evaluating Roget's Thesauri
+
+P08-1049 [bib]: Zhifei Li; David Yarowsky
+Unsupervised Translation Induction for Chinese Abbreviations using Monolingual Corpora
+
+P08-1050 [bib]: Jianguo Li; Chris Brew
+Which Are the Best Features for Automatic Verb Classification
+

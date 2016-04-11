@@ -1,0 +1,89 @@
+P08-2001 [bib]: Fernando Batista; Nuno Mamede; Isabel Trancoso
+Language Dynamics and Capitalization using Maximum Entropy
+
+P08-2002 [bib]: Marisa Ferrara Boston; John T. Hale; Reinhold Kliegl; Shravan Vasishth
+Surprising Parser Actions and Reading Difficulty
+
+P08-2003 [bib]: Yllias Chali; Shafiq Joty
+Improving the Performance of the Random Walk Model for Answering Complex Questions
+
+P08-2004 [bib]: Wei Chen
+Dimensions of Subjectivity in Natural Language
+
+P08-2005 [bib]: Sebastian de la Chica; Faisal Ahmad; James H. Martin; Tamara Sumner
+Extractive Summaries for Educational Science Content
+
+P08-2006 [bib]: Rahul Chitturi; John Hansen
+Dialect Classification for Online Podcasts Fusing Acoustic and Language Based Structural and Semantic Information
+
+P08-2007 [bib]: John DeNero; Dan Klein
+The Complexity of Phrase Alignment Problems
+
+P08-2008 [bib]: Dmitriy Dligach; Martha Palmer
+Novel Semantic Features for Verb Sense Disambiguation
+
+P08-2009 [bib]: Mark Dredze; Joel Wallenberg
+Icelandic Data Driven Part of Speech Tagging
+
+P08-2010 [bib]: Kevin Duh; Katrin Kirchhoff
+Beyond Log-Linear Models: Boosted Minimum Error Rate Training for N-best Re-ranking
+
+P08-2011 [bib]: Micha Elsner; Eugene Charniak
+Coreference-inspired Coherence Modeling
+
+P08-2012 [bib]: Jenny Rose Finkel; Christopher D. Manning
+Enforcing Transitivity in Coreference Resolution
+
+P08-2013 [bib]: Kallirroi Georgila; Maria Wolters; Johanna Moore
+Simulating the Behaviour of Older versus Younger Users when Interacting with Spoken Dialogue Systems
+
+P08-2014 [bib]: Dan Goldwasser; Dan Roth
+Active Sample Selection for Named Entity Transliteration
+
+P08-2015 [bib]: Nizar Habash
+Four Techniques for Online Handling of Out-of-Vocabulary Words in Arabic-English Statistical Machine Translation
+
+P08-2016 [bib]: Yaakov HaCohen-Kerner; Ariel Kass; Ariel Peretz
+Combined One Sense Disambiguation of Abbreviations
+
+P08-2017 [bib]: Robbie Haertel; Eric Ringger; Kevin Seppi; James Carroll; McClanahan Peter
+Assessing the Costs of Sampling Methods in Active Learning for Annotation
+
+P08-2018 [bib]: Chikara Hashimoto; Sadao Kurohashi
+Blog Categorization Exploiting Domain Dictionary and Dynamically Estimated Domains of Unknown Words
+
+P08-2019 [bib]: James Henderson; Oliver Lemon
+Mixture Model POMDPs for Efficient Handling of Uncertainty in Dialogue Management
+
+P08-2020 [bib]: Almut Silja Hildebrand; Kay Rottmann; Mohamed Noamany; Quin Gao; Sanjika Hewavitharana; Nguyen Bach; Stephan Vogel
+Recent Improvements in the CMU Large Scale Chinese-English SMT System
+
+P08-2021 [bib]: Damianos Karakos; Jason Eisner; Sanjeev Khudanpur; Markus Dreyer
+Machine Translation System Combination using ITG-based Alignments
+
+P08-2022 [bib]: Anagha Kulkarni; Jamie Callan
+Dictionary Definitions based Homograph Identification using a Generative Hierarchical Model
+
+P08-2023 [bib]: Wenjie Li; Peng Zhang; Furu Wei; Yuexian Hou; Qin Lu
+A Novel Feature-based Approach to Chinese Entity Relation Extraction
+
+P08-2024 [bib]: Chao-Lin Liu; Jen-Hsiang Lin
+Using Structural Information for Identifying Similar Chinese Characters
+
+P08-2025 [bib]: Yandong Liu; Eugene Agichtein
+You've Got Answers: Towards Personalized Models for Predicting Success in Community Question Answering
+
+P08-2026 [bib]: David McClosky; Eugene Charniak
+Self-Training for Biomedical Parsing
+
+P08-2027 [bib]: Tim Miller; William Schuler
+A Unified Syntactic Model for Parsing Fluent and Disfluent Speech
+
+P08-2028 [bib]: Karo Moilanen; Stephen Pulman
+The Good, the Bad, and the Unknown: Morphosyllabic Sentiment Tagging of Unseen Words
+
+P08-2029 [bib]: Alessandro Moschitti; Silvia Quarteroni
+Kernels on Linguistic Structures for Answer Extraction
+
+P08-2030 [bib]: Ryan Roth; Owen Rambow; Nizar Habash; Mona Diab; Cynthia Rudin
+Arabic Morphological Tagging, Diacritization, and Lemmatization Using Lexeme Models and Feature Ranking

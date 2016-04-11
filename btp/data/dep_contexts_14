@@ -1,0 +1,100 @@
+We use Conditional Random Fields (CRFs) CITATION to perform this tagging .
+There are several studies that used automatically extracted gazetteers for NER CITATION .
+Scientists  CITATION constructed gazetteers with about 100 ,000 entries in total for the "restaurant" domain; Scientists  CITATION used gazetteers with about 120 ,000 entries in total , and Scientists  CITATION used gazetteers with about 85 ,000 entries in total .
+Scientists  CITATION presented parallelized Latent Dirichlet Allocation (LDA) .
+Scientists  CITATION and Torisawa CITATION showed that the EM-based clustering using verb-MN dependencies can produce semantically clean MN clusters .
+This study , on the other hand , utilized MN clustering based on verb-MN dependencies CITATION .
+Using models such as Semi-Markov CRFs CITATION , which handle the features on overlapping re.g.ons , is one possible direction .
+The system recently proposed by Sasano and Kurohashi CITATION is currently the best system for the IREX dataset .
+In our experiments , we used the IREX dataset CITATION to demonstrate the usefulness of cluster gazetteers .
+We parallelized the algorithm of CITATION using the Message Passing Interface (MPI) , with the prime goal being to distribute parameters and thus enable clustering with a large vocabulary .
+To learn p(n\c) and p(c) for Japanese , we use the EM-based clustering method presented by Torisawa CITATION .
+The exception , which we noticed recently , is a study by Scientists  CITATION , which describes how each node stores only those parameters relevant to the training data on each node .
+We consider 10 measures , noted in the table as J&C CITATION , Resnik CITATION , Lin CITATION , W&P CITATION , L&C CITATION , H&SO CITATION , Path (counts edges between synsets) , Lesk CITATION , and finally Vector and Vector Pair CITATION .
+These kinds of measurements can help with problems such as identifying relevant sentences for extractive text summarization , or possibly paraphrase identification CITATION .
+We use WordNet 3.0 , the latest version CITATION .
+The 1911 and 1987 Thesauri were compared with WordNet 3.0 on the three data sets containing pairs of words with manually assigned similarity scores: 30 pairs CITATION , 65 pairs CITATION and 353 pairs 3 CITATION .
+Even on the largest set CITATION , however , the differences between Roget's Thesaurus and the Vector method are not statistically significant at the p < 0.05 level for either thesaurus on a two-tailed test 4 .
+Other methods of determining sentence semantic relatedness expand term relatedness functions to create a sentence relatedness function CITATION .
+In CITATION , an even better system was proposed , with a correlation of 0.853 .
+Lexical chains have also been developed using the 1987 Roget's Thesaurus CITATION .
+Kennedy and Szpakowicz CITATION show how disambiguating one of these relations , hypernymy , can help improve the semantic similarity functions in CITATION .
+Two terms in the same semicolon group score 16 , in the same paragraph - 14 , and so on CITATION .
+We used the system from CITATION for identifying synonyms with Roget's .
+The 1987 data come from Penguin's Roget's Thesaurus CITATION .
+We used three data sets for this application: 80 questions taken from the Test of English as a Foreign Language (TOEFL) CITATION , 50 questions - from the English as a Second Language test (ESL) CITATION and 300 questions - from the Reader's Digest Word Power Game (RDWP) CITATION .
+We also proposed a new method of representing the meaning of sentences or other short texts using either WordNet or Roget's Thesaurus , and tested it on the data set provided by Scientists  CITATION .
+We worked with a data set from CITATION .
+For the system in CITATION , where this data set was first introduced , a correlation of 0.816 with the human annotators was achieved .
+On the CITATION and CITATION data sets the best system did not show a statistically significant improvement over the 1911 or 1987 Roget's Thesauri , even at p < 0.1 for a two-tailed test .
+Much like CITATION , the data set used here is not large enough to determine if any system's improvement is statistically significant .
+Some work has been done on adding new terms and relations to WordNet CITATION and FACTOTUM CITATION .
+We used Pedersen's Semantic Distance software package CITATION .
+They took a subset of the term pairs from CITATION and chose sentences to represent these terms; the sentences are definitions from the Collins Cobuild dictionary CITATION .
+The idea of using a bridge (i.e. , full-form) to obtain translation entries for unseen words (i.e. , abbreviation) is similar to the idea of using paraphrases in MT (see Callison-Scientists  CITATION and references therein) as both are trying to introduce generalization into MT .
+On the other hand , inte.g.ating an additional component into a baseline SMT system is notoriously tricky as evident in the research on inte.g.ating word sense disambiguation (WSD) into SMT systems: different ways of inte.g.ation lead to conflicting conclusions on whether WSD helps MT performance CITATION .
+According to Chang and Lai CITATION , approximately 20% of sentences in a typical news article have abbreviated words in them .
+To create the baseline , we make use of the dominant abbreviation patterns shown in Table 5 , which have been reported in Chang and Lai CITATION .
+For the statistics on manually collected examples , please refer to Chang and Lai CITATION .
+Recently , Chang and Lai CITATION , Chang and Teng CITATION , and Lee CITATION have investigated this task .
+To identify their abbreviations , one can employ an HMM model CITATION .
+In comparison , Chang and Teng CITATION reports a precision of 50% over relations between single-word full-forms and single-character abbreviations .
+To handle different directions of translation between Chinese and English , we built two tri-gram language models with modified Kneser-Ney smoothing CITATION using the SRILM toolkit CITATION .
+While the research in statistical machine translation (SMT) has made significant progress , most SMT systems CITATION rely on parallel corpora to extract translation entries .
+However , since most of statistical translation models CITATION are symmetrical , it is relatively easy to train a translation system to translate from English to Chinese , except that we need to train a Chinese language model from the Chinese monolingual data .
+We carry out experiments on a state-of-the-art SMT system , i.e. , Moses CITATION , and show that the abbreviation translations consistently improve the translation performance (in terms of BLEU CITATION) on various NIST MT test sets .
+We inte.g.ate our method into a state-of-the-art phrase-based baseline translation system , i.e. , Moses CITATION , and show that the inte.g.ated system consistently improves the performance of the baseline system on various NIST machine translation test sets .
+In general , Chinese abbreviations are formed based on three major methods: reduction , elimination and generalization CITATION .
+Lee CITATION gives a summary about how Chinese abbreviations are formed and presents many examples .
+At last , the goal that we aim to exploit monolingual corpora to help MT is in-spirit similar to the goal of using non-parallel corpora to help MT as aimed in a large amount of work (see Munteanu and Marcu CITATION and references therein) .
+Moreover , our approach inte.g.ates the abbreviation translation component into the baseline system in a natural way , and thus is able to make use of the minimum-error-rate training CITATION to automatically adjust the model parameters to reflect the change of the inte.g.ated system over the baseline system .
+Once we obtain the augmented phrase table , we should run the minimum-error-rate training CITATION with the augmented phrase table such that the model parameters are properly adjusted .
+The feature functions are combined under a log-linear framework , and the weights are tuned by the minimum-error-rate training CITATION using BLEU CITATION as the optimization metric .
+We use MT02 as the development set 4 for minimum error rate training (MERT) CITATION .
+Using the toolkit Moses CITATION , we built a phrase-based baseline system by following the standard procedure: running GIZA++ CITATION in both directions , applying refinement rules to obtain a many-to-many word alignment , and then extracting and scoring phrases using heuristics CITATION .
+The MT performance is measured by lower-case 4-gram BLEU CITATION .
+Following studies on automatic SCF extraction CITATION , we apply a statistical test (Binomial Hypothesis Test) to the unfiltered-Levin-SCF to filter out noisy SCFs , and denote the resulting SCF set as filtered-Levin-SCF .
+It is therefore unsurprising that much work on verb classification has adopted them as features CITATION .
+However , some of the functions words , prepositions in particular , are known to carry great amount of syntactic information that is related to lexical meanings of verbs CITATION .
+One way to avoid these high-dimensional spaces is to assume that most of the features are irrelevant , an assumption adopted by many of the previous studies working with high-dimensional semantic spaces CITATION .
+SCF and DR: These more linguistically informed features are constructed based on the grammatical relations generated by the C&C CCG parser CITATION .
+Many scholars hypothesize that the behavior of a verb , particularly with respect to the expression of arguments and the assignment of semantic roles is to a large extent driven by deep semantic re.g.larities CITATION .
+Although the problem of data sparsity is alleviated to certain extent (3) , these features do not generally improve classification performance CITATION .
+Other methods for combining syntactic information with lexical information have also been attempted CITATION .
+Scientists  CITATION demonstrates that the general feature space they devise achieves a rate of error reduction ranging from 48% to 88% over a chance baseline accuracy , across classification tasks of varying difficulty .
+JOANIS07: We use the feature set proposed in Scientists  CITATION , which consists of 224 features .
+For example , Schulte im Walde CITATION uses 153 verbs in 30 classes , and Scientists  CITATION takes on 835 verbs and 15 verb classes .
+Although there exist several manually-created verb lexicons or ontologies , including Levin's verb taxonomy , VerbNet , and FrameNet , automatic verb classification (AVC) is still necessary for extending existing lexicons CITATION , building and tuning lexical information specific to different domains CITATION , and bootstrapping verb lexicons for new languages CITATION .
+Although dependency relations have been widely used in automatic acquisition of lexical information , such as detection of polysemy CITATION and WSD CITATION , their utility in AVC still remains untested .
+The software performs the so-called 1-of-k classification CITATION .
+We also lemmatize each word using the English lemmatizer as described in Scientists  CITATION , and use lemmas as features instead of words .
+Co-occurrence (CO): CO features mostly convey lexical information only and are generally considered not particularly sensitive to argument structures CITATION .
+In order to reduce undue influence of outlier features , we employ the four normalization strate.g.es in table 4 , which help reduce the range of extreme values while having little effect on others CITATION .
+Trying to overcome the problem of data sparsity , Schulte im Walde CITATION explores the additional use of selectional preference features by augmenting each syntactic slot with the concept to which its head noun belongs in an ontology (e.g.WordNet) .
+A preparatory study on the capitalization of Portuguese BN has been performed by CITATION .
+Results from previous experiment are still worse than results achieved by other work on the area CITATION (about 94% precision and 88% recall), specially in terms of recall .
+The modeling approach here described is discriminative, and is based on maximum entropy (ME) models, firstly applied to natural language problems in CITATION .
+The capitalization problem can be seen as a sequence tagging problem CITATION, where each lower-case word is associated to a tag that describes its capitalization form .
+Concerning this subject, CITATION shows that, as the time gap between training and test data increases, the performance of a named tagger based on co-training CITATION decreases .
+Evaluation results may be influenced when taking such words into account CITATION .
+The capitalization task, also known as truecasing CITATION, consists of rewriting each word of an input text with its proper case information .
+CITATION builds a trigram language model (LM) with pairs (word, tag), estimated from a corpus with case information, and then uses dynamic programming to disambiguate over all possible tag assignments on a sentence .
+The evaluation is performed using the metrics: Precision, Recall and SER (Slot Error Rate) CITATION .
+In fact, subtitling of BN has led us into using a baseline vocabulary of 100K words combined with a daily modification of the vocabulary CITATION and a re-estimation of the language model .
+Other related work includes a bilingual capitalization model for capitalizing machine translation (MT) outputs, using conditional random fields (CRFs) reported by CITATION .
+Whereas the more commonly applied Akaike Information Criterion CITATION requires the number of estimated parameters to be determined exactly, the DIC facilitates the evaluation of mixed-effects models by relaxing this requirement .
+A growing body of work in cognitive science characterizes human readers as some kind of probabilistic parser CITATION .
+This observation is consistent with Brants and Crocker's CITATION observation that accuracy can be maintained even when restricted to 1% of the memory required for exhaustive parsing .
+This basic notion has proved remarkably applicable across sentence types and languages CITATION .
+The length of time that a reader's eyes spend fixated on a particular word in a sentence is known to be affected by a variety of word-level factors such as length in characters, n-gram frequency and empirical predictability CITATION .
+From a cognitive perspective, the utility of small k parsers for modeling comprehension difficulty lends credence to the view that the human processor is a single-path analyzer CITATION .
+Hale CITATION suggests this quantity as an index of psycholinguistic difficulty .
+The parser's outputs define a relation on word pairs CITATION .
+Our methodology imposes this requirement by fitting a kind of re.g.ession known as a linear mixed-effects model to the total reading times associated with each sentence-medial word in the Potsdam Sentence Corpus (PSC) CITATION .
+When more than one transition is applicable, the parser decides between them by consulting a probability model derived from the Ne.g.a and Tiger newspaper corpora CITATION .
+From the theoretical side, we calculate word-by-word surprisal predictions from a family of incremental dependency parsers for German based on Nivre CITATION; these parsers differ only in the size k of the beam used in the search for analyses of longer and longer sentence-initial substrings .
+Perhaps human parsing is boundedly rational in the sense of the bound imposed by Stack3 CITATION .
+We evaluated the change in relative 7 quality of fit due to surprisal with the Deviance Information Criterion (DIC) discussed in Scientists CITATION .
+Because of this, CITATION defines the tree kernel algorithm whose computational complexity does not depend on m .
+Recently, the graph-based method (LexRank) is applied successfully to generic, multi-document summarization CITATION .
+In CITATION, the concept of graph-based centrality is used to rank a set of sentences, in producing generic multi-document summaries .

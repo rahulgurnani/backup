@@ -1,0 +1,9 @@
+import gensim
+fname = open('dada', 'w')
+sentences = gensim.models.word2vec.LineSentence('P08-1001-50_titles.txt')
+print "1"
+model = gensim.models.Word2Vec(sentences, size = 3, min_count = 1)
+print "2"
+print model['Neutral']
+
+

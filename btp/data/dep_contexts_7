@@ -1,0 +1,100 @@
+For example , Scientists  CITATION explore the use of prosodic features for sentence and topic se.g.entation .
+While more flexible than the interpolation techniques described in CITATION , training modality-specific classifiers separately is still suboptimal compared to training them jointly , because independent training of the modality-specific classifiers forces them to account for data that they cannot possibly explain .
+Toyama and Horvitz CITATION introduce a Bayesian network approach to modality combination for speaker identification .
+Introduction With recent advances in spoken dialogue system technologies , researchers have turned their attention to more complex domains (e.g.tutoring CITATION , technical support CITATION , medication assistance CITATION) .
+Average (standard deviation) for objective metrics in the first problem Related work Discourse structure has been successfully used in non-interactive settings (e.g.understanding specific lexical and prosodic phenomena CITATION  , natural language generation CITATION , essay scoring CITATION as well as in interactive settings (e.g.predictive/generative models of postural shifts CITATION , generation/interpretation of anaphoric expressions CITATION , performance modeling CITATION) .
+Other visual improvements for dialogue-based computer tutors have been explored in the past (e.g.talking heads CITATION) .
+This information is implicitly encoded in the intentional structure of a discourse as proposed in the Grosz & Sidner theory of discourse CITATION .
+3  The Navigation Map (NM) We use the Grosz & Sidner theory of discourse CITATION to inform our NM design .
+2 ITSPOKE ITSPOKE CITATION is a state-of-the-art tutoring spoken dialogue system for conceptual physics .
+Thus , interacting with such systems can be characterized by an increased user cognitive load associated with listening to often lengthy system turns and the need to inte.g.ate the current information to the discussion overall CITATION .
+However , implementing the NM in a new domain requires little expertise as previous work has shown that naïve users can reliably annotate the information needed for the NM CITATION .
+While a somewhat similar graphical representation of the discourse structure has been explored in one previous study CITATION , to our knowledge we are the first to test its benefits (see Section 6) .
+This theory has inspired several generic dialogue managers for spoken dialogue systems (e.g. CITATION) .
+One related study is that of CITATION .
+Results for Q1-6 Questions Q1-6 were inspired by previous work on spoken dialogue system evaluation (e.g. CITATION) and measure user's overall perception of the system .
+This situation is very similar to the training process of translation models in statistical machine translation CITATION , where parallel corpus is used to find the mappings between words from different languages by exploiting their co-occurrence patterns .
+J^Pr(Wj |o k) = 1 , Vk j =1 This optimization problem can be solved by the EM algorithm CITATION .
+Studies have also shown that eye gaze has a potential to improve resolution of underspecified referring expressions in spoken dialog systems CITATION and to disambiguate speech input CITATION .
+Given the recent advances in eye tracking technology CITATION , inte.g.ating non-intrusive and high performance eye trackers with conversational interfaces becomes feasible .
+Additionally , before speaking a word , the eyes usually move to the objects to be mentioned CITATION .
+Previous psycholinguistics studies have shown that the direction of gaze carries information about the focus of the user's attention CITATION .
+In research on multimodal interactive systems , recent work indicates that the speech and gaze inte.g.ation patterns can be modeled reliably for individual users and therefore be used to improve multimodal system performances CITATION .
+In addition , visual properties of the interface also affect user gaze behavior and thus influence the predication of attention CITATION based on eye gaze .
+Recent work has shown that the effect of eye gaze in facilitating spoken language processing varies among different users CITATION .
+Recent studies have shown that multisensory information (e.g. , through vision and language processing) can be combined to effectively acquire words to their perceptually grounded objects in the environment CITATION .
+The perceived visual context influences spoken word recognition and mediates syntactic processing CITATION .
+Figure 1 Multimodal interface on tablet In this paper we explore the application of multimodal interface technologies (See André CITATION for an overview) to the creation of more effective systems used to search and browse for entertainment content in the home .
+These interfaces are cumbersome and do not scale well as the range of content available increases CITATION .
+An important advantage of speech is that it makes it easy to combine multiple constraints over multiple dimensions within a single query CITATION .
+A number of previous systems have investigated the addition of unimodal spoken search queries to a graphical electronic program guide CITATION; Scientists  , 2003; Scientists  , 2006) .
+Others have gone beyond unimodal speech input and added multimodal commands combining speech with pointing CITATION .
+This develops and extends upon the multimodal architecture underlying the MATCH system CITATION .
+Speech recognition results , pointing gestures made on the display , and handwritten inputs , are all passed to a multimodal understanding server which uses finite-state multimodal language proc-essing techniques CITATION to interpret and inte.g.ate the speech and gesture .
+However , as also reported in previous work CITATION , recognition accuracy remains a serious problem .
+The past few years have seen considerable improvement in the performance of unsupervised parsers CITATION and , for the first time , unsupervised parsers have been able to improve on the right-branching heuristic for parsing English .
+Some of these subsets were used for scoring in CITATION .
+Table 1 gives two baselines and the parsing results for WSJ10 , WSJ40 , Ne.g.a10 and Ne.g.a40 for recent unsupervised parsing algorithms: CCM and DMV+CCM CITATION , U-DOP CITATION and UML-DOP CITATION .
+There are several algorithms for doing so CITATION , which cluster words into classes based on the most frequent neighbors of each word .
+This restriction is inspired by psycholin-guistic research which suggests that humans process language incrementally CITATION .
+When Klein and Manning induce the parts-of-speech , they do so from a much larger corpus containing the full WSJ treebank together with additional WSJ newswire CITATION .
+This can either be semi-supervised parsing , using both annotated and unannotated data CITATION or unsupervised parsing , training entirely on unan-notated text .
+This problem is known in psycholinguistics as the problem of reanalysis CITATION .
+For large datasets , we use an ensemble technique inspired by Bagging CITATION .
+In particular , we consider an algorithm proposed by Scientists  CITATION which has a worst-case complexity of O(km log(n)) , where k is the number of parses we want , n is the number of words in the input sentence , and m is the number of edges in the hypothesis graph .
+The k-best MST algorithm we introduce in this paper is the algorithm described in Scientists  CITATION .
+Algorithm 1 is a version of the MST algorithm as presented by Scientists  CITATION; subtleties of the algorithm have been omitted .
+We have introduced the Scientists  CITATION k-best MST algorithm and have shown how to efficiently train MaxEnt models for dependency parsing .
+Many of the model features have been inspired by the constituency-based features presented in Charniak and Johnson CITATION .
+Other DP solutions use constituency-based parsers to produce phrase-structure trees , from which dependency structures are extracted CITATION .
+An efficient algorithm for generating the k-best parse trees for a constituency-based parser was presented in Huang and Chiang CITATION; a variation of that algorithm was used for generating projective dependency trees for parsing in Scientists  CITATION and for training in McScientists  CITATION .
+The DP algorithms are generally variants of the CKY bottom-up chart parsing algorithm such as that proposed by Eisner CITATION .
+2 In order to explore a rich set of syntactic features in the MST framework , we can either approximate the optimal non-projective solution as in McDonald and Pereira CITATION , or we can use the constrained MST model to select a subset of the set of dependency parses to which we then apply less-constrained models .
+Unlike the training procedure employed by McScientists  CITATION and McDonald and Pereira CITATION , we provide positive and ne.g.tive examples in the training data .
+A second labeling stage can be applied to get labeled dependency structures as described in CITATION .
+The Maximum Spanning Tree algorithm 1 was recently introduced as a viable solution for non-projective dependency parsing CITATION .
+McScientists  CITATION introduced a model for dependency parsing based on the Edmonds/Chu-Liu algorithm .
+Many of the features above were introduced in McScientists  CITATION; specifically , the node-type , inside , and edge features .
+We have adopted the conditional Maximum Entropy (MaxEnt) modeling paradigm as outlined in Char-niak and Johnson CITATION and Scientists  CITATION .
+Work on statistical dependency parsing has utilized either dynamic-programming (DP) algorithms or variants of the Edmonds/Chu-Liu MST algorithm (see Tarjan CITATION) .
+This can be reduced to O(kn 2) in dense graphs 4 by choosing appropriate data structures CITATION .
+Recently , a number of data-driven distortion models , based on lexical features and relative distance , have been proposed to compensate for this weakness CITATION .
+Following CITATION , we conduct a targeted evaluation; we only draw our evaluation pairs from the uncohesive subset targeted by our constraint .
+Fox CITATION showed that cohesion is held in the vast majority of cases for English-French , while Cherry and Lin CITATION have shown it to be a strong feature for word alignment .
+Fox CITATION demonstrated and counted cases where cohesion was not maintained in hand-aligned sentence-pairs , while Cherry and Lin CITATION showed that a soft cohesion constraint is superior to a hard constraint for word alignment .
+The most successful attempts at syntax-enhanced phrasal SMT have directly targeted movement modeling: Scientists  CITATION modified a phrasal decoder with ITG constraints , while a number of researchers have employed syntax-driven source reordering before decoding be.g.ns CITATION .
+Our experimental set-up is modeled after the human evaluation presented in CITATION .
+Following CITATION , we provide the annotators with only short sentences: those with source sentences between 10 and 25 tokens long .
+These approaches were eventually superseded by tree transducers and tree substitution grammars , which allow translation events to span subtree units , providing several advantages , including the ability to selectively produce uncohesive translations CITATION .
+Syntactic cohesion 1 is the notion that all movement occurring during translation can be explained by permuting children in a parse tree CITATION .
+Previous approaches to measuring the cohesion of a sentence pair have worked with a word alignment CITATION .
+If one assumes arbitrary movement is possible , that alone is sufficient to show the problem to be NP-complete CITATION .
+We test our cohesion-enhanced Moses decoder trained using 688K sentence pairs of Europarl French-English data , provided by the SMT 2006 Shared Task CITATION .
+Phrase-based decoding CITATION is a dominant formalism in statistical machine translation .
+Early experiments with syntactically-informed phrases CITATION , and syntactic re-ranking of K-best lists CITATION produced mostly ne.g.tive results .
+Restricting phrases to syntactic constituents has been shown to harm performance CITATION , so we tighten our definition of a violation to disre.g.rd cases where the only point of overlap is obscured by our phrasal resolution .
+We compare against an unmodified baseline decoder , as well as a decoder enhanced with a lexical reordering model CITATION .
+We modify the Moses decoder CITATION to translate head-annotated sentences .
+English dependency trees are provided by Minipar CITATION .
+Word alignments are provided by GIZA++ CITATION with grow-diag-final combination , with infrastructure for alignment combination and phrase extraction provided by the shared task .
+We first present our soft cohesion constraint's effect on BLEU score CITATION for both our dev-test and test sets .
+Weights for the log-linear model are set using MERT , as implemented by Venugopal and Vogel CITATION .
+Early methods for syntactic SMT held to this assumption in its entirety CITATION .
+This will take the form of a check performed each time a hypothesis is extended , similar to the ITG constraint for phrasal SMT CITATION .
+One approach is to leverage underlying word alignment quality such as in Ayan and Dorr CITATION .
+We measure translation performance by the BLEU CITATION and METEOR CITATION scores with multiple translation references .
+In a statistical generative word alignment model CITATION , it is assumed that (i) a random variable a specifies how each target word fj is generated by (therefore aligned to) a source 1 word e aj; and (ii) the likelihood function f (f , a|e) specifies a generative procedure from the source sentence to the target sentence .
+The language model is a statistical trigram model estimated with Modified Kneser-Ney smoothing CITATION using only English sentences in the parallel training data .
+On the other hand , there are valid translation pairs in the training corpus that are not learned due to word alignment errors as shown in Deng and Byrne CITATION .
+The likelihood of those generative procedures can be accumulated to get the likelihood of the phrase pair CITATION .
+In the word-alignment derived phrase extraction approach , precision can be improved by filtering out most of the entries by using a statistical significance test CITATION .
+This is also the place where linguistic constraints can be applied , say to avoid non-compositional phrases CITATION .
+Second , some n-grams themselves carry no linguistic meaning; their phrase translations can be misleading , for example non-compositional phrases CITATION .
+In the final step 4 (line 15) , parameters {A k , t } are discriminatively trained on a development set using the downhill simplex method CITATION .
+By combining word alignments in two directions using heuristics CITATION , a single set of static word alignments is then formed .
+Two different word alignment models are trained as the baseline , one is symmetric HMM word alignment model , the other is IBM Model-4 as implemented in the GIZA++ toolkit CITATION .
+The translation probability can also be discriminatively trained such as in Tillmann and Zhang CITATION .
+WPPCR was used as one of the scores in CITATION for phrase extraction .
+The generic phrase training algorithm follows an information retrieval perspective as in CITATION but aims to improve both precision and recall with the trainable log-linear model .
+Methods have been proposed , based on syntax , that take advantage of linguistic constraints and alignment of grammatical structure , such as in Yamada and Knight CITATION and Wu CITATION .
+We then train HMM word alignment models CITATION in two directions simultaneously by merging statistics collected in the Algorithm 1 A Generic Phrase Training Procedure E-step from two directions motivated by Scientists  CITATION with 5 iterations .

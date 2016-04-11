@@ -1,0 +1,100 @@
+Although frequency-based criteria are often used , these are not without problems because low-frequency rules can be valid and potentially useful rules CITATION , and high-frequency rules can be erroneous CITATION .
+This method can be extended to increase recall , by treating similar daughters lists as equivalent CITATION .
+Using this strict equivalence to identify ad hoc rules is quite successful CITATION , but it misses a significant number of generalizations .
+Not only are errors inherently undesirable for obtaining an accurate grammar , but training on data with erroneous rules can be detrimental to parsing performance CITATION .
+To define dissimilarity , we need a notion of similarity , and , a starting point for this is the error detection method outlined in Dickinson and Meurers CITATION .
+This captures the property that identical daughters lists with different mothers are distinct CITATION .
+Although statistical techniques have been employed to detect anomalous annotation CITATION , these methods do not account for linguistically-motivated generalizations across rules , and no full evaluation has been done on a treebank .
+Infrequent rules in one genre may be quite frequent in another CITATION and their frequency may be unrelated to their usefulness for parsing CITATION .
+This issue is of even more importance when considering the task of porting a parser trained on one genre to another genre CITATION .
+Active learning techniques also require a scoring function for parser confidence CITATION , and often use uncertainty scores of parse trees in order to select representative samples for learning CITATION .
+Since most natural language expressions are endocentric , i.e. , a cate.g.ry projects to a phrase of the same cate.g.ry CITATION , daughters lists with more than one possible mother are flagged as potentially containing an error .
+For example , IN NP 1 has nine different mothers in the Wall Street Journal (WSJ) portion of the Penn Treebank CITATION , six of which are errors .
+If a treebank grammar is used CITATION , then one needs to isolate rules for ungram-matical data , to be able to distinguish grammatical from ungrammatical input .
+Thus , identifying ad hoc rules can also provide feedback on annotation schemes , an especially important step if one is to use the treebank for specific applications CITATION , or if one is in the process of developing a treebank .
+This is true of precision grammars , where analyses can be more or less preferred CITATION , and in applications like intelligent computer-aided language learning , where learner input is parsed to detect what is correct or not (see , e.g. , Vandeventer Faltin , 2003 , ch .
+The input for the se.g.entation task is however highly ambiguous for Semitic languages , and surface forms (tokens) may admit multiple possible analyses as in CITATION .
+Morphological dis-ambiguators that consider a token in context (an utterance) and propose the most likely morphological analysis of an utterance (including se.g.entation) were presented by Bar-Scientists  CITATION , Adler and Elhadad CITATION , Shacham and Wintner CITATION , and achieved good results (the best se.g.entation result so far is around 98%) .
+A possible probabilistic model for assigning probabilities to complex analyses of a surface form may be P (REL ,  VB fmnh , context) = P (RELf)P (VB|mnh , REL)P (REL , VB| context) and indeed recent sequential disambiguation models for Hebrew CITATION and Arabic CITATION present similar models .
+In sequential tagging models such as CITATION weights are assigned according to a language model based on linear context .
+Using a wide-coverage morphological analyzer based on CITATION should cater for a better coverage , and incorporating lexical probabilities learned from a big (unannotated) corpus (cf. CITATION) will make the parser more robust and suitable for use in more realistic scenarios .
+This is by now a fairly standard representation for multiple morphological se.g.entation of Hebrew utterances CITATION .
+Tsarfaty CITATION used a morphological analyzer CITATION , a PoS tagger CITATION , and a general purpose parser CITATION in an inte.g.ated framework in which morphological and syntactic components interact to share information , leading to improved performance on the joint task .
+To evaluate the performance on the se.g.entation task , we report SEG , the standard harmonic means for se.g.entation Precision and Recall F 1 (as defined in Bar-Scientists  CITATION; Tsarfaty CITATION) as well as the se.g.entation accuracy SEG Tok measure indicating the percentage of input tokens assigned the correct exact se.g.entation (as reported by Cohen and Smith CITATION) .
+REL+VB) (cf. CITATION) and probabilities are assigned to different analyses in accordance with the likelihood of their tags (e.g. , "fmnh is 30% likely to be tagged NN and 70% likely to be tagged REL+VB") .
+This is akin to PoS tags sequences induced by different parses in the setup familiar from English and explored in e.g. CITATION .
+One way to approach this discrepancy is to assume a preceding phase of morphological se.g.entation for extracting the different lexical items that exist at the token level (as is done , to the best of our knowledge , in all parsing related work on Arabic and its dialects CITATION) .
+Cohen and Smith CITATION followed up on these results and pro-posed a system for joint inference of morphological and syntactic structures using factored models each designed and trained on its own .
+Morphological se.g.entation decisions in our model are dele.g.ted to a lexeme-based PCFG and we show that using a simple treebank grammar , a data-driven lexicon , and a linguistically motivated unknown-tokens handling our model outperforms CITATION and CITATION on the joint task and achieves state-of-the-art results on a par with current respective standalone models .
+Cohen and Smith CITATION later on based a system for joint inference on factored , independent , morphological and syntactic components of which scores are combined to cater for the joint inference task .
+To facilitate the comparison of our results to those reported by CITATION we use their data set in which 177 empty and "malformed" 7 were removed .
+We used BitPar CITATION , an efficient general purpose parser , 10 together with various treebank grammars to parse the input sentences and propose compatible morphological se.g.entation and syntactic analysis .
+Finally , model GT v = 2 includes parent annotation on top of the various state-splits , as is done also in CITATION .
+Table 2 compares the performance of our system on the setup of Cohen and Smith CITATION to the best results reported by them for the same tasks .
+In Modern Hebrew (Hebrew) , a Semitic language with very rich morphology , particles marking conjunctions , prepositions , complementizers and rela-tivizers are bound elements prefixed to the word CITATION .
+In our third model GT ppp we also add the distinction between general PPs and possessive PPs following Goldberg and Elhadad CITATION .
+The current work treats both se.g.ental and super-se.g.ental phenomena , yet we note that there may be more adequate ways to treat super-se.g.ental phenomena assuming Word-Based morphology as we explore in CITATION .
+We use the HSPELL 9 CITATION wordlist as a lexeme-based lexicon for pruning se.g.entations involving invalid se.g.ents .
+Morphological analyzers for Hebrew that analyze a surface form in isolation have been proposed by Se.g.l CITATION , Yona and Wintner CITATION , and recently by the knowledge center for processing Hebrew CITATION .
+Such resources exist for Hebrew CITATION , but unfortunately use a tagging scheme which is incom-patible with the one of the Hebrew Treebank .
+The development of the very first Hebrew Tree-bank CITATION called for the exploration of general statistical parsing methods , but the application was at first limited .
+We use the Hebrew Treebank , CITATION , provided by the knowledge center for processing Hebrew , in which sentences from the daily newspaper "Ha'aretz" are morphologically se.g.ented and syntactically annotated .
+The joint morphological and syntactic hypothesis was first discussed in CITATION and empirically explored in CITATION .
+Tsarfaty CITATION was the first to demonstrate that fully automatic Hebrew parsing is feasible using the newly available 5000 sentences treebank .
+Tsarfaty and Sima'an CITATION have reported state-of-the-art results on Hebrew unlexicalized parsing (74.41%) albeit assuming oracle morphological se.g.entation .
+In our forth model GT nph we add the definiteness status of constituents following Tsarfaty and Sima'an CITATION .
+We conjecture that this trend may continue by incorporating additional information , e.g. , three-dimensional models as proposed by Tsarfaty and Sima'an CITATION .
+Tsarfaty CITATION argues that for Semitic languages determining the correct morphological se.g.entation is dependent on syntactic context and shows that increasing information sharing between the morphological and the syntactic components leads to improved performance on the joint task .
+In our second model GT vpi we also distinguished finite and non-finite verbs and VPs as proposed in CITATION .
+Both CITATION have shown that a single inte.g.ated framework outperforms a completely streamlined implementation , yet neither has shown a single generative model which handles both tasks .
+Finally , Adda-Decker and Lamel CITATION demonstrated that both French and English ASR systems had more trouble with male speakers than female speakers , and found several possible explanations , including higher rates of disfluencies and more reduction .
+Also , like Adda-Decker and Lamel CITATION , we find that male speakers have higher error rates than females , though in our data set the difference is more striking (3.6% absolute , compared to their 2.0%) .
+This last result sheds some light on the work of Adda-Decker and Lamel CITATION , who suggested several factors that could explain males' higher error rates .
+We fit our models using the lme4 package CITATION of R CITATION .
+One possibility is that female speech is more easily recognized because females tend to have expanded vowel spaces CITATION , a factor that is associated with greater intelligibility CITATION and is characteristic of genres with lower ASR error rates CITATION .
+Previous work on recognition of spontaneous monologues and dialogues has shown that infrequent words are more likely to be misrecognized CITATION and that fast speech increases error rates CITATION .
+In the word-level analyses of Fosler-Lussier and Morgan CITATION and Shinozaki and Fu-rui CITATION , only substitution and deletion errors were considered , so we do not know how including insertions might affect the results .
+In Scientists 's CITATION analysis of two human-computer dialogue systems , misrecog-nized turns were found to have (on average) higher maximum pitch and energy than correctly recognized turns .
+Scientists 's CITATION work suggests that prosodic factors can impact error rates , but leaves open the question of which factors are important at the word level and how they influence recognition of natural conversational speech .
+Classes were identified using a POS tagger CITATION trained on the tagged Switchboard corpus .
+We also see a tendency towards higher IWER for very slow speech , consistent with Shinozaki and Furui CITATION and Sie.g.er and Stern CITATION .
+For our analysis , we used the output from the SRI/ICSI/UW RT-04 CTS system CITATION on the NIST RT-03 development set .
+Rachmaninoff , Rafael and Brokoviev Ref3 composers including Bach , Mozart , Schopen , Beethoven , missing name Raphael , Rahmaniev and Brokofien Ref4 composers such as Bach , Mozart , missing name Beethoven , Schumann , Rachmaninov , Raphael and Prokofiev The task of transliterating names (independent of end-to-end MT) has received a significant amount of research , e.g. , CITATION .
+Unlike various generative approaches CITATION , we do not synthesize an English spelling from scratch , but rather find a translation in very large lists of English words (3.4 million) and phrases (47 million) .
+We follow previous work in using the Brent corpus consists of 9790 transcribed utterances (33 ,399 words) of child-directed speech from the Bernstein-Ratner corpus CITATION in the CHILDES database CITATION .
+Second , we can generalize over arbitrary subtrees rather than local trees in much the way done in DOP or tree substitution grammar CITATION , which leads to adaptor grammars .
+PCFG estimation procedures have been used to model the supervised and unsupervised acquisition of syllable structure CITATION; and the best performance in unsupervised acquisition is obtained using a grammar that encodes linguistically detailed properties of syllables whose rules are inferred using a fairly complex algorithm CITATION .
+For example , the adaptor grammars for syllable structure presented in sections 3.3 and 3.6 learn more information about syllable onsets and codas than the PCFGs presented in Goldwater and Johnson CITATION .
+We evaluated the f-score of the recovered word constituents CITATION .
+Scientists  CITATION presented an adaptor grammar that defines a unigram model of word se.g.entation and showed that it performs as well as the unigram DP word se.g.entation model presented by CITATION .
+As reported in Scientists  CITATION and Scientists  CITATION , a unigram word se.g.entation model tends to underse.g.ent and misanalyse collocations as individual words .
+based unsupervised morphological analysis model presented by Scientists  CITATION .
+Scientists  CITATION showed that modeling dependencies between adjacent words dramatically improves word se.g.entation accuracy .
+It's straight forward to design an adaptor grammar that can capture a finite number of concatenative paradigm classes CITATION .
+(In fact , the inference procedure for adaptor grammars described in Scientists  CITATION relies on a PCFG approximation that contains a rule for each subtree generalization in the adaptor grammar) .
+Adaptor grammars CITATION are a non-parametric Bayesian extension of Probabilistic Context-Free Grammars (PCFGs) which in effect learn the probabilities of entire subtrees .
+This section introduces adaptor grammars as an extension of PCFGs; for a more detailed exposition see Scientists  CITATION .
+Scientists  CITATION describe an MCMC procedure for inferring the adapted tree distributions Ga , and Scientists  CITATION describe a Bayesian inference procedure for the PCFG rule parameters 6 using a Metropolis-Hastings MCMC procedure; implementations are available from the author's web site .
+Scientists  CITATION presented an adaptor grammar for se.g.enting verbs into stems and suffixes that implements the DP-Sentence .
+The MCMC sampler of Scientists  CITATION used here is satifactory for small and medium-sized problems , but it would be very useful to have more efficient inference procedures .
+For example , the Bayesian unsupervised PCFG estimation procedure devised by Stolcke CITATION uses a model-merging procedure to propose new sets of PCFG rules and a Bayesian version of the EM procedure to estimate their weights .
+There are several different ways to define DPs; one of the most useful is the characterization of the conditional or sampling distribution of a draw from DP(a , H) in terms of the Polya urn or Chinese Restaurant Process CITATION .
+Technically this grammar implements a Hierarchical Dirichlet Process (HDP) CITATION because the base distribution for the Word DP is itself constructed from the Stem and Suffix distributions , which are themselves generated by DPs .
+Asahara and Motsumoto CITATION proposed using characters instead of morphemes as the unit to alleviate the effect of se.g.entation errors in morphological analysis and we also used their character-based method .
+Though there may be slight differences , these features are based on the standard ones proposed and used in previous studies on Japanese NER such as those by Asahara and Motsumoto CITATION , Nakano and Hirai CITATION , and Yamada CITATION .
+In addition , the clustering methods used , such as HMMs and Brown's algorithm CITATION , seem unable to adequately capture the semantics of MNs since they are based only on the information of adjacent words .
+They constructed word clusters by using HMMs or Brown's clustering algorithm CITATION , which utilize only information from neighboring words .
+Scientists  CITATION presented the MapReduce framework for a wide range of machine learning algorithms , including the EM algorithm .
+Since building and maintaining high-quality gazetteers by hand is very expensive , many methods have been proposed for automatic extraction of gazetteers from texts CITATION .
+For example , we can use automatically extracted hyponymy relations CITATION , or automatically induced MN clusters CITATION .
+Defining sentences in a dictionary or an encyclopedia have long been used as a source of hyponymy relations CITATION .
+19 Recently , Scientists  CITATION investi-gated the relation between the size and the quality of a gazetteer and its effect .
+For instance , Kazama and Torisawa CITATION used the hyponymy relations extracted from Wikipedia for the English NER , and reported improved accuracies with such a gazetteer .
+We also compared the cluster gazetteers with the Wikipedia gazetteer constructed by following the method of CITATION .
+Kazama and Torisawa CITATION extracted hyponymy relations from the first sentences (i.e. , defining sentences) of Wikipedia articles and then used them as a gazetteer for NER .
+Although this Wikipedia gazetteer is much smaller than the English version used by Kazama and Torisawa CITATION that has over 2 ,000 ,000 entries , it is the largest gazetteer that can be freely used for Japanese NER .
+We follow the method used by Kazama and Torisawa CITATION , which encodes the matching with a gazetteer entity using IOB tags , with the modification for Japanese .
+In the context of tagging , there are several studies that utilized word clusters to prevent the data sparseness problem CITATION .
+Inducing features for taggers by clustering has been tried by several researchers CITATION .
+We used MeCab as a morphological analyzer and CaboCha 14 CITATION as the dependency parser to find the boundaries of the bunsetsu .
+The corpus we used for collecting dependencies was a large set (76 million) of Web documents , that were processed by a dependency parser , KNP CITATION .

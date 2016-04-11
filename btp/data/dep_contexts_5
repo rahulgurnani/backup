@@ -1,0 +1,100 @@
+The infinite hidden Markov model (iHMM) or HDP-HMM CITATION is a model of sequence data with transitions modeled by an HDP .
+This is useful , because coarse-grained syntactic cate.g.ries , such as those used in the Penn Treebank (PTB) , make insufficient distinctions to be the basis of accurate syntactic parsing CITATION .
+Hence , state-of-the-art parsers either supplement the part-of-speech (POS) tags with the lexical forms themselves CITATION , manually split the tagset into a finer-grained one CITATION , or learn finer grained tag distinctions using a heuristic learning procedure CITATION .
+But the introduction of nonparametric priors such as the Dirichletprocess CITATION enabled development of infinite mixture models , in which the num-Scientists  CITATION proposed the hierarchical Dirichlet process (HDP) as a way of applying the Dirichlet process (DP) to more complex model forms , so as to allow multiple , group-specific , infinite mixture models to share their mixture components .
+8 Additionally , we compute the mutual information of the learned clusters with the gold tags , and we compute the cluster F-score CITATION .
+First , we use the standard approach of greedily assigning each of the learned classes to the POS tag with which it has the greatest overlap , and then computing tagging accuracy CITATION .
+For comparison , Haghighi and Klein CITATION report an unsupervised baseline of 41.3% , and a best result of 80.5% from using hand-labeled prototypes and distributional similarity .
+Earlier , Scientists  CITATION presented adaptor grammars , which is a very similar model to the HDP-PCFG .
+We use the generative dependency parser distributed with the Stanford factored parser CITATION for the comparison , since it performs simultaneous tagging and parsing during testing .
+The HDP-PCFG CITATION , developed at the same time as this work , aims to learn state splits for a binary-branching PCFG .
+In contrast , Scientists  CITATION define a global DP over sequences , with the base measure defined over the global state probabilities ,  0; locally , each state has an HDP , with this global DP as the base measure .
+For both experiments , we used dependency trees extracted from the Penn Treebank CITATION using the head rules and dependency extractor from Yamada and Matsumoto CITATION .
+To generate  n we first generate an infinite sequence of variables  n' = (n k each of which is distributed according to the Beta distribution: Then  n = (n k)£ = = 1 is defined as: (1 Following Pitman CITATION we refer to this process as n — GEM (a 0) .
+In many cases , improving semi-supervised models was done by seeding these models with domain information taken from dictionaries or ontology CITATION .
+This follows a conceptually similar approach by CITATION that uses a large named-entity dictionary , where the similarity between the candidate named-entity and its matching prototype in the dictionary is encoded as a feature in a supervised classifier .
+Therefore , an increasing attention has been recently given to semi-supervised learning , where large amounts of unlabeled data are used to improve the models learned from a small training set CITATION .
+This was used , for example , by CITATION in information extraction , and by CITATION in POS tagging .
+This decomposition applies both to discriminative linear models and to generative models such as HMMs and CRFs , in which case the linear sum corresponds to log likelihood assigned to the input/output pair by the model (for details see CITATION for the classification case and CITATION for the structured case) .
+For example , CITATION proposes Diagonal Transition Models for sequential labeling tasks where neighboring words tend to have the same labels .
+The second problem we consider is extracting fields from advertisements CITATION .
+CITATION and CITATION also report results for semi-supervised learning for these domains .
+CITATION extends the dictionary-based approach to sequential labeling tasks by propagating the information given in the seeds with contextual word similarity .
+We implement some global constraints and include unary constraints which were largely imported from the list of seed words used in CITATION .
+CITATION also worked on one of our data sets .
+1 The first task is to identify fields from citations CITATION .
+Another way to look the algorithm is from the self-training perspective CITATION .
+However , in the general case , semi-supervised approaches give mixed results , and sometimes even de.g.ade the model performance CITATION .
+CITATION has suggested to balance the contribution of labeled and unlabeled data to the parameters .
+CITATION .
+This confirms results reported for the supervised learning case in CITATION .
+On the other hand , in the supervised setting , it has been shown that incorporating domain and problem specific structured information can result in substantial improvements CITATION .
+However CITATION showed that reasoning with more expressive , non-sequential constraints can improve the performance for the supervised protocol .
+We note that in the presence of constraints , the inference procedure (for finding the output y that maximizes the cost function) is usually done with search techniques (rather than Viterbi decoding , see CITATION for a discussion) , we chose beamsearch decoding .
+While CITATION showed the significance of using hard constraints , our experiments show that using soft constraints is a superior option .
+Conceptually , although not technically , the most related work to ours is CITATION that , in a somewhat ad-hoc manner uses soft constraints to guide an unsupervised model that was crafted for mention tracking .
+Crucially , the kind of lexical descriptions that we employ are those that are commonly devised within lexicon-driven approaches to linguistic syntax , e.g.Lexicalized Tree-Adjoining Grammar CITATION and Combinary Cate.g.rial Grammar CITATION .
+There are currently two supertagging approaches available: LTAG-based CITATION and CCG-based CITATION .
+One important way of portraying such lexical descriptions is via the supertags devised in the LTAG and CCG frameworks CITATION .
+The term "supertagging" CITATION refers to tagging the words of a sentence , each with a supertag .
+The LTAG-based supertagger of CITATION is a standard HMM tagger and consists of a (second-order) Markov language model over supertags and a lexical model conditioning the probability of every word on its own supertag (just like standard HMM-based POS taggers) .
+For the LTAG supertags experiments , we used the LTAG English supertagger 5 CITATION to tag the English part of the parallel data and the supertag language model data .
+Akin to POS tagging , the process of supertagging an input utterance proceeds with statistics that are based on the probability of a word-supertag pair given their Markovian or local context CITATION .
+Besides the difference in probabilities and statistical estimates , these two supertaggers differ in the way the supertags are extracted from the Penn Treebank , cf. CITATION .
+Only quite recently have CITATION and CITATION shown that incorporating some form of syntactic structure could show improvements over a baseline PBSMT system .
+Among the first to demonstrate improvement when adding recursive structure was CITATION , who allows for hierarchical phrase probabilities that handle a range of reordering phenomena in the correct fashion .
+The CCG supertagger CITATION is based on log-linear probabilities that condition a supertag on features representing its context .
+For the CCG supertag experiments , we used the CCG supertagger of CITATION and the Edinburgh CCG tools 6 to tag the English part of the parallel corpus as well as the CCG supertag language model data .
+Both the LTAG CITATION and the CCG supertag sets CITATION were acquired from the WSJ section of the Penn-II Treebank using hand-built extraction rules .
+Decoder The decoder used in this work is Moses , a log-linear decoder similar to Pharaoh CITATION , modified to accommodate supertag phrase probabilities and supertag language models .
+Within the field of Machine Translation , by far the most dominant paradigm is Phrase-based Statistical Machine Translation (PBSMT) CITATION .
+For example , CITATION demonstrated that adding syntax actually harmed the quality of their SMT system .
+The bidirectional word alignment is used to obtain phrase translation pairs using heuristics presented in CITATION and CITATION , and the Moses decoder was used for phrase extraction and decoding .
+The bidirectional word alignment is used to obtain lexical phrase translation pairs using heuristics presented in CITATION and CITATION .
+Coming right up to date , CITATION demonstrate that 'syntactified' target language phrases can improve translation quality for Chinese-English .
+While the research of CITATION has much in common with the approach proposed here (such as the syntactified target phrases) , there remain a number of significant differences .
+The NIST MT03 test set is used for development , particularly for optimizing the interpolation weights using Minimum Error Rate training CITATION .
+Firstly , rather than induce millions of xRS rules from parallel data , we extract phrase pairs in the standard way CITATION and associate with each phrase-pair a set of target language syntactic structures based on supertag sequences .
+Table 1 presents the BLEU scores CITATION of both systems on the NIST 2005 MT Evaluation test set .
+For less commonly used languages , one might use open source research systems CITATION .
+Also relevant is previous work that applied machine learning approaches to MT evaluation , both with human references CITATION and without CITATION .
+METEOR uses the Porter stemmer and synonym-matching via WordNet to calculate recall and precision more accurately CITATION .
+This can be seen as a form of confidence estimation on MT outputs CITATION .
+To remove the bias in the distributions of scores between different judges , we follow the normalization procedure described by Scientists  CITATION .
+To compare the relative quality of different metrics , we apply bootstrapping re-sampling on the data , and then use paired t-test to determine the statistical significance of the correlation differences CITATION .
+ROUGE utilizes 'skip n-grams' , which allow for matches of sequences of words that are not necessarily adjacent CITATION .
+BLEU is smoothed CITATION , and it considers only matching up to bigrams because this has higher correlations with human judgments than when higher-ordered n-grams are included .
+The HWC metrics compare dependency and constituency trees for both reference and machine translations CITATION .
+In addition to adapting the idea of Head Word Chains CITATION , we also compared the input sentence's argument structures against the treebank for certain syntactic cate.g.ries .
+The relationship between word alignments and their impact on MT is also investigated in CITATION .
+Most current statistical models CITATION treat the aligned sentences in the corpus as sequences of tokens that are meant to be words; the goal of the alignment process is to find links between source and target words .
+To quickly (and approximately) evaluate this phenomenon , we trained the statistical IBM word-alignment model 4 CITATION , 1 using the GIZA++ software CITATION for the first two language pairs , and the Europarl corpus CITATION for the last one .
+They can be seen as extensions of the simpler IBM models 1 and 2 CITATION .
+We also want to bootstrap on different word aligners; in particular , one possibility is to use the flexible HMM word-to-phrase model of Deng and Byrne CITATION in place of IBM model 4 .
+We evaluate the reliability of these candidates , using simple metrics based on co-occurence frequencies , similar to those used in associative approaches to word alignment CITATION .
+Second , an increase in AER does not necessarily imply an improvement in translation quality CITATION and vice-versa CITATION .
+This very simple measure is frequently used in associative approaches CITATION .
+%: there is want to need not I^iS: in front of —: as soon as ;#: look at Figure 2: Examples of entries from the manually developed dictionary The intrinsic quality of word alignment can be assessed using the Alignment Error Rate (AER) metric CITATION , that compares a system's alignment output to a set of gold-standard alignment .
+The quality of the translation output is evaluated using BLEU CITATION .
+The experiments were carried out using the Chinese-English datasets provided within the IWSLT 2006 evaluation campaign CITATION , extracted from the Basic Travel Expression Corpus (BTEC) CITATION .
+For Chinese , the data provided were tokenized according to the output format of ASR systems , and human-corrected CITATION .
+Note that the need to consider se.g.entation and alignment at the same time is also mentioned in CITATION , and related issues are reported in CITATION .
+More importantly , however , this se.g.entation is often performed in a monolingual context , which makes the word alignment task more difficult since different languages may realize the same concept using varying numbers of words (see e.g. CITATION) .
+The log-linear model is also based on standard features: conditional probabilities and lexical smoothing ofphrases in both directions , and phrase penalty CITATION .
+To test the influence of the initial word se.g.entation on the process of word packing , we considered an additional se.g.entation configuration , based on an automatic se.g.enter combining rule-based and statistical techniques CITATION .
+These resources follow more or less the same format as the output of the word se.g.enter mentioned in Section 5.1.2 CITATION , so the experiments are carried out using this se.g.entation .
+It has been argued that METEOR correlates better with human judgment due to higher weight on recall than precision CITATION .
+Recently , confusion network decoding for MT system combination has been proposed CITATION .
+Powell's method CITATION is used to tune the system and feature weights simultaneously so as to optimize various automatic evaluation metrics on a development set .
+In this work , modified Powell's method as proposed by CITATION is used .
+Six MT systems were combined: three (A ,C ,E) were phrase-based similar to CITATION , two (B ,D) were hierarchical similar to CITATION and one (F) was syntax-based similar to CITATION .
+Combination of speech recognition outputs is an example of this approach CITATION .
+Also , a more heuristic alignment method has been proposed in a different system combination approach CITATION .
+In speech recognition , confusion network decoding CITATION has become widely used in system combination .
+In CITATION , different word orderings are taken into account by training alignment models by considering all hypothesis pairs as a parallel corpus using GIZA++ CITATION .
+Tuning is fully automatic , as opposed to CITATION where global system weights were set manually .
+Similar combination of multiple confusion networks was presented in CITATION .
+The same Powell's method has been used to estimate feature weights of a standard feature-based phrasal MT decoder in CITATION .
+The optimization of the system and feature weights may be carried out using -best lists as in CITATION .
+Currently , the most widely used automatic MT evaluation metric is the NIST BLEU-4 CITATION .
+This work was extended in CITATION by introducing system weights for word confidences .

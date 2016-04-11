@@ -1,0 +1,5 @@
+f1 = open('final_nlp_cits', 'r')
+f2 = open('final_nlp_cits2', 'w')
+for line in f1:
+	if line.count('CITATION') > 0:
+		f2.write(line.strip() + '\n')

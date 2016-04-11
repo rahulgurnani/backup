@@ -1,0 +1,100 @@
+We used the SRI Language Modeling Toolkit CITATION to train a five-gram model with modified Kneser-Ney smoothing CITATION .
+Based on the source syntax parse tree , for each measure word , we identified its head word by using a toolkit from CITATION which can heuristically identify head words for sub-trees .
+We used an SMT system similar to Chiang CITATION , in which FBIS corpus is used as the bilingual training data .
+We ran GI-ZA++ CITATION on the training corpus in both directions with IBM model 4 , and then applied the refinement rule described in CITATION to obtain a many-to-many word alignment for each sentence pair .
+The most relevant work based on statistical methods to our research might be statistical technologies employed to model issues such as morphology generation CITATION .
+In most statistical machine translation (SMT) models CITATION , some of measure words can be generated without modification or additional processing .
+In addition to precision and recall , we also evaluate the Bleu score CITATION changes before and after applying our measure word generation method to the SMT output .
+In our work , the Berkeley parser CITATION was employed to extract syntactic knowledge from the training corpus .
+These word-level alignments are most often obtained using Expectation Maximization on the conditional generative models of Scientists  CITATION and Scientists  CITATION .
+The traditional estimation method for word alignment models is the EM algorithm CITATION which iteratively updates parameters to maximize the likelihood of the data .
+The heuristic method is based on the Non-Compositional Constraint of Cherry and Lin CITATION .
+Kurihara and Sato CITATION describe VB for PCFGs , showing the only need is to change the M step of the EM algorithm .
+Minimum Error Rate training CITATION over BLEU was used to optimize the weights for each of these models over the development test data .
+Like Zhang and Gildea CITATION , it is used to prune bitext cells rather than score phrases .
+Our pruning differs from Zhang and Gildea CITATION in two major ways .
+The tic-tac-toe pruning algorithm CITATION uses dynamic programming to compute the product of inside and outside scores for all cells in O(n 4) time .
+Figure 2 compares the speed of the fast tic-tac-toe algorithm against the algorithm in Zhang and Gildea CITATION .
+We applied the decompounding algorithm proposed in Adda-Decker CITATION to our corpus to extract such compounds .
+Our experiments are based on word lattice output from the LIMSI German broadcast news transcription system CITATION , which employs 4-gram backoff language models .
+The evaluation scheme was taken from McTait and Adda-Decker CITATION .
+Scientists  CITATION pursued a similar approach .
+In order to compute the probability of a parse tree , it is transformed to a flat dependency tree similar to the syntax graph representation used in the TIGER treebank Scientists CITATION .
+Other linguistically inspired language models like Chelba and Jelinek CITATION and Roark CITATION have been applied to continuous speech recognition .
+To extract such word clusters we used suffix arrays proposed in Ya-mamoto and Church CITATION and the pointwise mutual information measure .
+More accurate statistical models of natural language have mainly been developed in the field of statistical parsing , e.g.Collins CITATION , Charniak CITATION and Ratnaparkhi CITATION .
+Our grammar incorporates many ideas from existing linguistic work , e.g.Miiller CITATION , Muller CITATION , Crysmann CITATION , Crysmann CITATION .
+Our main source of dictionary information was Duden CITATION .
+This improvement is statistically significant on a level of < 0.1% for both the Matched Pairs Sentence-Se.g.ent Word Error test (MAPSSWE) and McNemar's test CITATION .
+Our particular variant requires that constituents (phrases) be continuous , but it provides a mechanism for dealing with discontinuities as present e.g.in the German main clause , see Kaufmann and Pfister CITATION .
+We used the Head-driven Phrase Structure Grammar (HPSG , see Pollard and Sag CITATION) formalism to develop a precise large-coverage grammar for German .
+Natural language processing research has addressed a number of these issues as individual problems: automatic punctuation CITATION , text se.g.entation CITATION disfluency repair CITATION and error correction CITATION .
+Following Strzalkowski and Brandow CITATION and Peters and Drexel CITATION we have implemented a transformation-based learning (TBL) algorithm CITATION .
+The recognition output is auto-punctuated by a method similar in spirit to the one proposed by Scientists  CITATION before being passed to the transformation model .
+Deviating from Peters and Drexel CITATION , in the special case of an empty target sequence , i.e .
+Again deviating from Peters and Drexel CITATION , we consider two rules as overlapping if the left-hand-side of one is a contiguous subsequence of the other .
+The work of Ringger and Allen CITATION is similar in spirit to this method , but uses a factored source-channel model .
+before , during , etc.) CITATION .
+Queries are generated artificially using a method similar to Berger and Lafferty CITATION and used in Fleischman and Roy CITATION .
+Recent work in automatic image annotation CITATION and natural language processing CITATION , however , have demonstrated the advantages of using hierarchical Bayesian models for related tasks .
+We use the system of Scientists  CITATION which computes the camera motion using the parameters of a two-dimensional affine model to fit every pair of sequential frames in a video .
+The traditional text-only language models (which are also used below as baseline comparisons) are generated with the SRI language modeling toolkit CITATION using Chen and Goodman's modified Kneser-Ney discounting and interpolation CITATION .
+The method is based on the use of grounded language models to repre-sent the relationship between words and the non-linguistic context to which they refer CITATION .
+Although these correlations are not perfect , experiments have shown that baseball events can be classified using such features CITATION .
+CITATION .
+Thus , for a robot operating in a laboratory setting , words for colors and shapes may be grounded in the outputs of its computer vision system CITATION; while for a simulated agent operating in a virtual world , words for actions and events may be mapped to representations of the agent's plans or goals CITATION .
+Previous work has examined applying models often used in MT to the paired corpus described above CITATION .
+We follow previous work in sports video processing CITATION and define an event in a baseball video as any sequence of shots starting with a pitching-scene and continuing for four subsequent shots .
+Because these transcriptions are not necessarily time synched with the audio , we use the method described in Hauptmann and Witbrock CITATION to align the closed captioning to the announcers' speech .
+Recent work in video surveillance has demonstrated the benefit of representing complex events as temporal relations between lower level subevents CITATION .
+Recognizing speech in broadcast video is a necessary precursor to many multimodal applications such as video search and summarization CITATION .
+Shot detection and se.g.entation is a well studied problem; in this work we use the method of Scientists  CITATION .
+Although performance is often reasonable in controlled environments (such as studio news rooms) , automatic speech recognition (ASR) systems have significant difficulty in noisier settings (such as those found in live sports broadcasts) CITATION .
+Such video IR systems often use speech transcriptions to index se.g.ents of video in much the same way that words are used to index text documents CITATION .
+The WEKA machine learning package is used to train a boosted decision tree to classify these frames into one of three cate.g.ries: pitching-scene , field-scene , other CITATION .
+Finite-state models CITATION might be more compact .
+Brent CITATION and Venkataraman CITATION present incremental splitting algorithms with BF about 82% 3 on the Bernstein-Ratner (BR87) corpus of infant-directed English with disfluencies and interjections removed CITATION .
+Child-directed speech displays helpful features such as shorter phrases and fewer reductions CITATION .
+Learning to se.g.ent words is an old problem , with extensive prior work surveyed in CITATION .
+To build unsupervised algorithms , Brent and Cartwright suggested CITATION inferring phonotac-tic constraints from phone sequences observed at phrase boundaries .
+Feature-based or gestural phonology CITATION might help model se.g.ental variation .
+Simple supervised algorithms perform extremely well CITATION , but don't address our main goal: learning how to se.g.ent .
+Statistics of phone trigrams provide sufficient information to se.g.ent adult conversational speech (dictionary transcriptions with simulated phonology) with about 90% precision and 93% recall CITATION , see also CITATION .
+Early results using neural nets by Scientists  CITATION and Scientists CITATION are discouraging .
+See also CITATION .
+Attempts to se.g.ent transcriptions without pauses , e.g. CITATION , have worked poorly .
+Disfluen-cies in conversational speech create pauses where you might not expect them , e.g.immediately following the definite article CITATION .
+The other two English dictionary transcriptions were produced in a similar way from the Buckeye corpus CITATION and Mississippi State's corrected version of the LDC's Switchboard transcripts CITATION .
+The most recent algorithm CITATION achieves a BF of 85.8% using a Dirichlet Process bigram model , estimated using a Gibbs sampling algorithm .
+Supervised phonotactic methods date back at least to CITATION , see also CITATION .
+This issue was noted by Scientists  CITATION who used a list of known very short words to detect these cases .
+Prosody , stress , and other sub-phonemic cues might disambiguate some problem situations CITATION .
+Some words are "massively" reduced CITATION , going well beyond standard phonological rules .
+Claims that humans can extract words without pauses seem to be based on psychological experiments such as CITATION which conflate words and morphemes .
+For example , Figure 1 shows a transcribed phrase from the Buckeye corpus CITATION and the automatically se.g.ented output .
+Even then , explicit boundaries seem to improve performance CITATION .
+Se.g.entation by adults is sensitive to phono-tactic constraints CITATION .
+The Spanish corpus was produced in a similar way from the Callhome Spanish dataset CITATION , removing all accents .
+Query expansion CITATION is a commonly used strate.g. to bridge the vocabulary gaps by expanding original queries with related terms .
+The more common words the definitions of two terms have , the more similar these terms are CITATION .
+Most information retrieval models CITATION compute relevance scores based on matching of terms in queries and documents .
+Model Axiomatic approaches have recently been proposed and studied to develop retrieval functions CITATION .
+In CITATION , several axiomatic retrieval functions have been derived based on a set of basic formalized retrieval constraints and an inductive definition of the retrieval function space .
+In this paper , we use the best performing function derived in axiomatic retrieval models , i.e , F2-EXP in CITATION with a fixed parameter value (b = 0.5) .
+Expanded terms are often selected from either co-occurrence-based thesauri CITATION or handcrafted thesauri CITATION or both CITATION .
+In this paper , we re-examine the problem of query expansion using lexical resources with the recently proposed axiomatic approaches CITATION .
+According to the retrieval performance , the proposed similarity function is significantly better than simple mutual information based similarity function , while it is comparable to the function proposed in CITATION .
+To overcome this limitation , in CITATION , we proposed a set of semantic term matching constraints and modified the previously derived axiomatic functions to make them satisfy these additional constraints .
+In our previous study CITATION , term similarity function s is derived based on the mutual information of terms over collections that are constructed under the guidance of a set of term semantic similarity constraints .
+The parameter sensitivity is similar to the observations described in CITATION and will not be discussed in this paper .
+s MIBL uses the collection itself to compute the mutual information , while s MIImp uses the working sets con-structed based on several constraints CITATION .
+We first compare the retrieval performance of query expansion with different similarity functions using short keyword (i.e. , title-only) queries , because query expansion techniques are often more effective for shorter queries CITATION .
+In this paper , we study several term similarity functions that exploit various information from two lexical resources , i.e. , WordNet and dependency-thesaurus constructed by Lin CITATION , and then incorporate these similarity functions into the axiomatic retrieval framework .
+In this section , we discuss a set of term similarity functions that exploit the information stored in two lexical resources: WordNet CITATION and dependency-based thesaurus CITATION .
+Another lexical resource we study in the paper is the dependency-based thesaurus provided by Lin 1 CITATION .
+The most commonly used lexical resource is WordNet CITATION , which is a hand-crafted lexical system developed at Princeton University .
+However , previous studies failed to show any significant gain in retrieval performance when queries are expanded with terms selected from WordNet CITATION .
+By incorporating this similarity function into the axiomatic retrieval models , we show that query expansion using the information from only WordNet can lead to significant improvement of retrieval performance , which has not been shown in the previous studies CITATION .
+Voorhees CITATION showed that using WordNet for word sense disambiguation de.g.ade the retrieval performance .
+Stemming is related to query expansion or query reformulation CITATION , although the latter is not limited to word variants .
+Because err(W) is a convex function of W , it has a global minimum and obtains its minimum when the gradient is zero CITATION .

@@ -1,0 +1,100 @@
+Charniak and Johnson CITATION use a PCFG to do a pass of inside-outside parsing to reduce the state space of a subsequent lexicalized n-best parsing algorithm to produce parses that are further re-ranked by a MaxEnt model .
+In the past few years , a "standard model" of scope underspecification has emerged: A range of formalisms from Underspecified DRT CITATION to dominance graphs CITATION have offered mechanisms to specify the "semantic material" of which the semantic representations are built up , plus dominance or outscoping relations between these building blocks .
+In this paper , we consider dominance graphs CITATION as one representative of this class .
+Furthermore , there are algorithms for determinizing weighted tree automata CITATION , which could be applied as preprocessing steps for wRTGs .
+The algorithms generalize easily to weights that are taken from an arbitrary ordered semiring CITATION and to computing minimal-weight rather than maximal-weight configurations .
+Underspecification CITATION has become the standard approach to dealing with scope ambiguity in large-scale hand-written grammars .
+Redundancy elimination CITATION is the problem of deriving from an USR U another USR U ' , such that the readings of U ' are a proper subset of the read-ings of U  , but every reading in U is semantically equivalent to some reading in U ' .
+Re.g.lar tree grammars CITATION are a standard approach for specifying sets of trees in theoretical computer science , and are closely related to re.g.lar tree transducers as used e.g.in recent work on statistical MT CITATION and grammar formalisms CITATION .
+See Scientists  CITATION for more details .
+The Rondane treebank is a "Redwoods style" treebank CITATION containing MRS-based underspecified representations for sentences from the tourism domain , and is distributed together with the English Resource Grammar (ERG) CITATION .
+On the theoretical side , Ebert CITATION has shown that none of the major underspecification formalisms are expressively complete , i.e .
+Because every finite tree language is re.g.lar , RTGs constitute an expressively complete underspecifica-tion formalism in the sense of Ebert CITATION: They can represent arbitrary subsets of the original set of readings .
+Ebert CITATION proves that no expressively complete underspecifi-cation formalism can be compact , i.e .
+The precise definition of dominance nets is not important here , but note that virtually all underspecified descriptions that are produced by current grammars are nets CITATION .
+Furthermore , we show how to define a PCFG-style cost model on RTGs and compute best readings of deterministic RTGs efficiently , and illustrate this model on a machine learning based model of scope preferences CITATION .
+Weighted dominance graphs can be used to encode the standard models of scope preferences CITATION .
+Tree automata are related to tree transducers as used e.g.in statistical machine translation CITATION exactly like finite-state string automata are related to finite-state string transducers , i.e .
+For example , Knight and Graehl CITATION present an algorithm to extract the best derivation of a wRTG in time O(t + n log n) where n is the number of nonterminals and t is the number of rules .
+One can then strengthen the underspecified description to efficiently eliminate subsets of readings that were not intended in the given context CITATION; so when the individual readings are eventually computed , the number of remaining readings is much smaller and much closer to the actual perceived ambiguity of the sentence .
+Indeed , for one particular grammar formalism it has even been shown that the parse chart contains an isomorphic image of a dominance chart CITATION .
+We show that the "dominance charts" proposed by Koller and Thater CITATION can be naturally seen as re.g.lar tree grammars; using their algorithm , classical underspecified descriptions (dominance graphs) can be translated into RTGs that describe the same sets of readings .
+This simplifies semantics construction , and current algorithms CITATION support the efficient enumeration of readings from an USR when it is necessary .
+Koller and Thater CITATION demonstrate how to compute a dominance chart from a dominance graph D by tabulating how a subgraph can be decomposed into smaller subgraphs by removing what they call a "free fragment" .
+In the worst case , the dominance chart of a dominance graph with n fragments has O(2 n) production rules CITATION , i.e .
+This has been a very successful approach , but recent algorithms for eliminating subsets of readings have pushed the expres-sive power of these formalisms to their limits; for instance , Koller and Thater CITATION speculate that further improvements over their (incomplete) redundancy elimination algorithm require a more expressive formalism than dominance graphs .
+We exploit this increase in expressive power in presenting a novel redundancy elimination algorithm that is simpler and more powerful than the one by Koller and Thater CITATION; in our algorithm , redundancy elimination amounts to intersection of re.g.lar tree languages .
+Ebert shows that the classical dominance-based underspecification formalisms , such as MRS , Hole Semantics , and dominance graphs , are all expressively incomplete , which Koller and Thater CITATION speculate might be a practical problem for algorithms that strengthen USRs to remove unwanted readings .
+Koller and Thater CITATION define semantic equivalence in terms of a rewrite system that specifies under what conditions two quantifiers may exchange their positions without changing the meaning of the semantic representation .
+Based on this definition , Koller and Thater CITATION present an algorithm (henceforth , KT06) that deletes rules from a dominance chart and thus removes subsets of readings from the USR .
+4 of Koller and Thater CITATION completely , whereas KT06 won't .
+We use a slightly weaker version of the rewrite system that Koller and Thater CITATION used in their evaluation .
+For instance , both Combinatory Cate.g.rial Grammars CITATION and synchronous grammars CITATION represent syntactic and semantic ambiguity as part of the same parse chart .
+An important class of dominance graphs are hy-pernormally connected dominance graphs , or dominance nets CITATION .
+It is also useful in applications beyond semantic construction , e.g.in discourse parsing CITATION .
+The problem of computing the best tree is NP-complete CITATION .
+Since CITATION , numerous works have used patterns for discovery and identification of instances of semantic relationships (e.g. , CITATION) .
+To improve results , some systems utilize additional manually constructed semantic resources such as WordNet (WN) CITATION .
+Among the 15 systems presented by the 14 SemEval teams , some utilized the manually provided WordNet tags for the dataset pairs (e.g. , CITATION) .
+For reference , the best results overall CITATION are also shown .
+Many other works manually develop a set of heuristic features devised with some specific relationship in mind , like a WordNet-based meronymy feature CITATION or size-of feature CITATION .
+The winning algorithms were LWL CITATION , SMO CITATION , and K* CITATION (there were 7 tasks , and different algorithms could be selected for each task) .
+Some other systems that avoided using the labels used WN as a supporting resource for their algorithms CITATION .
+Table 1 shows our results , along with the best Task 4 result not using WordNet labels CITATION .
+To specify patterns , following CITATION we classify words into high-frequency words (HFWs) and content words (CWs) .
+For each nominal pair (w 1 ,w 2) in a given sentence S , we use a method similar to CITATION to extract words that have a shared meaning with w 1 or w 2 .
+In CITATION we present an approach to extract pattern clusters from an untagged corpus .
+In CITATION we describe the algorithm at length , discuss its behavior and parameters in detail , and evaluate its intrinsic quality .
+This corpus was extracted from the web starting from open directory links , comprising English web pages with varied topics and styles CITATION .
+Common choices include variations of SVM CITATION , decision trees and memory-based learners .
+For example , in noun compounds many different semantic relationships are encoded by the same simple form CITATION: 'dog food' denotes food consumed by dogs , while 'summer morn-ing' denotes a morning that happens in the summer .
+Recently , SemEval-07 Task 4 CITATION proposed a benchmark dataset that includes a subset of 7 widely accepted nominal relationship (NR) classes , allowing consistent evaluation of different NR classification algorithms .
+The most recent dataset has been developed for SemEval 07 Task 4 CITATION .
+In our evaluation we have selected the setup and data from SemEval-07 Task 4 CITATION .
+Task 4 CITATION involves classification of relationships between simple nominals other than named entities .
+A leading method for utilizing context information for classification and extraction of relationships is that of patterns CITATION .
+Several different relationship hierarchies have been proposed CITATION .
+A wide variety of features are used by different algorithms , ranging from simple bag-of-words frequencies to WordNet-based features CITATION .
+Scientists  CITATION proposed a different scheme with 35 classes .
+Since the SemEval dataset is of a very specific nature , we have also applied our classification framework to the CITATION dataset , which contains 600 pairs labeled with 5 main relationship types .
+We have used the exact evaluation procedure described in CITATION , achieving a class f-score average of 60.1 , as opposed to 54.6 in CITATION and 51.2 in CITATION .
+Many relationship classification methods utilize some language-dependent preprocessing , like deep or shallow parsing , part of speech tagging and named entity annotation CITATION .
+Strate.g.es were developed for discovery of multiple patterns for some specified lexical relationship CITATION and for unsuper-vised pattern ranking CITATION .
+Other resources used for relationship discovery include Wikipedia CITATION , thesauri or synonym sets CITATION and domain-specific semantic hierarchies like MeSH CITATION .
+Rosenfeld and Feldman CITATION discover relationship instances by clustering entities appearing in similar contexts .
+Relationship classification is known to improve many practical tasks , e.g. , textual entailment CITATION .
+Freely available tools like Weka CITATION allow easy experimentation with common learning algorithms CITATION .
+All occurrences of these verbs with a subject noun were next extracted from a RASP parsed CITATION version of the British National Corpus (BNC) .
+Following previous work CITATION , we optimized its parameters on a word-based semantic similarity task .
+In addition , Bullinaria and Levy CITATION found that these parameters perform well on a number of other tasks such as the synonymy task from the Test of English as a Foreign Language (TOEFL) .
+Examples include automatic thesaurus extraction CITATION , word sense discrimination CITATION and disambiguation CITATION , collocation extraction CITATION , text se.g.entation CITATION  , and notably information retrieval CITATION .
+NLP tasks that could benefit from composition models include paraphrase identification and context-dependent language modeling CITATION .
+In order to establish which ones fit our data better , we examined whether the correlation coefficients achieved differ significantly using a t-test CITATION .
+While vector addition has been effective in some applications such as essay grading CITATION and coherence assessment CITATION , there is ample empirical evidence that syntactic relations across and within sentences are crucial for sentence and discourse processing CITATION and modulate cognitive behavior in sentence priming CITATION and inference tasks CITATION .
+For example , assuming that individual words are represented by vectors , we can compute the meaning of a sentence by taking their mean CITATION .
+Specifically , they belonged to different synsets and were maximally dissimilar as measured by the Jiang and Con-rath CITATION measure .
+Vector-based models of word meaning CITATION have become increasingly popular in natural language processing (NLP) and cognitive science .
+In cognitive science vector-based models have been successful in simulating semantic priming CITATION and text comprehension CITATION .
+This is illustrated in the example below taken from Scientists  CITATION .
+Previous applications of vector addition to document indexing CITATION or essay grading CITATION were more concerned with modeling the gist of a document rather than the meaning of its sentences .
+Moreover , the vector similarities within such semantic spaces have been shown to substantially correlate with human similarity judgments CITATION and word association norms CITATION .
+Computational models of semantics which use symbolic logic representations CITATION can account naturally for the meaning of phrases or sentences .
+multi-task learning CITATION in which the task (and label set) is allowed to vary from source to target .
+Most of this prior work deals with supervised transfer learning , and thus requires labeled source domain data , though there are examples of unsupervised CITATION , semi-supervised CITATION , and transductive approaches CITATION .
+Some of the first formulations of the transfer learning problem were presented over 10 years ago CITATION .
+Other techniques have tried to quantify the generalizability of certain features across domains CITATION , or tried to exploit the common structure of related problems CITATION .
+These are: abstracts from biological journals [UT CITATION , Yapex CITATION]; news articles [MUC6 CITATION , MUC7 CITATION]; and personal e-mails [CSPACE CITATION] .
+When the task being learned varies (say , from identifying person names to identifying protein names) , the problem is called multi-task learning CITATION .
+One recently proposed method CITATION for transfer learning in Maximum Entropy models 1 involves modifying the /t's of this Gaussian prior .
+To avoid overfitting the training data , these A's are often further constrained by the use of a Gaussian prior CITATION with diagonal co-variance , N(/x , a 2) , which tries to maximize: where f3 > 0 is a parameter controlling the amount of re.g.larization , and N is the number of sentences in the training set .
+Representing feature spaces with this kind oftree , besides often coinciding with the explicit language used by common natural language toolkits CITATION , has the added benefit of allowing a model to easily back-off , or smooth , to decreasing levels of specificity .
+We used a standard natural language toolkit CITATION to compute tens of thousands of binary features on each of these tokens , encoding such information as capitalization patterns and contextual information from surrounding words .
+When only the type of data being examined is allowed to vary (from news articles to e-mails , for example) , the problem is called domain adaptation CITATION .
+Daume allows an extra de.g.ee of freedom among the features of his domains , implicitly creating a two-level feature hierarchy with one branch for general features , and another for domain specific ones , but does not extend his hierarchy further CITATION) .
+In this work , we will base our work on Conditional Random Fields (CRF's) CITATION , which are now one of the most preferred sequential models for many natural language processing tasks .
+Recent work using so-called meta-level priors to transfer information across tasks CITATION , while related , does not take into explicit account the hierarchical structure ofthese meta-level features often found in NLP tasks .
+It has been shown empirically that , while the significance of particular features might vary between domains and tasks , certain generalized classes of features retain their importance across domains CITATION .
+One common way of addressing the transfer learning problem is to use a prior which , in conjunction with a probabilistic model , allows one to specify a priori beliefs about a distribution , thus biasing the results a learning algorithm would have produced had it only been allowed to see the training data CITATION .
+Similarly , work on hierarchical penalization CITATION in two-level trees tries to produce models that rely only on a relatively small number of groups of variable , as structured by the tree , as opposed to transferring knowledge between branches themselves .
+Almost all the current event extraction systems focus on processing single documents and , except for coreference resolution , operate a sentence at a time CITATION .
+We use a state-of-the-art English IE system as our baseline CITATION .

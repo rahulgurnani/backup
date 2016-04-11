@@ -1,0 +1,100 @@
+Initiatives such as PropBank (PB) CITATION have made possible the design of accurate automatic Semantic Role Labeling (SRL) systems like ASSERT CITATION .
+We carried out automatic evaluation of our summaries using ROUGE CITATION toolkit, which has been widely adopted by DUC for automatic summarization evaluation .
+A topic-sensitive LexRank is proposed in CITATION .
+To apply LexRank to query-focused context, a topic-sensitive version of LexRank is proposed in CITATION .
+So far, linguistic cues have played an important role in research of subjectivity recognition (e.g.CITATION), sentiment analysis (e.g.CITATION), and emotion studies (e.g.CITATION) .
+Wiebe CITATION further adapted this definition of subjectivity to be "the linguistic expression of private states CITATION" .
+They have shown that subjectivity annotations can be helpful for word sense disambiguation when a word has distinct subjective senses and objective senses CITATION .
+First, non-objectivity cannot be clearly identified without knowledge about its source CITATION .
+Second, non-objectivity always lies in a context, which cannot be ignored CITATION .
+We have examined sentence extraction agreement between experts using the prevalence-adjusted bias-adjusted (PABA) kappa to account for prevalence of judgments and conflicting biases amongst experts CITATION .
+The gazetteer feature checks named entities from each sentence against the Alexandria Digital Library (ADL) Gazetteer CITATION .
+Knowledge maps consist of nodes containing rich concept descriptions interconnected using a limited set of relationship types CITATION .
+We use ROUGE CITATION to assess summary quality using common n-gram counts and longest common subsequence (LCS) measures .
+Lin and Pantel CITATION discover concepts using clustering by committee to group terms into conceptually related clusters .
+On-toLearn extracts candidate domain terms from texts using a syntactic parse and updates an existing ontology with the identified concepts and relationships CITATION .
+Learning research indicates that knowledge maps may be useful for learners to understand the macro-level structure of an information space CITATION .
+Finally, MEAD is a widely used MDS and evaluation platform CITATION .
+We have implemented an extractive summarizer for educational science content, COGENT, based on MEAD version 3.11 CITATION .
+Knowledge Puzzle focuses on n-gram identification to produce a list of candidate terms pruned using information extraction techniques to derive the ontology CITATION .
+For some restricted combinatorial spaces of alignments—those that arise in ITG-based phrase models CITATION or local distortion models CITATION—inference can be accomplished using polynomial time dynamic programs .
+However, for more permissive models such as Marcu and Wong CITATION and DeScientists CITATION, which operate over the full space of bijective phrase alignments (see below), no polynomial time algorithms for exact inference have been exhibited .
+Then, we can formally define the set of bijective phrase alignments: A = |J   dj = e ;   |J   f ki = f > Both the conditional model of DeScientists CITATION and the joint model of Marcu and Wong CITATION operate in A, as does the phrase-based decoding framework of Scientists CITATION .
+Using an off-the-shelf ILP solver, 4 we were able to quickly and reliably find the globally optimal phrase alignment under  <fi(eij, fki) derived from the Moses pipeline CITATION .
+Forced decoding arises in online discriminative training, where model updates are made toward the most likely derivation of a gold translation CITATION .
+Marcu and Wong CITATION describes an approximation to O .
+We selected a subset of the verbs annotated in the OntoNotes project CITATION that had at least 50 instances .
+The approaches to obtaining this kind of knowledge can be based on extracting it from ele c-tronic dictionaries such as WordNet CITATION, using Named Entity (NE) tags, or a combi-nation of both CITATION .
+An automatic VSD system usually has at its disposal a diverse set of features among which the semantic features play an important role: verb sense distinctions often depend on the distinctions in the semantics of the target verb's arguments CITATION .
+Hindle CITATION grouped nouns into thesaurus-like lists based on the similarity of their syntactic contexts .
+To collect this data, we utilized two resources: (1) MaltParser CITATION - a high-efficiency dependency parser; (2) English Gigaword - a large corpus of 5.7M news articles .
+Other researches attacked the problem of unsupervised extraction of world knowledge: Schubert CITATION reports a method for extracting general facts about the world from tree-banked Brown corpus .
+Schutze CITATION used bag-of-words contexts for sense discrimination .
+Another approach to fine-grained tagging captures grammatical structures with tree-based tags, such as "supertags" in the tree-adjoining grammar of Bangalore and Joshi CITATION .
+Like previous Icelandic work CITATION, morphological analyzers disambiguate words before statistical tagging in Arabic CITATION and Czech CITATION .
+Given these challenges, the most successful tagger is IceTagger CITATION, a linguistic rule based system with several linguistic resources: a morphological analyzer, a series of local rules and heuristics for handling PPs, verbs, and forcing agreement .
+Our BoostedMERT should not be confused with other boosting algorithms such as CITATION .
+We used a standard phrase-based statistical MT system CITATION to generated N-best lists CITATION on  Developments,  Developments, and  Evaluation sub-sets .
+These two models can be combined with the entity grid described by Lapata and Barzilay CITATION for significant improvement .
+These models typically view a sentence either as a bag of words CITATION or as a bag of entities associated with various syntactic roles CITATION .
+Since the correct labeling depends on the coref-erence relationships between the NPs, we need some way to guess at this; we take all NPs with the same head to be coreferent, as in the non-coreference version of CITATION 2 .
+As a baseline, we adopt the entity grid CITATION .
+In the discrimination task CITATION, a document is compared with a random permutation of its sentences, and we score the system correct ifitindicates the original as more coherent 4 .
+As mentioned, Barzilay and Lapata CITATION uses a coreference system to attempt to improve the entity grid, but with mixed results .
+Previous work has focused on the AIRPLANE corpus CITATION, which contains short announcements of airplane crashes written by and for domain experts .
+Models of coherence have been used to impose an order on sentences for multidocument summarization CITATION, to evaluate the quality of human-authored essays CITATION, and to insert new information into existing documents CITATION .
+Therefore we also test our systems on the task of insertion CITATION, in which we remove a sentence from a document, then find the point of insertion which yields the highest coherence score .
+We construct a maximum-entropy classifier using syntactic and lexical features derived from Uryupina CITATION, and a publicly available learning tool CITATION .
+These patterns have been studied extensively, by linguists CITATION and in the field of coreference resolution .
+Features such as full names, appositives, and restrictive relative clauses are associated with the introduction of unfamiliar entities into discourse CITATION .
+Another issue is that NPs whose referents are familiar tend to resemble discourse-old NPs, even though they have not been previously mentioned CITATION .
+We use a model which probabilistically attempts to describe these preferences CITATION .
+The model is trained using a small hand-annotated corpus first used in Scientists CITATION .
+Centering theory CITATION describes additional constraints about which entities in a discourse can be pronominalized: if there are pronouns in a se.g.ent, they must include the backward-looking center .
+As noted by studies since Hawkins CITATION, there are marked syntactic differences between the two classes .
+We evaluate our models using two tasks, both based on the assumption that a human-authored document is coherent, and uses the best possible ordering of its sentences (see Lapata CITATION) .
+The system of Nenkova and McKeown CITATION works in the opposite direction .
+Classifiers in the literature include CITATION .
+For the discourse-new classification task, the model's most important feature is whether the head word of the NP to be classified has occurred previously (as in Ng and Cardie CITATION and Vieira and Poesio CITATION) .
+This model outperforms a variety of word overlap and semantic similarity models, and is used as a component in the state-of-the-art system of Soricut and Marcu CITATION .
+Both of these models are very different from the lexical and entity-based models currently used for this task CITATION, and are probably capable of improving the state of the art .
+Our first model distinguishes discourse-new from discourse-old noun phrases, using features based on Uryupina CITATION .
+The b 3 scorer CITATION was proposed to overcome several shortcomings of the MUC scorer .
+Other work on global models of coreference (as opposed to pairwise models) has included: Scientists CITATION who used a Bell tree whose leaves represent possible partitionings of the mentions into entities and then trained a model for searching the tree; Mc-Callum and Wellner CITATION who defined several conditional random field-based models; Ng CITATION who took a reranking approach; and Scientists CITATION who use a probabilistic first-order logic model .
+Much work that followed improved upon this strate.g., by improving the features CITATION, the type of classifier CITATION, and changing mention links to be to the most likely antecedent rather than the most recent positively labeled antecedent CITATION .
+More recently, Denis and Baldridge CITATION utilized an inte.g.r linear programming (ILP) solver to better combine the decisions made by these two complementary classifiers, by finding the globally optimal solution according to both classifiers .
+When describing our model, we build upon the notation used by Denis and Baldridge CITATION .
+Prior work CITATION has generated training data for pairwise classifiers in the following manner .
+The coref-ilp model of Denis and Baldridge CITATION took a different approach at test time: for each mention they would work backwards and add a link for all previous mentions which the classifier deemed coreferent .
+4 We added named entity (NE) tags to the data using the tagger of Scientists CITATION .
+In addition to the MUC and b 3 scorers, we also evaluate using cluster f-measure CITATION, which is the standard f-measure computed over true/false coreference decisions for pairs of mentions; the Rand index CITATION, which is pairwise accuracy of the clustering; and variation of information CITATION, which utilizes the entropy of the clusterings and their mutual information (and for which lower values are better) .
+Ng and Cardie CITATION and Ng CITATION highlight the problem of determining whether or not common noun phrases are anaphoric .
+Much recent work on coreference resolution, which is the task of deciding which noun phrases, or mentions, in a document refer to the same real world entity, builds on Scientists CITATION .
+Our feature set was simple, and included many features from CITATION, including the pronoun, string match, definite and demonstrative NP, number and gender agreement, proper name and appositive features .
+Our Soon-style baseline used the same training and testing re.g.men as Scientists CITATION .
+We also added part of speech (POS) tags to the data using the tagger of Scientists CITATION, and used the tags to decide if mentions were plural or singular .
+The MUC scorer CITATION is a popular coreference evaluation metric, but we found it to be fatally flawed .
+System utterances were generated using a simple template-based algorithm and synthesised using the speech synthesis system Cerevoice CITATION, which has been shown to be intelligible to older users CITATION .
+Older people are a user group with distinct needs and abilities CITATION that present challenges for user modelling .
+They are also in line with findings of tests of deployed Interactive Voice Response systems with younger and older users CITATION, which show the diversity of older people's behaviour .
+In order to learn good policies, the behaviour of the SUs needs to cover the range of variation seen in real users CITATION .
+Our data comes from a fully annotated corpus of 447 interactions of older and younger users with a Wizard-of-Oz (WoZ) appointment scheduling system CITATION .
+Currently one of the standard methods for evaluating the quality of a SU is to run a user simulation on a real corpus and measure how often the action generated by the SU agrees with the action observed in the corpus CITATION .
+Given a history of system and user actions (n-1 actions) the SU generates an action based on a probability distribution learned from the training data CITATION .
+The actions generated by our SUs were compared to the actions observed in the corpus using five metrics proposed in the literature CITATION: perplexity (PP), precision, recall, expected precision and expected recall .
+A detailed description of the corpus design, statistics, and annotation scheme is provided in CITATION .
+There are 28 distinct user speech acts CITATION .
+This finding supports the principle of "inclusive design" CITATION: designers should consider a wide range of users when developing a product for general use .
+The only statistical spoken dialogue system for older people we are aware of is Nursebot, an early application of statistical methods (POMDPs) within the context of a medication reminder system CITATION .
+We then evaluate these models using standard metrics CITATION and compare our findings with the results of statistical corpus analysis .
+Finally, a linear model is trained using a variation of the averaged perceptron CITATION algorithm .
+We use a linear classifier trained with a re.g.larized perceptron update rule CITATION as implemented in SNoW, CITATION .
+CITATION bootstrap with a classifier used interchangeably with an un-supervised temporal alignment method .
+We evaluated our approach in two settings; first, we compared our system to a baseline system described in CITATION .
+Previous works usually take a generative approach, CITATION .
+The idea of selectively sampling training samples has been wildly discussed in machine learning theory CITATION and has been applied successfully to several NLP applications CITATION .
+Other approaches exploit similarities in aligned bilingual corpora; for example, CITATION combine two unsupervised methods .
+DictEx We extend the phrase table with entries from a manually created dictionary - the English glosses of the Buckwalter Arabic morphological analyzer CITATION .
+Our transliteration system is rather simple: it uses the transliteration similarity measure described by Scientists CITATION to select a best match from a large list of possible names in English .
+More details are available in a technical report CITATION .
+We tokenize using the Mada morphological disambiguation system CITATION, and Tokan, a general Arabic tokenizer CITATION .

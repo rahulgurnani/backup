@@ -1,0 +1,100 @@
+Goodman CITATION observed that the Viterbi parse is in general not the optimal parse for evaluation metrics such as f-score that are based on the number of correct constituents in a parse .
+For example , incremental CFG parsing algorithms can be used with the CFGs produced by this transform , as can the Inside-Outside estimation algorithm CITATION and more exotic methods such as estimating adjoined hidden states CITATION .
+The closest related work we are aware of is McAllester CITATION , which also describes a reduction of PBDGs to efficiently-parsable CFGs and directly inspired this work .
+This paper investigates the relationship between Context-Free Grammar (CFG) parsing and the Eis-ner/Satta PBDG parsing algorithms , including their extension to second-order PBDG parsing CITATION .
+First , because they capture bilexical head-to-head dependencies they are capable of producing extremely high-quality parses: state-of-the-art dis-criminatively trained PBDG parsers rival the accuracy of the very best statistical parsers available today CITATION .
+The steps involved in CKY parsing with this grammar correspond closely to those of the McDonald CITATION second-order PBDG parsing algorithm .
+These weights are estimated by an online procedure as in McDonald CITATION , and are not intended to define a probability distribution .
+We provided one grammar which captures horizontal second-order dependencies CITATION , and another which captures vertical second-order head-to-head-to-head dependencies .
+Since CFGs can be expressed as Horn-clause logic programs CITATION and the Unfold-Fold transformation is provably correct for such programs CITATION , it follows that its application to CFGs is provably correct as well .
+Specifically , we show how to use an off-line preprocessing step , the Unfold-Fold transformation , to transform a PBDG into an equivalent CFG that can be parsed in O(n 3) time using a version of the CKY algorithm with suitable indexing CITATION , and extend this transformation so that it captures second-order PBDG dependencies as well .
+By a slight generalization of a result by Aoto CITATION , this typing r h N' : a must be ne.g.tively non-duplicated in the sense that each atomic type has at most one ne.g.tive occurrence in it .
+By Aoto and Ono's CITATION generalization of the Coherence Theorem CITATION , it follows that every /-term P such that r' h P : a for some r' c r must be Sr-equal to N' (and consequently to N) .
+The reduction to Datalog makes it possible to apply to parsing and generation sophisticated evaluation techniques for Datalog queries; in particular , an application of generalized supplementary magic-sets rewriting CITATION automatically yields Earley-style algorithms for both parsing and generation .
+With re.g.rd to parsing and recognition of input strings , polynomial-time algorithms and the LOGCFL upper bound on the computational complexity are already known for the grammar formalisms covered by our results CITATION; nevertheless , we believe that our reduction to Datalog offers valuable insights .
+In this paper , we show that a similar reduction to Datalog is possible for more powerful grammar formalisms with "context-free" derivations , such as (multi-component) tree-adjoining grammars CITATION , IO macro grammars CITATION , and (parallel) multiple context-free grammars CITATION .
+By the main result of Scientists  CITATION , the related search problem of finding one derivation tree for the input /-term is in functional LOGCFL , i.e. , the class of functions that can be computed by a logspace-bounded Turing machine with a LOGCFL oracle .
+Our method essentially relies on the encoding of different formalisms in terms of abstract cate.g.rial grammars CITATION .
+What we have called a context-free / -term grammar is nothing but an alternative notation for an abstract cate.g.rial grammar CITATION whose abstract vocabulary is second-order , with the restriction to linear /-terms removed .
+A string-generating grammar coupled with Montague semantics may be represented by a synchronous CFLG , a pair of CFLGs with matching rule sets CITATION .
+linear ACGs are known to be expressive enough to encode well-known mildly context-sensitive grammar formalisms in a straightforward way , including TAGs and multiple context-free grammars CITATION .
+For example , the linear CFLG in Figure 8 is an encoding of the TAG in Figure 3 , where a(S) = o—>o and a(A) = (o —> o) —> o — > o CITATION .
+For such P and D , it is known that {(D , q) | D eD , P U D derives q } is in the complexity class LOGCFL CITATION .
+3 In the linear case , Salvati CITATION has shown the recognition/parsing complexity to be PTIME , and exhibited an algorithm similar to Earley parsing for TAGs .
+The result of the generalized supplementary magic-sets rewriting of Beeri and Ramakrish-nan CITATION applied to the Datalog program representing a CFG essentially coincides with the deduction system CITATION or uninstantiated parsing system CITATION for Earley parsing .
+By naive (or seminaive) bottom-up evaluation CITATION , the answer to such a query can be computed in polynomial time in the size of the database for any Datalog program .
+We illustrate this approach with the program in Figure 4 , following the presentation of Ullman CITATION .
+But there are also other factors involved - for example , the tendency to put "given" discourse elements before "new" ones , which has been shown to play a role independent of length CITATION .
+Statistical parsers make use of features that capture dependency length (e.g.an adjacency feature in Collins CITATION , more explicit length features in McScientists  CITATION and Eisner and Smith CITATION) and thus learn to favor parses with shorter dependencies .
+We take sentences from the Wall Street Journal section of the Penn Treebank , extract the dependency trees using the head-word rules of Collins CITATION , consider them to be unordered dependency trees , and linearize them to minimize dependency length .
+Exactly this pattern has been observed by Dryer CITATION in natural languages .
+Frazier CITATION suggests that this might serve the function of keeping heads and dependents close together .
+This has been offered as an explanation for numerous psycholinguistic phenomena , such as the greater processing difficulty of object relative clauses versus subject relative clauses CITATION .
+Hawkins CITATION has shown that this principle is reflected in grammatical rules across many languages .
+One might suppose that such syntactic choices in English are guided at least partly by dependency length minimization , and indeed there is evidence for this; for example , people tend to put the shorter of two PPs closer to the verb CITATION .
+The problem of finding the optimum weighted DLA for a set of input trees can be shown to be NP-complete by reducing from the problem of finding a graph's minimum Feedback Arc Set , one of the 21 classic problems of Karp CITATION .
+This setting is reminiscent of the problem of optimizing feature weights for reranking of candidate machine translation outputs , and we employ an optimization technique similar to that used by Och CITATION for machine translation .
+In particular , our approach would be applicable to corpora with frame-specific role labels , e.g.FrameNet CITATION .
+Our work suggests that feature generalization based on verb-similarity may compliment approaches to generalization based on role-similarity CITATION .
+For this task we utilized the August 2005 release of the Charniak parser with the default speed/accuracy settings CITATION , which required roughly 360 hours of processor time on a 2.5 GHz PowerPC G5 .
+To automatically identify all verb inflections , we utilized the English DELA electronic dictionary CITATION , which contained all but 21 of the PropBank verbs (for which we provided the inflections ourselves) , with old-English verb inflections removed .
+Parse tree paths were used for semantic role labeling by Gildea and Jurafsky CITATION as descriptive features of the syntactic relationship between predicates and their arguments in the parse tree of a sentence .
+In future work , it would be particularly interesting to compare empirically-derived verb clusters to verb classes derived from theoretical considerations CITATION , and to the automated verb classification techniques that use these classes CITATION .
+Our approach is analogous to previous work in extracting collocations from large text corpora using syntactic information CITATION .
+This observation further supports the distributional hypothesis of word similarity and corresponding technologies for identifying synonyms by similarity of lexical-syntactic context CITATION .
+In our work , we utilized the GigaWord corpus of English newswire text CITATION , consisting of nearly 12 gigabytes of textual data .
+Annotations similar to these have been used to create automated semantic role labeling systems CITATION for use in natural language processing applications that require only shallow semantic parsing .
+The overall performance of our semantic role labeling approach is not competitive with leading contemporary systems , which typically employ support vector machine learning algorithms with syntactic features CITATION or syntactic tree kernels CITATION .
+A recent release of the PropBank CITATION corpus of semantic role annotations of Tree-bank parses contained 112 ,917 labeled instances of 4 ,250 rolesets corresponding to 3 ,257 verbs , as illustrated by this example for the verb buy .
+An important area for future research will be to explore the correlation between our distance metric for syntactic similarity and various quantitative measures of semantic similarity CITATION .
+To prepare this corpus for analysis , we extracted the body text from each of the 4.1 million entries in the corpus and applied a maximum-entropy algorithm to identify sentence boundaries CITATION .
+Feature-based Methods for SRL: most features used in prior SRL research are generally extended from Gildea and Jurafsky CITATION , who used a linear interpolation method and extracted basic flat features from a parse tree to identify and classify the constituents in the FrameNet CITATION .
+SVM CITATION is selected as our classifier and the one vs .
+In the context of it , more and more kernels for restricted syntaxes or specific domains CITATION are proposed and explored in the NLP domain .
+In this paper , we apply Alternating Structure Optimization (ASO) CITATION to the semantic role labeling task on NomBank .
+ASO has been shown to be effective on the following natural language processing tasks: text cate.g.rization , named entity recognition , part-of-speech tagging , and word sense disambiguation CITATION .
+For a more complete description , see CITATION .
+In this work , we use a modification of Huber's robust loss function , similar to that used in CITATION: L(p , y) —4py if py < —1 (1 — py) 2 if — 1 py< 1 (2) 0 if py > 1 We fix the re.g.larization parameter A to 10 -4 , similar to that used in CITATION .
+This is a simplified version of the definition in CITATION , made possible because the same A is used for all auxiliary problems .
+ASO has been demonstrated to be an effective semi-supervised learning algorithm CITATION .
+A variety of auxiliary problems are tested in CITATION in the semi-supervised settings , i.e. , their auxiliary problems are generated from unlabeled data .
+More recently , for the word sense disambiguation (WSD) task , CITATION experimented with both supervised and semi-supervised auxiliary problems , although the auxiliary problems she used are different from ours .
+In recent years , the availability of large human-labeled corpora such as PropBank CITATION and FrameNet CITATION has made possible a statistical approach of identifying and classifying the arguments of verbs in natural language texts .
+This is known as multi-task learning in the machine learning literature CITATION .
+A large number of SRL systems have been evaluated and compared on the standard data set in the CoNLL shared tasks CITATION , and many systems have performed reasonably well .
+In addition to the target outputs , CITATION discusses configurations where both used inputs and unused inputs (due to excessive noise) are utilized as additional outputs .
+First , we train the various classifiers on sections 2 to 21 using gold argument labels and automatic parse trees produced by Charniak's re-ranking parser CITATION , and test them on section 23 with automatic parse trees .
+Noun predicates also appear in FrameNet semantic role labeling CITATION , and many FrameNet SRL systems are evaluated in Senseval-3 CITATION .
+So far we are aware of only one English NomBank-based SRL system CITATION , which uses the maximum entropy classifier , although similar efforts are reported on the Chinese NomBank by CITATION and on FrameNet by CITATION using a small set of hand-selected nominalizations .
+Second , we achieve accuracy higher than that reported in CITATION and advance the state of the art in SRL research .
+Eighteen baseline features and six additional features are proposed in CITATION for NomBank argument identification .
+Unlike in CITATION , we do not prune arguments dominated by other arguments or those that overlap with the predicate in the training data .
+The J&N column presents the result reported in CITATION using both baseline and additional features .
+A diverse set of 28 features is used in CITATION for argument classification .
+To find a smaller set of effective features , we start with all the features considered in CITATION , in CITATION , and various combinations of them , for a total of 52 features .
+The J&N column presents the result reported in CITATION .
+This is the same configuration as reported in CITATION .
+Table 3: Fl scores of various classifiers on NomBank SRL Our maximum entropy classifier consistently outperforms CITATION , which also uses a maximum entropy classifier .
+Our results outperform those reported in CITATION .
+With the recent release of NomBank CITATION , it becomes possible to apply machine learning techniques to the task .
+Accordingly , we do not maximize the probability of the entire labeled parse tree as in CITATION .
+Some approaches have used WordNet for the generalization step CITATION , others EM-based clustering CITATION .
+The argument positions for which we compute selec-tional preferences will be semantic roles in the FrameNet CITATION paradigm , and the predicates we consider will be semantic classes of words rather than individual words (which means that different preferences will be learned for different senses of a predicate word) .
+We use FrameNet CITATION , a semantic lexicon for English that groups words in semantic classes called frames and lists semantic roles for each frame .
+Brockmann and Lapata CITATION perform a comparison of WordNet-based models .
+In SRL , the two most pressing issues today are (1) the development of strong semantic features to complement the current mostly syntactically-based systems , and (2) the problem of the domain dependence CITATION .
+The preference that r p has for a given synset co , the selectional association between the two , is then defined as the contribution of c 0 to r p's selectional preference strength: A(rp ,C 0) = P (C 0|r p)log  ^gf* S (rp Further WordNet-based approaches to selec-tional preference induction include Clark and Weir CITATION , and Abe and Li CITATION .
+To determine headwords of the semantic roles , the corpus was parsed using the Collins CITATION parser .
+5x2cv CITATION .
+They have been used for example for syntactic disambiguation CITATION , word sense disambiguation (WSD) CITATION and semantic role labeling (SRL) CITATION .
+While EM-based models have been shown to work better in SRL tasks CITATION , this has been attributed to the difference in coverage .
+We will be using the similarity metrics shown in Table 1: Cosine , the Dice and Jaccard coefficients , and Hindle's CITATION and Lin's CITATION mutual information-based metrics .
+Selectional restrictions and selectional preferences that predicates impose on their arguments have long been used in semantic theories , (see e.g. CITATION) .
+It was parsed using Minipar CITATION , which is considerably faster than the Collins parser but failed to parse about a third of all sentences .
+In this paper we propose a new , simple model for selectional preference induction that uses corpus-based semantic similarity metrics , such as Cosine or Lin's CITATION mutual information-based metric , for the generalization step .
+The corpus-based induction of selectional preferences was first proposed by Resnik CITATION .
+The induction of selectional preferences from corpus data was pioneered by Resnik CITATION .
+Scientists  CITATION generalize over seen headwords using EM-based clustering rather than WordNet .
+Experimental design Like Scientists  CITATION we evaluate selectional preference induction approaches in a pseudo-disambiguation task .
+The intuition that "hard to learn" examples are suspect corpus errors is not new , and appears also in Scientists  CITATION , who consider the "heaviest" samples in the final distribution of the AdaBoost algorithm to be the hardest to classify and thus likely corpus errors .
+The HEB  Err version of the corpus is obtained by projecting the chunk boundaries on the sequence of PoS and morphology tags obtained by the automatic PoS tagger of Adler & Elhadad CITATION .

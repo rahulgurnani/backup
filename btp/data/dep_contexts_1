@@ -1,0 +1,100 @@
+Roark and Bacchiani CITATION showed that weighted count-merging is a special case of maximum a posteriori (MAP) estimation , and successfully used it for probabilistic context-free grammar domain adaptation CITATION and language model adaptation CITATION .
+We have recently shown that this algorithm is effective in estimating the sense priors of a set of nouns CITATION .
+However , in CITATION , we showed that in a supervised setting where one has access to some annotated training data , the EM-based method in section 5 estimates the sense priors more effectively than the method described in CITATION .
+A similar work is the recent research by Scientists  CITATION , where active learning was used successfully to reduce the annotation effort for WSD of 5 English verbs using coarse-grained evaluation .
+This is slightly higher than the 5.8 senses per verb in CITATION , where the experiments were conducted using coarse-grained evaluation .
+For WSD , Scientists  CITATION used selective sampling for a Japanese language WSD system , Scientists  CITATION used active learning for 5 verbs using coarse-grained evaluation , and H .
+Dang CITATION employed active learning for another set of 5 verbs .
+To investigate this , Scientists  CITATION and Martinez and Agirre CITATION conducted experiments using the DSO corpus , which contains sentences from two different corpora , namely Brown Corpus (BC) and Wall Street Journal (WSJ) .
+Scientists  CITATION pointed out that one of the reasons for the drop in accuracy is the difference in sense priors (i.e. , the proportions of the different senses of a word) between BC and WSJ .
+Following the setup of CITATION , we similarly made use of the DSO corpus to perform our experiments on domain adaptation .
+As mentioned in section 1 , research in CITATION noted an improvement in accuracy when they adjusted the BC and WSJ datasets such that the proportions of the different senses of each word were the same between BC and WSJ .
+Scientists  CITATION used the DSO corpus to highlight the importance of the issue of domain dependence of WSD systems , but did not propose methods such as active learning or count-merging to address the specific problem of how to perform domain adaptation for WSD .
+This is similar to the approach taken in CITATION where they focus on determining the predominant sense of words in corpora drawn from finance versus sports domains .
+Research by McScientists  CITATION and Scientists  CITATION pointed out that a change of predominant sense is often indicative of a change in domain .
+These knowledge sources were effectively used to build a state-of-the-art WSD program in one of our prior work CITATION .
+To reduce the effort required to adapt a WSD system to a new domain , we employ an active learning strate.g. CITATION to select examples to annotate from the new domain of interest .
+With active learning CITATION , we use uncertainty sampling as shown r  — WSD system trained on D T b  — word sense prediction for d using r  p  — confidence of prediction b if p < p  min then Figure 1: Active learning in Figure 1 .
+The WordNet Domains resource CITATION assigns domain labels to synsets in WordNet .
+Among the few currently available manually sense-annotated corpora for WSD , the SEMCOR (SC) corpus CITATION is the most widely used .
+The DSO corpus CITATION contains 192 ,800 annotated examples for 121 nouns and 70 verbs , drawn from BC and WSJ .
+In this section , we describe an EM-based algorithm that was introduced by Scientists  CITATION , which can be used to estimate the sense priors , or a priori probabilities of the different senses in a new dataset .
+Most of this section is based on CITATION .
+In applying active learning for domain adaptation , Scientists  CITATION presented work on sentence boundary detection using generalized Winnow , while Scientists  CITATION performed language model adaptation of automatic speech recognition systems .
+In most contexts , the similarity between chocolate , say , and a narcotic like heroin will mea-gerly reflect the simple ontological fact that both are kinds of substances; certainly , taxonomic measures of similarity as discussed in Budanitsky and Hirst CITATION will capture little more than this commonality .
+The function (%sim arg 0 CAT) reflects the perceived similarity between the putative member arg 0 and a synset CAT in WordNet , using one of the standard formulations described in Budanitsky and Hirst CITATION .
+Whissell CITATION reduces the notion of affect to a single numeric dimension , to produce a dictionary of affect that associates a numeric value in the range 1.0 (most unpleasant) to 3.0 CITATION .
+We have described an approach that can be seen as a functional equivalent to the CPA (Corpus Pattern Analysis) approach of Scientists  CITATION , in which our goal is not that of automated induction of word senses in context (as it is in CPA) but the automated induction of flexible , context-sensitive cate.g.ry structures .
+Since the line between literal and metaphoric uses of a cate.g.ry is often impossible to draw , the best one can do is to accept metaphor as a gradable phenomenon CITATION .
+The most revealing variations are syntagmatic in nature , which is to say , they look beyond individual word forms to larger patterns of contiguous usage CITATION .
+Dice's coefficient CITATION is used to implement this measure .
+As noted by De Leenheer and de Moor CITATION , ontologies are lexical representations of concepts , so we can expect the effects of context on language use to closely reflect the effects of context on ontolog-Linguistic variation across contexts is often symp- ical structure .
+While simile is a mechanism for highlighting inter-concept similarity , metaphor is at heart a mechanism of cate.g.ry inclusion CITATION .
+Glucksberg CITATION notes that the same cate.g.ry , used figuratively , can exhibit different qualities in different metaphors .
+In this section , we describe how we use Markov chain Monte Carlo methods to perform inference in the statistical models described in the previous section; Scientists  CITATION provide an excellent introduction to MCMC techniques .
+These are short statements that restrict the space of languages in a concrete way (for instance "object-verb ordering implies adjective-noun ordering"); Croft CITATION , Hawkins CITATION and Song CITATION provide excellent introductions to linguistic typology .
+The closest work is represented by the books Possible and Probable Languages CITATION and Language Classification by Numbers CITATION , but the focus of these books is on automatically discovering phylogenetic trees for languages based on Indo-European cognate sets CITATION .
+They have also been used computationally to aid in the learning of unsupervised part of speech taggers CITATION .
+For instance our #7 is implication #18 from Greenberg , reproduced by Song CITATION .
+We examined sentences using a phrase structure parser CITATION and an HPSG parser CITATION .
+Since the number of parameters in NLM is still large , several smoothing methods are used CITATION to produce more accurate probabilities , and to assign nonzero probabilities to any word string .
+We would like to see more refined online learning methods with kernels CITATION that we could apply in these areas .
+Therefore we make use of an online learning algorithm proposed by CITATION , which has a much smaller computational cost .
+Blei , 2003; Scientists  , 2005) , our result may encourage the study ofthe combination offeatures forlanguage modeling .
+We used a Viterbi decoding CITATION for the partition .
+Discriminative language models (DLMs) have been proposed to classify sentences directly as correct or incorrect CITATION , and these models can handle both non-local and overlapping information .
+For fast kernel computation , the Polynomial Kernel Inverted method (PKI)) is proposed CITATION , which is an extension of Inverted Index in Information Retrieval .
+The class model was originally proposed by CITATION .
+However , by considering only those counts that actually change , the algorithm can be made to scale somewhere between linearly and quadratically to the number of classes CITATION .
+Recently , Whole Sentence Maximum Entropy Models CITATION (WSMEs) have been introduced .
+In our experiments , we did not examine the result of using other sampling methods , For example , it would be possible to sample sentences from a whole sentence maximum entropy model CITATION and this is a topic for future research .
+A contrastive estimation method CITATION is similar to ours with re.g.rd to constructing pseudo-ne.g.tive examples .
+If the kernel-trick CITATION is applied to online margin-based learning , a subset of the observed examples , called the active set , needs to be stored .
+It should be noted that models based on finite state transducers have been shown to be adequate for describing fusion as wellCITATION , and further work should evaluate these types of models in ASR of languages with higher indexes of fusion .
+The final approach applies a manually constructed rule-based morphological taggerCITATION .
+For training the LMs , a subset of 43 million words from the Estonian Se.g.korpus was usedCITATION , preprocessed with a morphological analyzerCITATION .
+In CITATION a WER of 44.5% was obtained with word-based trigrams and a WER of 37.2% with items similar to ones from "grammar" using the same speech corpus as in this work .
+It should be noted that every OOV causes roughly two errors in recognition , and vocabulary decomposition approaches such as the ones evaluated here give some benefits to word error rate (WER) even in recognizing languages such as EnglishCITATION .
+This is similar to what was introduced as "flat hybrid model"CITATION , and it tries to model OOV-words as sequences of words and fragments .
+The results for "hybrid" are in in the range suggested by earlier workCITATION .
+The morph approach was developed for the needs of Finnish speech recognition , which is a high synthesis , moderate fusion and very low orthographic irre.g.larity language , whereas the hybrid approach in CITATION was developed for English , which has low synthesis , moderate fusion , and very high orthographic irre.g.larity .
+VarigramsCITATION are used in this work , and to make LMs trained with each approach comparable , the varigrams have been grown to roughly sizes of 5 million counts .
+ing approach , growing varigram modelsCITATION were used with no limits as to the order of n-grams , but limiting the number of counts to 4.8 and 5 million counts .
+Models of this type have previously been shown to yield very good g2p conversion results CITATION .
+It has been argued that using morphological information is important for languages where morphology has an important influence on pronunciation , syllabiication and word stress such as German , Dutch , Swedish or , to a smaller extent , also English CITATION .
+Decision trees were one of the first data-based approaches to g2p and are still widely used CITATION .
+Best results were obtained when using a variant of Modified Kneser-Ney Smoothing 2 CITATION .
+CITATION also used a joint n-gram model .
+We compared four different state-of-the-art unsu-pervised systems for morphological decomposition (cf. CITATION) .
+In very recent work , CITATION developed an unsupervised algorithm (f-meas: 68%; an extension of RePortS) whose se.g.entations improve g2p when using a the decision tree (PER: 3.45%) .
+The German corpus used in these experiments is CELEX CITATION .
+Among the unsupervised systems , best results 7 on the g2p task with morphological annotation were obtained with the RePortS system CITATION .
+The same algorithms have previously been shown to help a speech recognition task CITATION .
+The joint n-gram model performs significantly better than the decision tree (essentially based on CITATION) , and achieves scores comparable to the Pronunciation by Analogy (PbA) algorithm CITATION .
+This is much faster than the times for Pronunciation by Analogy (PbA) CITATION on the same corpus .
+Examples of such approaches using Hidden Markov Models are CITATION (who applied the HMM to the related task of phoneme-to-grapheme conversion) , CITATION and CITATION .
+For German , CITATION show that information about stress assignment and the position of a syllable within a word improve g2p conversion .
+Vowel length and quality has been argued to also depend on morphological structure CITATION .
+The two rule-based systems we evaluated , the ETI 4 morphological system and SMOR 5 CITATION , are both high-quality systems with large lexica that have been developed over several years .
+We used the syllabifier described in CITATION , which works similar to the joint n-gram model used for g2p conversion .
+A possible reason for the observed dichotomy in the behavior of the vowel and consonant inventories with respect to redundancy can be as follows: while the organization of the vowel inventories is known to be governed by a single force - the maximal perceptual contrast CITATION) , consonant inventories are shaped by a complex interplay of several forces CITATION .
+Such an observation is significant since whether or not these principles are similar/different for the two inventories had been a question giving rise to perennial debate among the past researchers CITATION .
+On the other hand , in spite of several attempts CITATION the organization of the consonant inventories lacks a satisfactory explanation .
+Various attempts have been made in the past to explain the aforementioned trends through linguistic insights CITATION mainly establishing their statistical significance .
+For instance , in biological systems we find redundancy in the codons CITATION , in the genes CITATION and as well in the proteins CITATION .
+In fact , the organization of the vowel inventories (especially those with a smaller size) across languages has been satisfactorily explained in terms of the single principle of maximal perceptual contrast CITATION .
+This redundancy is present mainly to reduce the risk of the complete loss of information that might occur due to accidental errors CITATION .
+Many typological studies CITATION of se.g.ental inventories have been carried out in past on the UCLA Phonological Se.g.ent Inventory Database (UPSID) CITATION .
+In order to explain these trends , feature economy was proposed as the organizing principle of the consonant inventories CITATION .
+Inspired by the aforementioned studies and the concepts of information theory CITATION we try to quantitatively capture the amount of redundancy found across the consonant Table 1: The table shows four plosives .
+For this purpose , we present an information theoretic definition of redundancy , which is calculated based on the set of features 1 CITATION that are used to express the consonants .
+However , one of the earliest observations about the consonant inventories has been that consonants tend to occur in pairs that exhibit strong correlation in terms of their features CITATION .
+2 Previous Work Previous work — e.g. CITATION — has mostly assumed that one has a training lexicon of transliteration pairs , from which one can learn a model , often a source-channel or MaxEnt-based model .
+A linear classifier is trained using the Winnow algorithm from the SNoW toolkit CITATION .
+Using comparable corpora , the named-entities for persons and locations were extracted from the English text; in this paper , the English named-entities were extracted using the named-entity recognizer described in Scientists  CITATION , based on the SNoW machine learning toolkit CITATION .
+This is quite small compared to previous approaches such as Knight and Graehl CITATION or Scientists  CITATION .
+Gildea and Jurafsky CITATION counted the number of features whose values are different , and used them as a substitution cost .
+Halle and Clements CITATION's distinctive features are used in order to model the substitution/ insertion/deletion costs for the string-alignment algorithm and linear classifier .
+All pronunciations are based on the WorldBet transliteration system CITATION , an ascii-only version of the IPA .
+Based on the pronunciation error data of learners of English as a second language as reported in CITATION , we propose the use of what we will term pseudofeatures .
+Examples of the top-3 candidates in the transliteration of English-Korean To evaluate the proposed transliteration methods quantitatively , the Mean Reciprocal Rank (MRR) , a measure commonly used in information retrieval when there is precisely one correct answer CITATION was measured , following Tao and Zhai CITATION .

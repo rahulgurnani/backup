@@ -1,0 +1,100 @@
+Therefore , we use the forward-backward algorithm CITATION to calculate P(e ij) in a more efficient way .
+There are several re.g.ession models , ranging from the simplest linear re.g.ession model to non-linear alternatives , such as a neural network () , a Re.g.ession SVM CITATION .
+This inconsistency may result in severe problems when the scales of feature values vary dramatically CITATION .
+Then we do corpus analysis to filter out the words which are clustered incorrectly , according to word distributional similarity , following CITATION .
+UMASS: This is the result reported in CITATION using Porter stemming for both document and query terms .
+Most stemmers , such as the Porter stemmer CITATION and Krovetz stemmer CITATION , deal with stemming by stripping word suffixes according to a set of morphological rules .
+Among them , the Porter stemmer CITATION is the most widely used .
+The Indri 2.5 search engine CITATION is used as our basic retrieval system .
+To better determine stemming rules , Xu and Croft CITATION propose a selective stemming method based on corpus analysis .
+Xu and Croft CITATION create equivalence clusters of words which are morphologically similar and occur in similar contexts .
+This approach is similar to the work of Xu and Croft CITATION , and can be considered as another state-of-the-art result .
+Question answering CITATION relates to question search .
+Conventional vector space models are used to calculate the statistical similarity and WordNet CITATION is used to estimate the semantic similarity .
+Note that the root node of a question tree is associated with empty string as the definition of prefix tree requires CITATION .
+Sneiders CITATION proposed template based FAQ retrieval systems .
+The MDL-based tree cut model was originally introduced for handling the problem of generalizing case frames using a thesaurus CITATION .
+Jeon and Bruce CITATION proposed a mixture model for fixing the lexical chasm between questions .
+For example , Scientists  CITATION compared four different retrieval methods , i.e .
+MDL is a principle of data compression and statistical estimation from information theory CITATION .
+FAQ Finder CITATION heuristically combines statistical similarities and semantic similarities between questions to rank FAQs .
+Scientists  CITATION used a Question Answer Database (known as QUAB) to support interactive question answering .
+A BaseNP is defined as a simple and non-recursive noun phrase CITATION .
+Scientists  CITATION proposed an approach to automatically mine FAQs from the Web .
+Previous work has shown that modeling the relation between personality and language is far from trivial CITATION , suggesting that the control of personality is a harder problem than the control of data-driven variation dimensions .
+One line of work has primarily focused on gram-maticality and naturalness , scoring the overgener-ation phase with a SLM , and evaluating against a gold-standard corpus , using string or tree-match metrics CITATION .
+While handcrafted rule-based approaches are limited to variation along a small number of discrete points CITATION , we learn models that predict parameter values for any arbitrary value on the variation dimension scales .
+Following Mairesse and Walker CITATION , two expert judges (not the authors) familiar with the Big Five adjectives (Table 1) evaluate the personality of each utterance using the Ten-Item Personality Inventory CITATION , and also judge the utterance's naturalness .
+Subjects evaluate the naturalness and personality of each utterance using the TIPI CITATION .
+We present a new method for generating linguistic variation projecting multiple personality traits continuously , by combining and extending previous research in statistical natural language generation CITATION .
+Langkilde and Knight CITATION first applied SLMs to statistical natural language generation (SNLG) , showing that high quality paraphrases can be generated from an underspecified representation of meaning , by first applying a very undercon-strained , rule-based overgeneration phase , whose outputs are then ranked by an SLM scoring phase .
+Over the last 20 years , statistical language models (SLMs) have been used successfully in many tasks in natural language processing , and the data available for modeling has steadily grown CITATION .
+both introverted and extraverted personality types CITATION .
+See CITATION for more detail .
+Section 3.2 shows that humans accurately perceive the intended variation , and Section 3.3 compares P ersonage-PE (trained) with P ersonage CITATION .
+We start with the P ersonage generator CITATION , which generates recommendations and comparisons of restaurants .
+Mairesse and Walker CITATION show that this approach generates utterances that are perceptibly different along the extraversion dimension .
+Even though the parameters of P ersonage-PE were suggested by psychological studies CITATION , some of them are not modeled successfully by our approach , and thus omitted from Tables 3 and 4 .
+Third , there are many studies linking personality to linguistic variables CITATION .
+These parameters are derived from psychological studies identifying linguistic markers of the Big Five traits CITATION .
+Another thread investigates SNLG scoring models trained using higher-level linguistic features to replicate human judgments of utterance quality CITATION .
+A third SNLG approach eliminates the overgeneration phase CITATION .
+There is only one other similar evaluation of an SNLG CITATION .
+We compare various learning algorithms using the Weka toolkit CITATION .
+Similar strate.g.es with parse trees are pursued in CITATION , and error templates are utilized in CITATION for a word processor .
+Research on automatic grammar correction has been conducted on a number of different parts-of-speech , such as articles CITATION and prepositions CITATION .
+Automatic error detection has been performed on other parts-of-speech , e.g. , articles CITATION and prepositions CITATION .
+For example , the sentence "My father is *work in the laboratory" is parsed CITATION as: The progressive form "working" is substituted with its bare form , which happens to be also a noun .
+After parsing the corpus CITATION , we artificially introduced verb form errors into these sentences , and observed the resulting "disturbances" to the parse trees .
+Using these patterns , we introduced verb form errors into Aquaint , then re-parsed the corpus CITATION , and compiled the changes in the "disturbed" trees into a catalog .
+Errors in verb forms have been covered as part of larger systems such as CITATION , but we believe that their specific research challenges warrant more detailed examination .
+For example , in the Japanese Learners of English corpus CITATION , errors related to verbs are among the most frequent cate.g.ries .
+A maximum entropy model , using lexical and POS features , is trained in CITATION to recognize a variety of errors .
+ual evaluation of HKUST is 0.76 , corresponding to "substantial agreement" between the two evalu-ators CITATION .
+Hand-crafted error production rules (or "mal-rules") , augmenting a context-free grammar , are designed for a writing tutor aimed at deaf students CITATION .
+An approach combining a hand-crafted context-free grammar and stochastic probabilities is pursued in CITATION , but it is designed for a restricted domain only .
+The OpenCCG surface realizer is based on Steed-man's CITATION version of CCG elaborated with Baldridge and Kruijff's multi-modal extensions for lexically specified derivation control CITATION and hybrid logic dependency semantics CITATION .
+Internally , such graphs are represented using Hybrid Logic Dependency Semantics (HLDS) , a dependency-based approach to representing linguistic meaning developed by Baldridge and Kruijff CITATION .
+A relatively recent technique for lexical cate.g.ry assignment is supertagging CITATION , a preprocessing step to parsing that assigns likely cate.g.ries based on word and part-of-speech (POS) contextual information .
+We have introduced a novel type of supertagger , which we have dubbed a hypertagger , that assigns CCG cate.g.ry labels to elementary predications in a structured semantic representation with high accuracy at several levels of tagging ambiguity in a fashion reminiscent of CITATION .
+Assigned cate.g.ries are instantiated in OpenCCG's chart realizer where , together with a treebank-derived syntactic grammar CITATION and a factored language model CITATION , they constrain the English word-strings that are chosen to express the LF .
+OpenCCG implements a symbolic-statistical chart realization algorithm CITATION combining (1) a theoretically grounded approach to syntax and semantic composition with (2) factored language models CITATION for making choices among the options left open by the grammar .
+In HLDS , hybrid logic CITATION terms are used to describe dependency graphs .
+A separate transformation then uses around two dozen generalized templates to add logical forms to the cate.g.ries , in a fashion reminiscent of CITATION .
+To illustrate the input to OpenCCG , consider the semantic dependency graph in Figure 1 , which is taken from section 00 of a Propbank-enhanced version of the CCGbank CITATION .
+Even with the current incomplete set of semantic templates , the hy-pertagger brings realizer performance roughly up to state-of-the-art levels , as our overall test set B LEU score CITATION slightly exceeds that of Cahill and van Genabith CITATION , though at a coverage of 96% instead of98% .
+In this re.g.rd , our approach is more similar to the ones pursued more recently by Carroll , Oepen and Velldal CITATION , Scientists  CITATION and Cahill and van Genabith CITATION with HPSG and LFG grammars .
+Our approach follows Langkilde-Geary CITATION and Callaway CITATION in aiming to leverage the Penn Treebank to develop a broad-coverage surface re-alizer for English .
+One way of performing lexical assignment is simply to hypothesize all possible lexical cate.g.ries and then search for the best combination thereof , as in the CCG parser in CITATION or the chart realizer in CITATION .
+Supertagging has been more recently extended to a multitagging paradigm in CCG CITATION , leading to extremely efficient parsing with state-of-the-art dependency recovery CITATION .
+Clark CITATION notes in his parsing experiments that the POS tags of the surrounding words are highly informative .
+While these models are considerably smaller than the ones used in CITATION , the training data does have the advantage of being in the same domain and genre (using larger n-gram models remains for future investigation) .
+We caution , however , thatitremains unclear how meaningful it is to directly compare these scores when the realizer inputs vary considerably in their specificity , as Langkilde-Geary's CITATION experiments dramatically illustrate .
+In the two-stage mode , a packed forest of all possible realizations is created in the first stage; in the second stage , the packed representation is unpacked in bottom-up fashion , with scores assigned to the edge for each sign as it is unpacked , much as in CITATION .
+Moreover , the overall Bleu CITATION and Meteor CITATION scores , as well as numbers of exact string matches (as measured against to the original sentences in the CCGbank) are higher for the hypertagger-seeded realizer than for the preexisting realizer .
+We used Zhang Le's maximum entropy toolkit 4 for training the hypertagging model , which uses an implementation of Limited-memory BFGS , an approximate quasi-Newton optimization method from the numerical optimization literature CITATION .
+Example (1) shows how numbered semantic roles , taken from PropBank CITATION when available , are added to the cate.g.ry of an active voice , past tense transitive verb , where *pred* is a placeholder for the lexical predicate; examples (2) and (3) show how more specific relations are introduced in the cate.g.ry for determiners and the cate.g.ry for the possessive's , respectively .
+The language models were created using the SRILM toolkit CITATION on the standard training sections (2-21) of the CCGbank , with sentence-initial words (other than proper names) uncapital-ized .
+2 Second , we compare a hypertagger-augmented version of OpenCCG's chart realizer with the preexisting chart realizer CITATION that simply instantiates the chart with all possible CCG cate.g.ries (subject to frequency cutoffs) for each input LF predicate .
+Following Scientists  CITATION , we use factored tri-gram models over words , part-of-speech tags and supertags to score partial and complete realizations .
+Additionally , to realize a wide range of paraphrases , OpenCCG implements an algorithm for efficiently generating from disjunctive logical forms CITATION .
+Informally , a packed parse forest , or forest in short , is a compact representation of all the derivations (i.e. , parse trees) for a given sentence under a context-free grammar CITATION .
+Such a forest has a structure of a hypergraph CITATION , where items like NP 0  3 are called nodes , and deductive steps like (*) correspond to hyperedges .
+Both tasks can be done efficiently by forest-based algorithms based on k-best parsing CITATION .
+Basically , cube pruning works bottom up in a forest , keeping at most k +LM items at each node , and uses the best-first expansion idea from the Algorithm 2 of Huang and Chiang CITATION to speed up the computation .
+For k-best search after getting 1-best derivation , we use the lazy Algorithm 3 of Huang and Chiang CITATION that works backwards from the root node , incrementally computing the second , third , through the kth best alternatives .
+However , a k-best list , with its limited scope , often has too few variations and too many redundancies; for example , a 50-best list typically encodes a combination of 5 or 6 binary ambiguities (since 2 5 6) , and many subtrees are repeated across different parses CITATION .
+We use the pruning algorithm of CITATION that is very similar to the method based on marginal probability CITATION , except that it prunes hyperedges as well as nodes .
+Following Huang CITATION , we modify the parser to output a packed forest for each sentence .
+The corresponding BLEU score of Pharaoh CITATION is 0.2182 on this dataset .
+We use the standard minimum error-rate training CITATION to tune the feature weights to maximize the system's BLEU score on the dev set .
+Such approaches have been shown to be effective in log-linear word-alignment models where only a small supervised corpus is available CITATION .
+Promising features might include those over source side reordering rules CITATION or source context features CITATION .
+For this reason , to our knowledge , all discriminative models proposed to date either side-step the problem by choosing simple model and feature structures , such that spurious ambiguity is lessened or removed entirely CITATION , or else ignore the problem and treat derivations as translations CITATION .
+To our knowledge no systems directly address Problem 1 , instead choosing to ignore the problem by using one or a small handful of reference derivations in an n-best list CITATION , or else making local independence assumptions which side-step the issue CITATION .
+The standard solution is to approximate the maximum probability translation using a single derivation CITATION .
+A synchronous context free grammar (SCFG) consists of paired CFG rules with co-indexed nonterminals CITATION .
+Both the global models CITATION use fairly small training sets , and there is no evidence that their techniques will scale to larger data sets .
+Our findings echo those observed for latent variable log-linear models successfully used in monolingual parsing CITATION .
+This method has been demonstrated to be effective for (non-convex) log-linear models with latent variables CITATION .
+This is an instance of the ITG alignment algorithm CITATION .

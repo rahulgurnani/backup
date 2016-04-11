@@ -1,0 +1,100 @@
+Mann CITATION encoded specific inference rules to improve extraction of CEO (name , start year , end year) in the MUC management succession task .
+In addition , Patwardhan and Ri-loff CITATION also demonstrated that selectively applying event patterns to relevant re.g.ons can improve MUC event extraction .
+We then use the INDRI retrieval system CITATION to obtain the top N (N=25 in this pa-per 3) related documents .
+Scientists  CITATION applied cross-document inference to correct local extraction results for disease name , location and start/end time .
+Several recent studies involving specific event types have stressed the benefits of going beyond traditional single-document extraction; in particular , Yangarber CITATION has emphasized this potential in his work on medical information extraction .
+The trigger labeling task described in this paper is in part a task of word sense disambiguation (WSD) , so we have used the idea of sense consistency introduced in CITATION , extending it to operate across related documents .
+The correlated topic model CITATION is one way to account for relationships between hidden topics; more structured representations , such as hierarchies , may also be considered .
+We employ Gibbs sampling , previously used in NLP by Scientists  CITATION and Scientists  CITATION , among others .
+Our approach relates to previous work on property extraction from reviews CITATION .
+for a discussion of similarity metrics , see Lin CITATION .
+For this purpose , we use the Rand Index CITATION , a measure of cluster similarity .
+Recent work has examined coupling topic models with explicit supervision CITATION .
+become widely available CITATION .
+These range from supervised classification CITATION to instantiations of the noisy-channel model CITATION , to clustering CITATION , and methods inspired by information retrieval CITATION .
+Scientists  CITATION propose a hierarchical latent model in order to account for the fact that some words are more general than others .
+More sophisticated graphical models CITATION have also been employed including Gaussian Mixture Models (GMM) and Latent Dirichlet Allocation (LDA) .
+Specifically , we use Latent Dirichlet Allocation (LDA) as our topic model CITATION .
+Scientists  CITATION improve on this model by treating image re.g.ons and keywords as a bi-text and using the EM algorithm to construct an image re.g.on-word dictionary .
+Typically , the k-best words are taken to be the automatic annotations for a test image I CITATION where k is a small number and the same for all images .
+Our evaluation follows the experimental methodology proposed in Scientists  CITATION .
+For instance , resources like WordNet CITATION can be used to expand the annotations by exploiting information about is-a relationships .
+Finally , relevance models originally developed for information retrieval , have been successfully applied to image annotation CITATION .
+We are more interested in modeling the presence or absence of words in the annotation and thus use the multiple-Bernoulli distribution to generate words CITATION .
+Using a grid avoids unnecessary errors from image se.g.entation algorithms , reduces computation time , and simplifies parameter estimation CITATION .
+Standard latent semantic analysis (LSA) and its probabilistic variant (PLSA) have been applied to this task CITATION .
+Specifically , we extend and modify Lavrenko's CITATION continuous relevance model to suit our task .
+Our work is an extension of the continuous relevance annotation model put forward in Scientists  CITATION .
+The continuous relevance image annotation model CITATION generatively learns the joint probability distribution P(V , W) of words W and image re.g.ons V .
+Scientists  CITATION estimate the word probabilities P(W I\s) using a multinomial distribution .
+Our third baseline is Scientists 's CITATION continuous relevance model .
+We compare the annotation performance of the model proposed in this paper (ExtModel) with Scientists 's CITATION original continuous relevance model (Lavrenko03) and two other simpler models which do not take the image into account (tf* idfand Doc-Title) .
+Incidentally , LDA can be also used to rerank the output of Scientists 's CITATION model .
+4 Interestingly , the latter yields precision similar to Scientists  CITATION .
+The co-occurrence model CITATION collects co-occurrence counts between words and image features and uses them to predict annotations for new images .
+We reduce the search space , by scoring each document word with its tf * idf weight CITATION and adding the n-best candidates to our caption vocabulary .
+The first baseline is based on tf * idf CITATION .
+The earliest approaches are closely related to image classification CITATION , where pictures are assigned a set of simple descriptions such as indoor , outdoor , landscape , people , animal .
+reliably CITATION .
+LDA represents documents as a mixture of topics and has been previously used to perform document classification CITATION and ad-hoc information retrieval CITATION with good results .
+Maximum Entropy Models CITATION seek to maximise the conditional probability of classes , given certain observations (features) .
+This phenomenon , together with others used to express forms of authorial opinion , is often classified under the notion of subjectivity CITATION , CITATION .
+In contrast to the findings of Scientists  (CITATION) , who addressed the broader task of subjectivity learning and found that the density of other potentially subjective cues in the context benefits classification accuracy , we observed that the co-occurence of speculative cues in a sentence does not help in classifying a term as speculative or not .
+Since the benefits from combining classifiers that always make similar decisions is minimal , the two (or more) base-learners should complement each other CITATION .
+Recent experiments assessing system portability across different domains , conducted by Aue and Gamon CITATION , demonstrated that sentiment annotation classifiers trained in one domain do not perform well on other domains .
+Such approaches work well in situations where large labeled corpora are available for training and validation (e.g. , movie reviews) , but they do not perform well when training data is scarce or when it comes from a different domain CITATION , topic CITATION or time period CITATION .
+For instance , Aue and Gamon CITATION proposed training on a samll number of labeled examples and large quantities of unlabelled in-domain data .
+Research on sentiment annotation is usually conducted at the text CITATION or at the sentence levels CITATION .
+3.3 Establishing a Baseline for a Corpus-based System (CBS) Supervised statistical methods have been very successful in sentiment tagging of texts: on movie review texts they reach accuracies of 85-90% CITATION .
+A number of methods has been proposed in order to overcome this system portability limitation by using out-of-domain data , unlabelled in-domain corpora or a combination of in-domain and out-of-domain examples CITATION .
+Consistent with findings in the literature CITATION , on the large corpus of movie review texts , the in-domain-trained system based solely on unigrams had lower accuracy than the similar system trained on bigrams .
+Scientists  CITATION applied structural correspondence learning CITATION to the task of domain adaptation for sentiment classification of product reviews .
+It also strongly depends on the similarity between the domains as has been shown by CITATION .
+On other domains , such as product reviews , the performance of systems that use general word lists is comparable to the performance of supervised machine learning approaches CITATION .
+To our knowledge , the only work that describes the application of statistical classifiers (SVM) to sentence-level sentiment classification is CITATION 1 .
+In sentiment tagging and related areas , Aue and Gamon CITATION demonstrated that combining classifiers can be a valuable tool in domain adaptation for sentiment analysis .
+Since the structure of WordNet glosses is fairly different from that of other types of corpora , we developed a system that used the list of human-annotated adjectives from CITATION as a seed list and then learned additional unigrams from WordNet synsets and glosses with up to 88% accuracy , when evaluated against General Inquirer CITATION (GI) on the intersection of our automatically acquired list with GI .
+In order to assign the membership score to each word , we did 58 system runs on unique non-intersecting seed lists drawn from manually annotated list of positive and ne.g.tive adjectives from CITATION .
+But such general word lists were shown to perform worse than statistical models built on sufficiently large in-domain training sets of movie reviews CITATION .
+The results reported by CITATION for binary classification of sentences in a related domain of subjectivity tagging (i.e. , the separation of sentiment-laden from neutral sentences) suggest that statistical classifiers can perform well on this task: the authors have reached 74.9% accuracy on the MPQA corpus CITATION .
+Similarly , Scientists  CITATION suggested to combine out-of-domain labeled examples with unla-belled ones from the target domain in order to solve the domain-transfer problem .
+In order to maximize the utility of the examples from the target domain , these examples were selected using Similarity Ranking and Relative Similarity Ranking algorithms CITATION .
+For example , it has been observed that texts often contain multiple opinions on different topics CITATION , which makes assignment of the overall sentiment to the whole document problematic .
+The NOSs were then normalized into the interval from -1 to +1 using a sigmoid fuzzy membership function CITATION 4 .
+Despite its limited scale , prior work in sentence compression relied heavily on this particular corpus for establishing results CITATION .
+In the context of sentence compression , a linear programming based approach such as Clarke and Lapata CITATION is certainly one that deserves consideration .
+Thus , unlike McDonald CITATION , Clarke and Lap-ata CITATION and Cohn and Lapata CITATION , we do not insist on finding a globally optimal solution in the space of 2 n possible compressions for an n word long sentence .
+Our approach is broadly in line with prior work CITATION , in that we make use of some form of syntactic knowledge to constrain compressions we generate .
+DPM was first introduced in CITATION , later explored by a number of people CITATION .
+For better or worse , much of prior work on sentence compression CITATION turned to a single corpus developed by Knight and Marcu CITATION (K&M , henceforth) for evaluating their approaches .
+What sets this work apart from them , however , is a novel use we make of Conditional Random Fields (CRFs) to select among possible compressions CITATION .
+In the experiment described later , we set a = 0.1 for DPM , following Scientists  CITATION , who found the best performance with that setting for a .
+Nonetheless , there is some cost that comes with the straightforward use of CRFs as a discriminative classifier in sentence compression; its outputs are often ungrammatical and it allows no control over the length of compression they generates CITATION .
+If it is , the whole scheme of ours would fall under what is known as 'Linear Programming CRFs' CITATION .
+We extracted lead sentences both from the brief and from its source article , and aligned them , using what is known as the Smith-Waterman algorithm CITATION , which produced 1 ,401 pairs of summary and source sentence .
+A part of our system makes use of a modeling toolkit called GRMM CITATION .
+In any case , we need some extra rules on G(S) to take care of language specific issues (cf.Vande.g.inste and Pan CITATION for English) .
+Recently , Blei and McAuliffe CITATION proposed an approach for joint sentiment and topic modeling that can be viewed as a supervised LDA (sLDA) model that tries to infer topics appropriate for use in a given classification or re.g.ession problem .
+The Multi-Grain Latent Dirichlet Allocation model (MG-LDA) is an extension of Latent Dirichlet Allocation (LDA) CITATION .
+Parallel to this study Scientists  CITATION also showed that joint models of text and user annotations benefit extractive summarization .
+In this study , we look at the problem of aspect-based sentiment summarization CITATION .
+Text excerpts are usually extracted through string matching CITATION , sentence clustering CITATION , or through topic models CITATION .
+Gibbs sampling is an example of a Markov Chain Monte Carlo algorithm CITATION .
+Following Titov and McDonald CITATION we use a collapsed Gibbs sampling algorithm that was derived for the MG-LDA model based on the Gibbs sampling method proposed for LDA in CITATION .
+However , CITATION demonstrated that an efficient collapsed Gibbs sampler can be constructed , where only assignments z need to be sampled , whereas the dependency on distributions 0 and p can be inte.g.ated out analytically .
+These simple techniques are capable of modeling local topics without more expensive modeling of topic transitions used in CITATION .
+2 Aspect identification has also been thoroughly studied CITATION , but again , ontologies and users often provide this information ne.g.ting the need for automation .
+When labeled data exists , this problem can be solved effectively using a wide variety of methods available for text classification and information extraction CITATION .
+A closely related model to ours is that of Scientists  CITATION which performs joint topic and sentiment modeling of collections .
+For details on computing gradients for loglinear graphical models with Gibbs sampling we refer the reader to CITATION .
+Sentiment classification is a well studied problem CITATION and in many domains users explicitly provide ratings for each aspect making automated means unnecessary .
+However , it has been observed that ratings for different aspects can be correlated CITATION , e.g. , very ne.g.tive opinion about room cleanliness is likely to result not only in a low rating for the aspect rooms , but also is very predictive of low ratings for the aspects service and dining .
+The first part is based on Multi-Grain Latent Dirichlet Allocation CITATION , which has been previously shown to build topics that are representative of ratable aspects .
+As was demon-strated in Titov and McDonald CITATION , the topics produced by LDA do not correspond to ratable aspects of entities .
+It was demonstrated in Titov and McDonald CITATION that ratable aspects will be captured by local topics and global topics will capture properties of reviewed items .
+This factor is proportional to the conditional distribution used in the Gibbs sampler of the MG-LDA model CITATION .
+Other local topics , as for the MG-LDA model , correspond to other aspects discussed in reviews (breakfast , prices , noise) , and as it was previously shown in Titov and McDonald CITATION , aspects for global topics correspond to the types of reviewed items (hotels in Russia , Paris hotels) or background words .
+For a broader review of WSD in NLP applications , see Resnik CITATION .
+This problem of identifying the correct sense of a word in context is known as word sense disambiguation (WSD: Agirre and Edmonds CITATION) .
+Following Atterer and Schutze CITATION , we wrote a script that , given a parse tree , identifies instances of PP attachment ambiguity and outputs the (v ,n1 ,p ,n2) quadruple involved and the attachment decision .
+This evaluation methodology coincides with that of Atterer and Schutze CITATION .

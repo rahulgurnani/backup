@@ -1,0 +1,100 @@
+Note that Atterer and Schutze CITATION have shown that the Bikel parser performs as well as the state-of-the-art in PP attachment , which suggests our method improves over the current state-of-the-art .
+We provide the first definitive results that word sense information can enhance Penn Treebank parser performance , building on earlier results of Bikel CITATION and Scientists  CITATION .
+The most closely related research is that of Bikel CITATION , who merged the Brown portion of the Penn Tree-bank with SemCor (similarly to our approach in Section 4.1) , and used this as the basis for evaluation of a generative bilexical model for joint WSD and parsing .
+Note that this dataset is smaller than the one described by Bikel CITATION in a similar exercise , the reason being our simple and conservative approach taken when merging the resources .
+Parsing As our baseline parsers , we use two state-of-the-art lexicalised parsing models , namely the Bikel parser CITATION and Charniak parser CITATION .
+Tighter inte.g.ation of semantics into the parsing models , possibly in the form of discriminative reranking models CITATION , is a promising way forward in this re.g.rd .
+For example , a number of different parsers have been shown to benefit from lexicalisation , that is , the conditioning of structural features on the lexical head of the given constituent CITATION .
+This extraction system uses Collins' rules (based on treep CITATION) to locate the heads of phrases .
+Other notable examples of the successful incorporation of lexical semantics into parsing , not through word sense information but indirectly via selectional preferences , are Scientists  CITATION and Hektoen CITATION .
+The method we use to predict the first sense is that of McScientists  CITATION , which was obtained using a thesaurus automatically created from the British National Corpus (BNC) applying the method of Lin CITATION , coupled with WordNet-based similarity measures .
+The only successful applications of word sense information to parsing that we are aware of are Scientists  CITATION and Scientists  CITATION .
+The only publicly-available resource with these two characteristics at the time of this work was the subset of the Brown Corpus that is included in both SemCor CITATION and the Penn Tree-bank (PTB) .
+Li and Abe CITATION , McCarthy and Carroll CITATION , Scientists  CITATION , Scientists  CITATION) .
+Traditionally , the two parsers have been trained and evaluated over the WSJ portion of the Penn Treebank (PTB: Scientists  CITATION) .
+Prepositional phrase attachment (PP attachment) is the problem of determining the correct attachment site for a PP , conventionally in the form of the noun or verb in a V NP PP structure CITATION .
+Disambiguating each word relative to its context of use becomes increasingly difficult for fine-grained representations CITATION .
+The best published results over RRR are those of Stetina and Nagao CITATION , who employ WordNet sense predictions from an unsuper-vised WSD method within a decision tree classifier .
+The fact that the improvement is larger for PP attachment than for full parsing is suggestive of PP attachment being a parsing subtask where lexical semantic information is particularly important , supporting the findings of Stetina and Nagao CITATION over a standalone PP attachment task .
+However , it has been argued that Spanish causative verbs do not in fact take objects CITATION .
+The logic also ensures that the new rules are subject to modalities consistent with those defined by Baldridge and Kruijff CITATION .
+This treats CCG as a compilation of CTL proofs , providing a principled , grammar-internal basis for restrictions on the CCG rules , transferring language-particular restrictions on rule application to the lexicon , and allowing the CCG rules to be viewed as grammatical universals CITATION .
+The rules of this multimodal version of CCG CITATION are derived as theorems of a Cate.g.rial Type Logic (CTL , Moortgat CITATION) .
+The most commonly used are Karttunnen's chart subsumption check CITATION and Eisner's normal-form constraints CITATION .
+Furthermore , CCG augmented with  D is compatible with Eisner NF CITATION , a standard technique for controlling derivational ambiguity in CCG-parsers , and also with the modalized version of CCG CITATION .
+It has been used for a variety of tasks , such as wide-coverage parsing CITATION , sentence realization CITATION , learning semantic parsers CITATION , dialog systems CITATION , grammar engineering CITATION , and modeling syntactic priming CITATION .
+We show two ways to derive the D rules: one based on unary composition and the other based on a logical characterization of CCG's rule base CITATION .
+The  D rules are well-behaved; we show this by deriving them both from unary composition and from the logic defined by Baldridge CITATION .
+(11) s vp/np base your verdict on s/(vp/np) s/(s/np) s/vp what you can (s/(vp/np))\(s/(vp/np)) (x\x)/x s/(vp/np) and s/(s/np) s/vp what you must not The cate.g.ry for and is marked for non-associativity with * , and thus combines with other expressions only by function application CITATION .
+The implication is that outputs of  B 1+ rules are inert , using the terminology of Baldridge CITATION .
+In this section , we present an alternate formulation of Eisner NF with Baldridge's CITATION CTL basis for CCG .
+In Baldridge's CITATION system , only proofs involving the ARP and ALP rules produce inert cate.g.ries .
+These are instead determined by syntactic , semantic , and pragmatic factors , such as transitivity , word order , animacy , gender , social prestige , and referential specificity CITATION .
+Combining (20) with a type-raised subject presents another instance of the structure in (1) , where that question words are represented as variable-binding operators CITATION: .
+Several techniques have been proposed for the problem CITATION .
+It was noted by Pickering and Barry CITATION for English , but to the best of our knowledge it has not been treated in the s CCG literature , nor noted in other languages .
+Combinatory Cate.g.rial Grammar (CCG , Steedman CITATION) is a compositional , semantically transparent formalism that is both linguistically expressive and computationally tractable .
+This supports ele.g.nt analyses of several phenomena (e.g. , coordination , long-distance extraction , and intonation) and allows incremental parsing with the competence grammar CITATION .
+Inert slashes are Baldridge's CITATION encoding in OpenCCG 3 of his CTL interpretation of Steedman's CITATION antecedent-government feature .
+Following Wittenburg CITATION , we remedy this by adding a set of rules based on the D combinator of combinatory logic CITATION .
+CCG's flexibility is useful for linguistic analyses , but leads to spurious ambiguity CITATION due to the associativity introduced by the  B and  T rules .
+Wittenburg CITATION originally proposed using rules based on  D as a way to reduce spurious ambiguity , which he achieved by eliminating  B rules entirely and replacing them with variations on  D .
+The parser uses a two-stage system , first employing a supertagger CITATION to propose lexical cate.g.ries for each word , and then applying the cky chart parsing algorithm .
+To remove this variable , we carry out a second evaluation against the Briscoe and Carroll CITATION reannotation ofDep-Bank CITATION , as described in Clark and Curran CITATION .
+This evaluation is particularly relevant for nps , as the Briscoe and Carroll CITATION corpus has been annotated for internal np structure .
+Lewin CITATION experiments with detecting base -nps using ner information , while Scientists  CITATION use a crf to identify a guest comedian Victor Borge NP[nb}/N N/N  N/N  N/N ~N~ NP (a) N N N guest comedian Victor Borge NP[nb  \I N N  I N NP N N   (NP\NP  )I (NP\NP) NP\NP -> -> NP\NP NP (b) Figure 4: CCGbank derivations for apposition with dt coordinate structure in biological named entities .
+Clark and Curran CITATION has a full description of the C&C parser's pre-existing features , to which we have added a number of novel ner-based features .
+Our experiments are run with the C&C ccg parser CITATION , and will evaluate the changes made to CCGbank , as well as the effectiveness of the ner features .
+Vadas and Curran CITATION carry out supervised experiments using this data set of 36 ,584 NPs , outperforming the Collins CITATION parser .
+This is unexpected , because possessives were already bracketed properly when CCGbank was originally created CITATION .
+We generate the two forms of output that CCGbank contains: AUTO files , which represent the tree structure of each sentence; and PARG files , which list the word-word dependencies CITATION .
+The flat structure described by the Penn Treebank can be seen in this example: (NP (NN lung)  (NN cancer)  (NNS deaths)) CCGbank CITATION is the primary English corpus for Combinatory Cate-gorial Grammar (ccg) CITATION and was created by a semi-automatic conversion from the penn Treebank .
+Heads are then assigned using heuristics adapted from Hockenmaier and Steedman CITATION .
+Honnibal and Curran CITATION have also made changes to CCGbank , aimed at better differentiating between complements and adjuncts .
+Finally , we evaluate against DepBank CITATION .
+This is because their training data , the Penn Treebank CITATION , does not fully annotate np structure .
+Nakov and Hearst CITATION use search engine hit counts and extend the query set with typographical markers .
+PropBank CITATION is used as a gold-standard to inform these decisions , similar to the way that we use the Vadas and Curran CITATION data .
+Combinatory Cate.g.rial Grammar (ccg) CITATION is a type-driven , lexicalised theory of grammar .
+We apply an automatic conversion process using the gold-standard np data annotated by Vadas and Curran CITATION .
+Recently , Vadas and Curran CITATION annotated internal NP structure for the entire Penn Treebank , providing a large gold-standard corpus for np bracketing .
+The Vadas and Curran CITATION annotation scheme inserts NML and JJP brackets to describe the correct np structure , as shown below: We use these brackets to determine new goldstandard CCG derivations in Section 3 .
+This section describes the process of converting the Vadas and Curran CITATION data to ccg derivations .
+For example , we would insert the NML bracket shown below: This simple heuristic captures np structure not explicitly annotated by Vadas and Curran CITATION .
+Vadas and Curran CITATION describe using ne tags during the annotation process , suggesting that ner-based features will be helpful in a statistical model .
+Vadas and Curran CITATION experienced a similar drop in performance on Penn Tree-bank data , and noted that the F-score for nml and jjp brackets was about 20% lower than the overall figure .
+The first contribution of this paper is the application of the Vadas and Curran CITATION data to Combinatory Cate.g.rial Grammar .
+In particular , we implement new features using ner tags from the BBN Entity Type Corpus CITATION .
+We draw ne tags from the BBN Entity Type Corpus CITATION , which describes 28 different entity types .
+Another group of related work focuses on summarizing sentences through a series of deletions CITATION .
+A relatively straight-forward extension of the inside-outside algorithm for chart-parses allows us to learn and perform inference in our compact representation (a similar algorithm is presented in CITATION) .
+Features derived from a syntactic parse of the sentence have proven particularly useful CITATION .
+Another area of related work in the semantic role labeling literature is that on tree kernels CITATION .
+We compared to a strong Baseline SRL system that learns a logistic re.g.ession model using the features of Scientists  CITATION .
+Table 2 shows results of these three systems on the Conll-2005 task , plus the top-performing system CITATION for reference .
+Approaches include incorporating a subcate.g.rization feature CITATION , such as the one used in our baseline; and building a model which jointly classifies all arguments of a verb CITATION .
+Graph-ranking algorithms , e.g. , Page-Rank CITATION , are then applied to rank those sentences .
+This problem and its influence on email summarization were studied in CITATION and CITATION .
+As a second contribution of this paper , we study several ways to measure the cohesion between parent and child sentences in the quotation graph: clue words (re-occurring words in the reply) CITATION , semantic similarity and cosine similarity .
+In our recent study CITATION , we built a fragment quotation graph to represent an email conversation and developed a ClueWordSummarizer (CWS) based on the concept of clue words .
+One is the generalization of the CWS algorithm in CITATION and one is the well-known PageRank algorithm .
+Particularly , when the weight of the edge is based on clue words as in Equation 1 , this method is equivalent to Algorithm CWS in CITATION .
+Those discussions can be viewed as conversations via emails and are valuable for the user as a personal information repositoryCITATION .
+Other than for email summarization , other document summarization methods have adopted graphranking algorithms for summarization , e.g. , CITATION , CITATION and CITATION .
+In many applications , it has been shown that sentences with subjective meanings are paid more attention than factual onesCITATIONCITATION .
+Since this idea is borrowed from the pyramid metric by Scientists  CITATION , we call it the sentence pyramid precision .
+Specifically , we use the package by CITATION , which includes several methods to compute the semantic similarity .
+We use the MEAD package to se.g.ent the text into 1 ,394 sentences CITATION .
+Meanwhile , most existing email summarization approaches use quantitative features to describe the conversation structure , e.g. , number of recipients and responses , and apply some general multi-document summarization methods to extract some sentences as the summary CITATION CITATION .
+Our experiments showed that CWS had a higher accuracy than the email summarization approach in CITATION and the generic multi-document summarization approach MEAD CITATION .
+The major source of this list is from CITATION with additional words from other sources .
+A large amount of work has been done on determining the level of subjectivity of text CITATION .
+Similar to the issue-response relationship , Scientists  CITATION proposed methods to identify the question-answer pairs from an email thread .
+Most of the existing methods dealing with email conversations use the email thread to represent the email conversation structure , which is not accurate in many cases CITATION .
+For example , in (2) , the daughters list RB TO JJ NNS is a daughters list with no correlates in the treebank; it is erroneous because close to wholesale needs another layer of structure , namely adjective phrase (ADJP)  CITATION .
+The description for tagging titles in the guidelines (Scientists  , 1995 , p .
+To understand this , we have to realize that most modifiers are adjoined at the sentence level when there is any doubt about their attachment  CITATION .
+QP is "used for multiword numerical expressions that occur within NP (and sometimes ADJP) , where the QP corresponds frequently to some kind of complex determiner phrase"  CITATION .
+When extracting rules from constituency-based tree-banks employing flat structures , grammars often limit the set of rules CITATION , due to the large number of rules CITATION and "leaky" rules that can lead to mis-analysis CITATION .
+Parse reranking techniques , for instance , rely on knowledge about features other than those found in the core parsing model in order to determine the best parse CITATION .
+Instead of examining and comparing rules in their entirety , this method abstracts a rule to its component parts , similar to features using information about n-grams of daughter nodes in parse reranking models CITATION .

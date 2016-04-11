@@ -1,0 +1,100 @@
+In CITATION , simple score was assigned to the word coming from the th-best hypothesis .
+The improved system combination method was compared to a simple confusion network decoding without system weights and the method proposed in CITATION on the Arabic to English and Chinese to English NIST MT05 tasks .
+Compared to the baseline from CITATION , the new method improves the BLEU scores significantly .
+In ensemble learning , a collection of simple classifiers is used to yield better performance than any single classifier; for example boosting CITATION .
+A modified Levenshtein alignment allowing shifts as in computation of the translation edit rate (TER) CITATION was used to align hy-potheses in CITATION .
+Minimum Bayes risk (MBR) was used to choose the skeleton in CITATION .
+This is equivalent to minimum Bayes risk decoding with uniform posterior probabilities CITATION .
+It has been found that multiple hypotheses from each system may be used to improve the quality of the combination output CITATION .
+Translation edit rate (TER) CITATION has been proposed as more intuitive evaluation metric since it is based on the rate of edits required to transform the hypothesis into the reference .
+However , this would require time consuming evaluations such as human mediated TER post-editing CITATION .
+The TnT tagger CITATION and the TreeTagger CITATION are used for tagging and lemmatization .
+Motivated by the theoretical work by Chafe CITATION and Jacobs CITATION , we view the VF as the place for elements which modify the situation described in the sentence , i.e .
+Finally , the articles are parsed with the CDG dependency parser CITATION .
+The sentence-initial position , which in German is the VF , has been shown to be cognitively more prominent than other positions CITATION .
+Inspired by the findings of the Prague School CITATION and Systemic Functional Linguistics CITATION , they focus on the role that information structure plays in constituent ordering .
+Scientists  CITATION present a generation workbench , which has the goal of producing not the most appropriate order , but all grammatical ones .
+We suppose that this dificulty comes from the double function of the initial position which can either introduce the ad-dressation topic , or be the scene- or frame-setting position CITATION .
+We hypothesize that the reasons which bring a constituent to the VF are different from those which place it , say , to the be.g.nning of the MF , for the order in the MF has been shown to be relatively rigid CITATION .
+Since our learner treats all values as nominal , we discretized the values of dep and len with a C4.5 classifier CITATION .
+Scientists  CITATION describe an architecture which supports generating the appropriate word order for different languages .
+Kruijff-Scientists  CITATION address the task of word order generation in the same vein .
+Similar to Langkilde & Knight CITATION we utilize statistical methods .
+Kendall's t , which has been used for evaluating sentence ordering tasks CITATION , is the second metric we use .
+Scientists  CITATION aim at re.g.nerating the order of constituents as well as the order within them for German and French technical manuals .
+Similar to Scientists  CITATION , we find the order with the highest probability conditioned on syntactic and semantic cate.g.ries .
+Apart from acc and t , we also adopt the metrics used by Scientists  CITATION and Scientists  CITATION .
+According to the inv metric , our results are considerably worse than those reported by Scientists  CITATION .
+We retrained our system on a corpus of newspaper articles CITATION which is manually annotated but encodes no semantic knowledge .
+The work of Scientists  CITATION is done on the free word order language Japanese .
+For the fourth baseline (UCHIMOTO) , we utilized a maximum entropy learner (OpenNLP 8) and reim-plemented the algorithm of Scientists  CITATION .
+Uszkoreit CITATION addresses the problem from a mostly grammar-based perspective and suggests weighted constraints , such as [+nom] -< [+dat] , [+pro] -< [-pro] , [-focus] -< [+focus] , etc .
+Unlike overgeneration approaches CITATION which select the best of all possible outputs ours is more efficient , because we do not need to generate every permutation .
+It also compares reasonably with other more recent evaluations CITATION which derive their input data from the penn Treebank by transforming each sentence tree into a format suitable for the realiser CITATION .
+For instance , CITATION reports that the implementation of such a processor for Surge was the most time consuming part of the evaluation with the resulting component containing 4000 lines of code and 900 rules .
+The realiser presented here differs in mainly two ways from existing reversible realisers such as CITATION's CCG system or the HPSG ERG based realiser CITATION .
+The reason for this is that the grammar is compiled from a higher level description where tree fragments are first encapsulated into so-called classes and then explicitly combined (by inheritance , conjunction and disjunction) to produce the grammar elementary trees (cf. CITATION) .
+Thus for instance , both REALPRO CITATION and Surge CITATION assume that the input associates semantic literals with low level syntactic and lexical information mostly leaving the realiser to just handle inflection , word order , insertion of grammatical words and agreement .
+To associate semantic representations with natural language expressions , the FTAG is modified as proposed in CITATION .
+The proposal draws on ideas from CITATION and aims to determine whether for a given input (a set of TAG elementary trees whose semantics equate the input semantics) , syntactic requirements and resources cancel out .
+It could be used for instance , in combination with the parser and the semantic construction module described in CITATION , to support textual entailment recognition or answer detection in question answering .
+We rely on these features to associate one and the same semantic to large sets of trees denoting semantically equivalent but syntactically distinct configurations (cf. CITATION) .
+The basic surface realisation algorithm used is a bottom up , tabular realisation algorithm CITATION optimised for TAGs .
+Similarly , KPML CITATION assumes access to ideational , interpersonal and textual information which roughly corresponds to semantic , mood/voice , theme/rheme and focus/ground information .
+In order to ensure this determinism , NLG geared realisers generally rely on theories of grammar which systematically link form to function such as systemic functional grammar (SFG , CITATION) and , to a lesser extent , Meaning Text Theory (MTT , CITATION) .
+First , the paraphrase figures might seem low wrt to e.g. , work by CITATION which mentions several thousand outputs for one given input and an average number of realisations per input varying between 85.7 and 102.2 .
+This does not seem to be the case in CITATION's approach where the count seems to include all sentences associated by the grammar with the input semantics .
+A Feature-based TAG (FTAG , CITATION) consists of a set of (auxiliary or initial) elementary trees and of two tree composition operations: substitution and ad-junction .
+A first possibility would be to draw on CITATION's proposal and compute the enriched input based on the traversal of a systemic network .
+Thus for instance , CITATION resorts to ad hoc "mapping tables" to associate substitution nodes with semantic indices and "fr-nodes" to constrain adjunction to the correct nodes .
+While there have been previous systems that encode generation as planning CITATION , our approach is distinguished from these systems by its focus on the grammatically specified contributions of each individual word (and the TAG tree it anchors) to syntax , semantics , and local pragmatics CITATION .
+It also allows us to benefit from the past and ongoing advances in the performance of off-the-shelf planners CITATION .
+Unlike some approaches CITATION , we do not have to distinguish between generating NPs and expressions of other syntactic cate.g.ries .
+The context set of an intended referent is the set of all individuals that the hearer might possibly confuse it with CITATION .
+It is based on the well-known STRIPS language CITATION .
+The grammar formalism we use here is that of lex-icalized tree-adjoining grammars (LTAG; Joshi and Schabes CITATION) .
+In order to use the planner as a surface realization algorithm for TAG along the lines of Koller and Strie.g.itz CITATION , we attach semantic content to each elementary tree and require that the sentence achieves a certain communicative goal .
+However , this problem is NP-complete , by reduction of Hamiltonian Cycle - unsurprisingly , given that it encompasses realization , and the very similar realization problem in Koller and Strie.g.itz CITATION is NP-hard .
+PDDL CITATION is the standard input language for modern planning systems .
+In a scenario that involves multiple rabbits , multiple hats , and multiple individuals that are inside other individuals , but only one pair of a rabbit r inside a hat h , the expression "X takes the rabbit from the hat" is sufficient to refer uniquely to r and h CITATION .
+We share these advantages with systems such as SPUD CITATION .
+This makes our encoding more direct and transparent than those in work like Thomason and Hobbs CITATION and Scientists  CITATION .
+We follow Scientists  CITATION in formalizing the semantic content of a lexicalized elementary tree t as a finite set of atoms; but unlike in earlier approaches , we use the semantic roles in t as the arguments of these atoms .
+The three pragmatic predicates that we will use here are hearer-new , indicating that the hearer does not know about the existence of an individual and can't infer it CITATION , hearer-old for the opposite , and contextset .
+In addition to the semantic content , we equip every elementary tree in the grammar with a semantic requirement and a pragmatic condition CITATION .
+Supertag This is a variant of the approach above , but using supertags CITATION instead of PoS tags .
+For example , the metrics proposed in Scientists  CITATION , such as Simple Accuracy and Generation Accuracy , measure changes with respect to a reference string based on the idea of string-edit distance .
+The judges were then presented with the 50 sentences in random order , and asked to score the sentences according to their own scale , as in magnitude estimation CITATION; these scores were then normalised in the range [0 ,1] .
+Re.g.rding the interpretation of the absolute value of (Pearson's) correlation coefficients , both here and in the rest of the paper , we adopt Cohen's scale CITATION for use in human judgements , given in Table 1; we use this as most of this work is to do with human judgements of fluency .
+Those chosen were the Connexor parser , 2 the Collins parser CITATION , and the Link Grammar parser CITATION .
+For example , in statistical MT the translation model and the language model are treated separately , characterised as faithfulness and fluency respectively (as in the treatment in Jurafsky and Martin CITATION) .
+A neat solution to poor sentence-level evaluation proposed by Kulesza and Shieber CITATION is to use a Support Vector Machine , using features such as word error rate , to estimate sentence-level translation quality .
+Bleu CITATION is a canonical example: in matching n-grams in a candidate translation text with those in a reference text , the metric measures faithfulness by counting the matches , and fluency by implicitly using the reference n-grams as a language model .
+Quite a different idea was suggested in Scientists  CITATION , of using the grammatical judgement of a parser to assess fluency , giving a measure independent of the language model used to generate the text .
+In terms of automatic evaluation , we are not aware of any technique that measures only fluency or similar characteristics , ignoring content , apart from that of Scientists  CITATION .
+The consistency and magnitude of the first three parser metrics , however , lends support to the idea of Scientists  CITATION to use something like these as indicators of generated sentence fluency .
+Similarly , the ultrasummarisa-tion model of Witbrock and Mittal CITATION consists of a content model , modelling the probability that a word in the source text will be in the summary , and a language model .
+In this model we violate the Markov assumption of independence in much the same way as Witbrock and Mittal CITATION in their combination of content and language model probabilities , by backtracking at every state in order to discourage repeated words and avoid loops .
+Scientists  CITATION use similar scales for summarisation .
+Coreference resolution on text datasets is well-studied (e.g. , CITATION) .
+We employ a set of verbal features that is similar to the features used by state-of-the-art coreference resolution systems that operate on text (e.g. , CITATION) .
+Evaluation metric Coreference resolution is often performed in two phases: a binary classification phase , in which the likelihood of corefer-ence for each pair of noun phrases is assessed; and a partitioning phase , in which the clusters of mutually-coreferring NPs are formed , maximizing some global criterion CITATION .
+The verbal features that we have included are a representative sample from the literature (e.g. , CITATION) .
+All features are computed from hand and body pixel coordinates , which are obtained via computer vision; our vision system is similar to CITATION .
+The continuous-valued features were binned using a supervised technique CITATION .
+While people have little difficulty distinguishing between meaningful gestures and irrelevant hand motions (e.g. , self-touching , adjusting glasses) CITATION , NLP systems may be confused by such seemingly random movements .
+Markable noun phrases - those that are permitted to participate in coreference relations - were annotated by the first author , in accordance with the MUC task definition CITATION .
+To measure the similarity between gesture trajectories , we use dynamic time warping CITATION , which gives a similarity metric for temporal data that is invariant to speed .
+In addition , verbal language is different when used in combination with meaningful non-verbal communication than when it is used unimodally CITATION .
+Kehler finds that fully-specified noun phrases are less likely to receive multimodal support CITATION .
+Last , we note that NPs with adjectival modifiers were assigned ne.g.tive weights , supporting the finding of CITATION that fully-specified NPs are less likely to receive multimodal support .
+Experiments in both CITATION and CITATION find no conclusive winner among early fusion , additive late fusion , and multiplicative late fusion .
+JS-div reports the Jensen-Shannon divergence , a continuous-valued feature used to measure the similarity in cluster assignment probabilities between the two gestures CITATION .
+The objective function (Equation 1) is optimized using a Java implementation of L-BFGS , a quasiNewton numerical optimization technique CITATION .
+However , non-verbal modalities are often noisy , and their interactions with speech are complex CITATION .
+Our non-verbal features attempt to capture similarity between the speaker's hand gestures; similar gestures are thought to suggest semantic similarity CITATION .
+Euclidean distance captures cases in which the speaker is performing a gestural "hold" in roughly the same location CITATION .
+Non-verbal meta features Research on gesture has shown that semantically meaningful hand motions usually take place away from "rest position ," which is located at the speaker's lap or sides CITATION .
+Indeed , the psychology literature describes a finite-state model of gesture , proceeding from "preparation ," to "stroke ," "hold ," and then "retraction" CITATION .
+Verbal meta features Meaningful gesture has been shown to be more frequent when the associated speech is ambiguous CITATION .
+The use of hidden variables in a conditionally-trained model follows CITATION .

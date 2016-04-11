@@ -1,0 +1,40 @@
+import gensim
+import re
+import nltk
+cues_name = ['subject_cue', 'quantity_cue', 'frequency_cue', ]
+cues = [
+['we' ,'our' ,'us' ,'table' ,'figure' ,'paper' ,'algorithm' ,'here'], 
+['many' ,'some' ,'most' ,'several' ,'number of' ,'numerous' ,'variety' ,'range of' ], 
+['usually' ,'often' ,'common' ,'commonly' ,'typical' ,'typically' ,'traditional' ,'traditionally' ], 
+['recent' ,'recently' ,'prior' ,'previous' ,'early' ], 
+['such as' ,'for example' ,'for instance' ,'e.g.', 'example', 'instance' ], 
+['may' ,'might' ,'could' ,'would' ,'will' ,'can' ,'should' ], 
+['suppose' ,'conjecture' ,'want' ,'possible' ], 
+['following' ,'similar to' ,'motivate' ,'inspired' ,'idea' ,'spirit' ], 
+['provided by' ,'taken from' ,'extracted from' ,'based on' ,'use' ,'run' ,'apply' ,'extend' ,'measure' ,'evaluate' ,'modify' ,'extract' ], 
+['compare' ,'differ' ,'deviate' ,'contrast' ,'exceed' ,'outperform' ,'opposed' ,'consistent with' ,'significant' ], 
+['result' ,'accuracy' ,'precision' ,'performance' ,'baseline' ]
+]
+files = ['all_citations', 'final_nlp_cits_w2v']
+sentences = gensim.models.word2vec.LineSentence('final_nlp_cits_w2v')
+#model = gensim.models.Word2Vec(sentences, size = 10, min_count = 50)
+#model.save('model1')
+model = gensim.models.Word2Vec.load('model1')
+
+def all_present(cue):
+	temp_cue = list()
+	for word in cue:
+		if word in model.vocab.keys():
+			temp_cue.append(word)
+	return temp_cue
+count = 0
+for cue in cues:
+	sim_words = model.most_similar(positive = all_present(cue), topn=20)
+	print ''
+#	print cues_name[count]
+	for word in sim_words:
+		w1 = nltk.word_tokenize(word[0])
+		if w1[0].lower() not in cue and len(w1[0])>1:
+			print "" + w1[0].lower()
+	count += 1
+

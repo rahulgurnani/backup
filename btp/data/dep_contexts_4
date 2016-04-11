@@ -1,0 +1,100 @@
+We tested this hypothesis by training the Error-Driven Pruning (EDP) method of CITATION with an extended set of features .
+In CITATION , we established that the task is not trivially transferable to Hebrew , but reported that SVM based chunking CITATION performs well .
+In CITATION we argued that it is not applicable to Hebrew , mainly because of the prevalence of the Hebrew's construct state (smixut) .
+For the Hebrew experiments , we use the corpora of CITATION .
+These are the same settings as in CITATION .
+Refining the SimpleNP Definition: The hard cases analysis identified examples that challenge the SimpleNP definition proposed in Scientists  CITATION .
+Kudo and Matsumoto CITATION used SVM as a classification engine and achieved an F-Score of 93.79 on the shared task NPs .
+Further details can be found in Kudo and Matsumoto CITATION .
+Following Ramshaw and Marcus CITATION , the current dominant approach is formulating chunking as a classification task , in which each word is classified as the (B)e.g.nning , (I)nside or (O)outside of a chunk .
+NP chunks in the shared task data are BaseNPs , which are non-recursive NPs , a definition first proposed by Ramshaw and Marcus CITATION .
+For the English experiments , we use the now-standard training and test sets that were introduced in CITATION 2 .
+This method is similar to the corpus error detection method presented by Nakagawa and Matsumoto CITATION .
+It is a well studied problem in English , and was the focus of CoNLL2000's Shared Task CITATION .
+We applied this definition to the Hebrew Tree Bank CITATION , and constructed a moderate size corpus (about 5 ,000 sentences) for Hebrew SimpleNP chunking .
+SVM CITATION is a supervised binary classifier .
+However , each of these assumes that the relations themselves are known in advance (implicitly or explicitly) so that the method can be provided with seed patterns CITATION , pattern-based rules CITATION , relation keywords CITATION , or word pairs exemplifying relation instances CITATION .
+Most related work deals with discovery of hypernymy CITATION , synonymy CITATION and meronymy CITATION .
+In addition to these basic types , several studies deal with the discovery and labeling of more specific relation sub-types , including inter-verb relations CITATION and noun-compound relationships CITATION .
+It should be noted that some of these papers utilize language and domain-dependent preprocessing including syntactic parsing CITATION and named entity tagging CITATION , while others take advantage of handcrafted databases such as WordNet CITATION and Wikipedia CITATION .
+In several studies CITATION it has been shown that relatively unsupervised and language-independent methods could be used to generate many thousands of sets of words whose semantics is similar in some sense .
+We do this as follows , essentially implementing a simplified version of the method of Davidov and Rappoport CITATION .
+Note that our method differs from that of Davidov and Rappoport CITATION in that here we provide an initial seed pair , representing our target concept , while there the goal is grouping of as many words as possible into concept classes .
+It was shown in CITATION that pairs of words that often appear together in such symmetric patterns tend to belong to the same class (that is , they share some notable aspect of their semantics) .
+Studying relationships between tagged named entities , CITATION proposed unsupervised clustering methods that assign given (or semi-automatically extracted) sets of pairs into several clusters , where each cluster corresponds to one of a known relationship type .
+A lot of this research is based on the initial insight CITATION that certain lexical patterns ('X is a country') can be exploited to automatically generate hyponyms of a specified word .
+In some recent work CITATION , it has been shown that related pairs can be generated without pre-specifying the nature of the relation sought .
+Finally , CITATION provided a pattern distance measure which allows a fully unsupervised measurement of relational similarity between two pairs of words; however , relationship types were not discovered explicitly .
+The bracketing guidelines CITATION also mention the considerable difficulty of identifying the correct scope for nominal modifiers .
+We use Bikel's implementation CITATION of Collins' parser CITATION in order to carry out these experiments , using the non-deficient Collins settings .
+We draw our counts from a corpus of n-gram counts calculated over 1 trillion words from the web CITATION .
+We use the Briscoe and Carroll CITATION version of DepBank , a 560 sentence subset used to evaluate the rasp parser .
+We map the brackets to dependencies by finding the head of the np , using the Collins CITATION head finding rules , and then creating a dependency between each other child's head and this head .
+We dis-cretised the non-binary features using an implementation of Fayyad and Irani's CITATION algorithm , and classify using Me.g.M 2 .
+For instance , CCGbank CITATION was created by semi-automatically converting the Treebank phrase structure to Combinatory Cate.g.rial Grammar (ccg) CITATION derivations .
+An additional grammar rule is needed just to get a parse , but it is still not correct (Hockenmaier , 2003 , p .
+We check the correctness of the corpus by measuring inter-annotator agreement , by reannotating the first section , and by comparing against the sub -NP structure in DepBank CITATION .
+We used the PARC700 Dependency Bank CITATION which consists of 700 Section 23 sentences annotated with labelled dependencies .
+Our annotation guidelines 1 are based on those developed for annotating full sub -np structure in the biomedical domain CITATION .
+Lapata and Keller CITATION derive estimates from web counts , and only compare at a lexical level , achieving 78.7% accuracy .
+Finally , we test the utility of the extended Treebank for training statistical models on two tasks: NP bracketing CITATION and full parsing CITATION .
+Lauer CITATION has demonstrated superior performance of the dependency model using a test set of 244 (216 unique) noun compounds drawn from Grolier's encyclopedia .
+We implement a similar system to Table 4: Comparison of NP bracketing corpora Table 5: Lexical overlap Lauer CITATION , described in Section 3 , and report on results from our own data and Lauer's original set .
+The np bracketing task has often been posed in terms of choosing between the left or right branching structure of three word noun compounds: (a)  (world (oil prices)) - Right-branching (b)  ((crude oil) prices) - Left-branching Most approaches to the problem use unsupervised methods , based on competing association strength between two of the words in the compound (Marcus , 1980 , p .
+The Penn Treebank CITATION is perhaps the most influential resource in Natural Language Processing (NLP) .
+According to Scientists  CITATION , asking annota-tors to markup base -np structure significantly reduced annotation speed , and for this reason base- nps were left flat .
+For the original bracketing of the Treebank , anno-tators performed at 375-475 words per hour after a Table 1: Agreement between annotators few weeks , and increased to about 1000 words per hour after gaining more experience CITATION .
+Nakov and Hearst CITATION also use web counts , but incorporate additional counts from several variations on simple bigram queries , including queries for the pairs of words concatenated or joined by a hyphen .
+With our new data set , we be.g.n running experiments similar to those carried out in the literature CITATION .
+Many approaches to identifying base noun phrases have been explored as part of chunking CITATION , but determining sub -np structure is rarely addressed .
+The bracketing tool often suggests a bracketing using rules based mostly on named entity tags , which are drawn from the bbn corpus CITATION .
+The most common form of parser evaluation is to apply the parseval metrics to phrase-structure parsers based on the penn Treebank , and the highest reported scores are now over 90% CITATION .
+In this paper we evaluate a ccg parser CITATION on the Briscoe and Carroll version of DepBank CITATION .
+Briscoe and Carroll CITATION reannotated this resource using their grs scheme , and used it to evaluate the rasp parser .
+Parsers have been developed for a variety of grammar formalisms , for example hpsg CITATION , lfg CITATION , tag CITATION , ccg CITATION , and variants of phrase-structure grammar CITATION , including the phrase-structure grammar implicit in the Penn Treebank CITATION .
+And third , we provide the first evaluation of a wide-coverage ccg parser outside of CCGbank , obtaining impressive results on DepBank and outperforming the rasp parser CITATION by over 5% overall and on the majority of dependency types .
+For the gold standard we chose the version of Dep-Bank reannotated by Briscoe and Carroll CITATION , consisting of 700 sentences from Section 23 of the Penn Treebank .
+The results in Table 4 were obtained by parsing the sentences from CCGbank corresponding to those in the 560-sentence test set used by Scientists  CITATION .
+the macro-averaged scores are the mean of the individual scores for each relation CITATION .
+Scientists  CITATION split the 700 sentences in DepBank into a test and development set , but the latter only consists of 140 sentences which was not enough to reliably create the transformation .
+All the results were obtained using the RASP evaluation scripts , with the results for the rasp parser taken from Scientists  CITATION .
+Preiss CITATION compares the parsers of Collins CITATION and Charniak CITATION , the gr finder of Scientists  CITATION , and the rasp parser , using the Scientists  CITATION gold-standard .
+It has been argued that the parseval metrics are too forgiving and that phrase structure is not the ideal representation for a gold standard CITATION .
+Scientists  CITATION describe such a suite , consisting of sentences taken from the Susanne corpus , annotated with Grammatical Relations (grs) which specify the syntactic relation between a head and dependent .
+We chose not to use the corpus based on the Susanne corpus CITATION because the grs are less like the ccg dependencies; the corpus is not based on the Penn Treebank , making comparison more difficult because of tokenisation differences , for example; and the latest results for rasp are on DepBank .
+parser evaluation has improved on the original parseval measures CITATION , but the challenge remains to develop a representation and evaluation suite which can be easily applied to a wide variety of parsers and formalisms .
+Clark and Curran CITATION describes the ccg parser used for the evaluation .
+Previous evaluations of ccg parsers have used the predicate-argument dependencies from CCGbank as a test set CITATION , with impressive results of over 84% F-score on labelled dependencies .
+Scientists  CITATION compare the Collins CITATION parser with the Parc lfg parser by mapping lfg F-structures and Penn Treebank parses into DepBank dependencies , claiming that the lfg parser is considerably more accurate with only a slight reduction in speed .
+The ccg parser results are based on automatically assigned pos tags , using the Curran and Clark CITATION tagger .
+An example of this is from CCGbank CITATION , where all modifiers in noun-noun compound constructions modify the final noun (because the penn Treebank , from which CCGbank is derived , does not contain the necessary information to obtain the correct bracketing) .
+The grammar used by the parser is extracted from CCGbank , a ccg version of the Penn Treebank CITATION .
+Such conversions have been performed for other parsers , including parsers producing phrase structure output CITATION .
+In the case of Scientists  CITATION , the testing procedure would include running their conversion process on Section 23 of the Penn Treebank and evaluating the output against DepBank .
+A similar resource — the Parc Dependency Bank (DepBank) CITATION — has been created using sentences from the Penn Treebank .
+The b&c scheme is similar to the original DepBank scheme CITATION , but overall contains less grammatical detail; Briscoe and Carroll CITATION describes the differences .
+Different parsers produce different output , for ex-ample phrase structure trees CITATION , dependency trees CITATION , grammatical relations CITATION , and formalism-specific dependencies CITATION .
+The grammar consists of 425 lexical cate.g.ries — expressing subcate.g.risation information — plus a small number of combinatory rules which combine the cate.g.ries CITATION .
+A more interesting statement would be that it makes learning easier , along the lines of the result of CITATION — note , however , that their results are for the "semi-supervised" domain adaptation problem and so do not apply directly .
+A part-of-speech tagging problem on PubMed abstracts introduced by Scientists  CITATION .
+The first model , which we shall refer to as the Prior model , was first introduced by Chelba and Acero CITATION .
+This is a recapitalization task introduced by Chelba and Acero CITATION and also used by Daume III and Marcu CITATION .
+For the CNN-Recap task , we use identical feature to those used by both Chelba and Acero CITATION and Daume III and Marcu CITATION: the current , previous and next word , and 1-3 letter prefixes and suffixes .
+Many of these are presented and evaluated by Daume III and Marcu CITATION .
+Daume III and Marcu CITATION provide empirical evidence on four datasets that the Prior model outperforms the baseline approaches .
+More recently , Daume III and Marcu CITATION presented an algorithm for domain adaptation for maximum entropy classifiers .
+We additionally ran the Me.g.M model CITATION on these data (though not in the multi-conditional case; for this , we considered the single source as the union of all sources) .
+In all cases , we use the S earn algorithm for solving the sequence labeling problem CITATION with an underlying averaged perceptron classifier; implementation due to CITATION .
+Second , it is arguable that a measure like F 1 is inappropriate for chunking tasks CITATION .
+Following CITATION , we call the first the source domain , and the second the target domain .
+Recently there have been some studies addressing domain adaptation from different perspectives CITATION .
+The POS data set and the CTS data set have previously been used for testing other adaptation methods CITATION , though the setup there is different from ours .
+Scientists  CITATION propose a domain adaptation method that uses the unlabeled target instances to infer a good feature representation , which can be re.g.rded as weighting the features .
+Chelba and Acero CITATION use the parameters of the maximum entropy model learned from the source domain as the means of a Gaussian prior when training a new model on the target data .
+The setup is very similar to Daume III and Marcu CITATION .
+els the different distributions in the source and the target domains is by Daume III and Marcu CITATION .
+Scientists  CITATION first train a NE tagger on the source domain , and then use the tagger's predictions as features for training and testing on the target domain .
+This way of setting 7 corresponds to the entropy minimization semi-supervised learning method CITATION .
+For generative syntactic parsing , Roark and Bac-chiani CITATION have used the source domain data to construct a Dirichlet prior for MAP estimation of the PCFG for the target domain .
+ber of hidden components is not fixed , but emerges We be.g.n by presenting three finite tree models , each naturally from the training data CITATION .
+The closely related infinite hidden Markov model is an HMM in which the transitions are modeled using an HDP , enabling unsupervised learning of sequence models when the number of hidden states is unknown CITATION .
